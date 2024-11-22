@@ -1,1 +1,2 @@
-// export const API_KEY = "your api key here"
+// export const API_KEY = ""
+// export const API_READ_ACCESS_TOKEN = ""

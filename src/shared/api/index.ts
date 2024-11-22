@@ -1,1 +1,5 @@
-export { apiRequest } from "./apiRequest"
+export { apiRequest } from "./request/apiRequest"
+export * from "./popular-movies"
+export * from "./image-service"
+export * from "./request"
+export * from "./movies"

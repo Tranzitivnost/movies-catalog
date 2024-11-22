@@ -15,8 +15,9 @@ interface Props
   alignEnd?: boolean
   flexDirectionColumn?: boolean
   justifyContentCenter?: boolean
-
+  flexWrap?: boolean
   className?: string
+  gap?: string
 }
 
 export const Container = ({
@@ -30,11 +31,15 @@ export const Container = ({
   alignEnd,
   flexDirectionColumn,
   justifyContentCenter,
+  flexWrap,
+  gap,
   ...rest
 }: Props) => {
+  const style = { gap: gap ?? "0", ...rest.style } as React.CSSProperties
   return (
     <div
       {...rest}
+      style={style}
       className={clsx([
         styles.container,
         className,
@@ -47,6 +52,7 @@ export const Container = ({
           [styles.alignEnd]: alignEnd,
           [styles.flexDirectionColumn]: flexDirectionColumn,
           [styles.justifyContentCenter]: justifyContentCenter,
+          [styles.flexWrap]: flexWrap,
         },
       ])}
     >
