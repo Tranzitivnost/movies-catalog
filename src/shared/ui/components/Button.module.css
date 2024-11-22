@@ -1,0 +1,22 @@
+.button {
+  composes: color-scheme-third color-scheme-third-hover from global;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.2px;
+  display: flex;
+  height: 50px;
+
+  align-items: center;
+
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  font-family: "Open Sans", serif;
+
+  border: none;
+  padding: 12px 6px;
+  &:hover {
+    cursor: pointer;
+  }
+}

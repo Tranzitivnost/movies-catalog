@@ -1,0 +1,35 @@
+h2 {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  text-align: center;
+  margin: 0;
+  font-family: "Open Sans", serif;
+}
+
+.text-s {
+  font-size: 12px;
+}
+
+.text-m {
+  font-size: 14px;
+}
+
+.text-l {
+  font-size: 16px;
+}
+
+.text-xl {
+  font-size: 27px;
+}
+
+.color-blue {
+  color: var(--blue-text);
+}
+
+.color-yellow {
+  composes: typography-secondary from global;
+}
+
+.color-white {
+  composes: typography-primary from global;
+}
