@@ -10,12 +10,10 @@ interface Props
   className: string
 }
 
-const Text = ({ children, className, ...rest }: Props) => {
+export const Text = ({ children, className, ...rest }: Props) => {
   return (
     <div className={clsx([styles.text, className])} {...rest}>
       {children}
     </div>
   )
 }
-
-export default Text

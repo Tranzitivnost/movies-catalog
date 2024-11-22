@@ -12,7 +12,7 @@ interface Props
   className: string
 }
 
-const Link = ({ href, children, target, className, ...rest }: Props) => {
+export const Link = ({ href, children, target, className, ...rest }: Props) => {
   return (
     <a
       href={href}
@@ -24,5 +24,3 @@ const Link = ({ href, children, target, className, ...rest }: Props) => {
     </a>
   )
 }
-
-export default Link

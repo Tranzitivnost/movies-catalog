@@ -8,7 +8,7 @@ interface Props {
   className?: string
 }
 
-const Switch = ({ onChange, defaultValue, className }: Props) => {
+export const Switch = ({ onChange, defaultValue, className }: Props) => {
   const [isChecked, setIsChecked] = useState(defaultValue)
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked)
@@ -33,4 +33,3 @@ const Switch = ({ onChange, defaultValue, className }: Props) => {
     </div>
   )
 }
-export default Switch

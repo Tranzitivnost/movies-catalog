@@ -1,10 +1,9 @@
-// import styles from "./App.module.css" // TODO delete styles?
 import "./reset-styles.css"
 import { Providers } from "../providers"
-import { AppHeader } from "../../widgets"
 import { AppRouter } from "../routes"
+import { AppHeader } from "../app-header"
 
-const App = () => {
+export const App = () => {
   return (
     <Providers>
       <AppHeader />
@@ -12,5 +11,3 @@ const App = () => {
     </Providers>
   )
 }
-
-export default App

@@ -19,7 +19,7 @@ interface Props
   className?: string
 }
 
-const Container = ({
+export const Container = ({
   className,
   children,
   justifyStart,
@@ -54,5 +54,3 @@ const Container = ({
     </div>
   )
 }
-
-export default Container

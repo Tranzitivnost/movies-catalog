@@ -4,7 +4,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom"
-import { HomePage } from "../../pages"
+import { HomePage } from "../../pages/home"
 
 export const AppRouter = () => {
   const routers = createRoutesFromElements(

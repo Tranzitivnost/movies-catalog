@@ -1,7 +1,7 @@
 import styles from "./App.module.css"
-import Container from "./Container"
+import { Container } from "./Container"
 
-import Switch from "./Switch"
+import { Switch } from "./Switch"
 import clsx from "clsx"
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
   children: React.ReactNode
 }
 
-const App = ({ onChange, defaultValue, children }: Props) => {
+export const App = ({ onChange, defaultValue, children }: Props) => {
   return (
     <Container
       className={clsx([styles.app])}
@@ -27,5 +27,3 @@ const App = ({ onChange, defaultValue, children }: Props) => {
     </Container>
   )
 }
-
-export default App

@@ -1,1 +1,1 @@
-export { LocalStorage } from "./LocalStorage"
+export * from "./storage"
