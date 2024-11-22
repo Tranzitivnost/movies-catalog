@@ -1,7 +1,0 @@
-export { Button } from "./Button"
-export { Avatar } from "./Avatar"
-export { Container } from "./Container"
-export { Switch } from "./Switch"
-export { Header } from "./Header"
-export { Link } from "./Link"
-export { Text } from "./Text"

@@ -4,7 +4,7 @@ import styles from "./PopularMoviewPreview.module.css"
 import { usePopularMovies } from "../../../entities/popular-movies"
 
 export function PopularMoviesPreview() {
-  const { popularMovies } = usePopularMovies()
+  const { popularMovies } = usePopularMovies({ page: 1 })
 
   return (
     <Container

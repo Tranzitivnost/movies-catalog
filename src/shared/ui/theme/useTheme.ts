@@ -1,4 +1,4 @@
-import { LocalStorage } from "../lib/storage/LocalStorage"
+import { LocalStorage } from "../../lib/storage/LocalStorage"
 
 export enum Theme {
   Dark = "dark",

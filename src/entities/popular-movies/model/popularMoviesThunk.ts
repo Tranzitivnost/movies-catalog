@@ -14,8 +14,6 @@ export const fetchPopularMovies = createAsyncThunk<
     const response = await getPopularMovies(query)
     return mapMovies(response)
   } catch (err: unknown) {
-    const knownError = err as ErrorType
-
-    return thunkAPI.rejectWithValue(knownError)
+    return thunkAPI.rejectWithValue(err as ErrorType)
   }
 })
