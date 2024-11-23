@@ -1,6 +1,6 @@
 import type { GetPopularMoviesQueryType } from "./getPopularMoviesQueryType"
 import { apiRequest } from "../request/apiRequest"
-import type { Movie } from "../movies"
+import type { Movie } from "../movies/movie"
 
 export const getPopularMovies = async (
   query?: GetPopularMoviesQueryType,
