@@ -1,7 +1,7 @@
 import clsx from "clsx"
-import { Container, Header } from "../../../shared/ui"
+import { Container, Header } from "@shared/ui"
 import styles from "./MoviePreview.module.css"
-import type { Movie } from "../../../shared/api"
+import type { Movie } from "@shared/api"
 
 type Props = {
   movie: Movie
