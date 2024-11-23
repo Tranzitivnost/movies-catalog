@@ -9,11 +9,10 @@ interface Props
   children: React.ReactNode
 }
 
-const Button = ({ children, className, ...rest }: Props) => {
+export const Button = ({ children, className, ...rest }: Props) => {
   return (
     <button className={clsx([className, styles.button])} {...rest}>
       {children}
     </button>
   )
 }
-export default Button

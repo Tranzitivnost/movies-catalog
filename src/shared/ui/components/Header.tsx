@@ -14,7 +14,12 @@ interface Props
   color?: TColor
 }
 
-const Header = ({ size = "xl", color = "white", children, ...rest }: Props) => {
+export const Header = ({
+  size = "xl",
+  color = "white",
+  children,
+  ...rest
+}: Props) => {
   const headerStyles = clsx(styles[`color-${color}`], styles[`text-${size}`])
   return (
     <h2 className={headerStyles} {...rest}>
@@ -22,5 +27,3 @@ const Header = ({ size = "xl", color = "white", children, ...rest }: Props) => {
     </h2>
   )
 }
-
-export default Header

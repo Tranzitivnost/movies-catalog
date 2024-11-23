@@ -33,3 +33,7 @@
 .flexDirectionColumn {
   flex-direction: column;
 }
+
+.flexWrap {
+  flex-wrap: wrap;
+}

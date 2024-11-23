@@ -14,7 +14,7 @@ interface Props
   className?: string
 }
 
-const Avatar: React.FunctionComponent<Props> = ({
+export const Avatar: React.FunctionComponent<Props> = ({
   src,
   size = "m",
   alt,
@@ -24,5 +24,3 @@ const Avatar: React.FunctionComponent<Props> = ({
   const avatarStyles = clsx([className, styles[`img-${size}`]])
   return <img className={avatarStyles} {...rest} src={src} alt={alt} />
 }
-
-export default Avatar
