@@ -1,11 +1,10 @@
 import { selectPopularMovies } from "."
 
-import { useAppSelector } from "../../shared/lib"
+import { useAppSelector, useAppDispatch } from "@shared/lib"
 
 import { fetchPopularMovies } from "."
-import { useAppDispatch } from "../../shared/lib"
 import { useEffect } from "react"
-import type { GetPopularMoviesQueryType } from "../../shared/api"
+import type { GetPopularMoviesQueryType } from "@shared/api"
 
 export function usePopularMovies(options?: GetPopularMoviesQueryType) {
   const dispatch = useAppDispatch()

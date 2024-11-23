@@ -1,5 +1,5 @@
-import type { Movie } from "../../../shared/api"
-import { getImageUrl } from "../../../shared/api"
+import type { Movie } from "@shared/api"
+import { getImageUrl } from "@shared/api"
 
 export function mapMovie(movie: Movie) {
   return {

@@ -1,4 +1,4 @@
-import { API_READ_ACCESS_TOKEN } from "../../../../config"
+import { API_READ_ACCESS_TOKEN } from "@/../config"
 
 const BASE_URL = `https://api.themoviedb.org/3`
 

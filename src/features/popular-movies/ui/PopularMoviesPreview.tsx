@@ -1,7 +1,7 @@
-import { Container, Header } from "../../../shared/ui"
-import { MoviePreview } from "../../../entities/movies"
+import { Container, Header } from "@shared/ui"
+import { MoviePreview } from "@entities/movies"
 import styles from "./PopularMoviewPreview.module.css"
-import { usePopularMovies } from "../../../entities/popular-movies"
+import { usePopularMovies } from "@entities/popular-movies"
 
 export function PopularMoviesPreview() {
   const { popularMovies } = usePopularMovies({ page: 1 })

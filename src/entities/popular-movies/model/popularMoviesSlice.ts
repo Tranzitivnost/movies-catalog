@@ -1,7 +1,7 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit"
 import { fetchPopularMovies } from "./popularMoviesThunk"
-import type { Movie } from "../../../shared/api"
-import type { ErrorType } from "../../../shared/error"
+import type { Movie } from "@shared/api"
+import type { ErrorType } from "@shared/error"
 
 type PopularMoviesState = {
   popularMovies: Movie[]

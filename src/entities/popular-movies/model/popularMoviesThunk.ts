@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit"
-import { getPopularMovies } from "../../../shared/api"
-import type { ErrorType } from "../../../shared/error"
-import type { GetPopularMoviesQueryType, Movie } from "../../../shared/api"
+import { getPopularMovies } from "@shared/api"
+import type { ErrorType } from "@shared/error"
+import type { GetPopularMoviesQueryType, Movie } from "@shared/api"
 import { mapMovies } from "./mapMovies"
 export const fetchPopularMovies = createAsyncThunk<
   Movie[],

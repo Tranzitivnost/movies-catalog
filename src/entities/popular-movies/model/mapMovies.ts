@@ -1,4 +1,4 @@
-import { getImageUrl, type Movie } from "../../../shared/api"
+import { getImageUrl, type Movie } from "@shared/api"
 
 export const mapMovies = (movies: Movie[]) => {
   return movies.map(movie => ({
