@@ -3,4 +3,12 @@
   align-items: center;
   flex-direction: column;
   background-color: rgb(13, 12, 15);
+  overflow-x: hidden;
+}
+
+.generalContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

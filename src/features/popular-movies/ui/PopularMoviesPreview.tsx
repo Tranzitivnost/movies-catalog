@@ -11,6 +11,7 @@ export function PopularMoviesPreview() {
     <Container
       flexDirectionColumn
       alignStart
+      justifyContentCenter
       gap="16px"
       className={styles.container}
     >
@@ -20,7 +21,7 @@ export function PopularMoviesPreview() {
         <Button>Add Watchlist</Button>
       </Container>
       <Header>Popular Movies:</Header>
-      <Container flexWrap gap="16px">
+      <Container flexWrap justifyBetween gap="16px">
         {popularMovies.map(movie => (
           <MoviePreview movie={movie} key={movie.id} />
         ))}
