@@ -6,10 +6,10 @@ interface Props
     React.AnchorHTMLAttributes<HTMLAnchorElement>,
     HTMLAnchorElement
   > {
-  children: React.ReactNode
-  href: string
-  target: string
-  className: string
+  children?: React.ReactNode
+  href?: string
+  target?: string
+  className?: string
 }
 
 export const Link = ({ href, children, target, className, ...rest }: Props) => {

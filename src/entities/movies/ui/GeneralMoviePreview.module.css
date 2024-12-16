@@ -1,0 +1,12 @@
+.container {
+  width: 100vw;
+  height: 648px;
+  display: flex;
+  /* position: relative;
+
+  z-index: 2; */
+}
+
+.img {
+  width: 100vw;
+}

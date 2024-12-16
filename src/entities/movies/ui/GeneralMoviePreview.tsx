@@ -1,6 +1,6 @@
 import clsx from "clsx"
 import { Container, Header } from "@shared/ui"
-import styles from "./MoviePreview.module.css"
+import styles from "./GeneralMoviePreview.module.css"
 import type { Movie } from "@shared/api"
 
 type Props = {
@@ -8,13 +8,13 @@ type Props = {
   className?: string
 }
 
-export function MoviePreview({ movie, className }: Props) {
+export function GeneralMoviePreview({ movie, className }: Props) {
   return (
     <Container
       flexDirectionColumn
       className={clsx(styles.container, className)}
     >
-      <img className={styles.img} src={movie.poster_path} alt={movie.title} />
+      <img className={styles.img} src={movie.backdrop_path} alt={movie.title} />
       <Header>{movie.title}</Header>
     </Container>
   )
