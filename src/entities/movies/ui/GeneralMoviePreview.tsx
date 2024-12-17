@@ -15,7 +15,7 @@ export function GeneralMoviePreview({ movie, className }: Props) {
       className={clsx(styles.container, className)}
     >
       <img className={styles.img} src={movie.backdrop_path} alt={movie.title} />
-      <Header>{movie.title}</Header>
+      <Header className={styles.title}>{movie.title}</Header>
     </Container>
   )
 }

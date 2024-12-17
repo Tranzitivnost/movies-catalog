@@ -8,8 +8,9 @@
   width: 1440px;
   height: 110px;
 
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  bottom: 83%;
+  z-index: 3;
 }
 
 .buttonContainer {

@@ -15,7 +15,7 @@ export function MoviePreview({ movie, className }: Props) {
       className={clsx(styles.container, className)}
     >
       <img className={styles.img} src={movie.poster_path} alt={movie.title} />
-      <Header>{movie.title}</Header>
+      <Header className={styles.movieTitle}>{movie.title}</Header>
     </Container>
   )
 }

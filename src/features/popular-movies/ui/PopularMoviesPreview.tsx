@@ -20,7 +20,7 @@ export function PopularMoviesPreview() {
         <Button>Add Watchlist</Button>
         <Button>Add Watchlist</Button>
       </Container>
-      <Header>Popular Movies:</Header>
+      <Header className={styles.title}>Popular Movies for you</Header>
       <Container flexWrap justifyBetween gap="16px">
         {popularMovies.map(movie => (
           <MoviePreview movie={movie} key={movie.id} />

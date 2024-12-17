@@ -13,21 +13,22 @@ interface Props
 }
 
 export function PosterMovie({ children, className }: Props) {
-  const { popularMovies } = usePopularMovies({ page: 3 })
+  const { popularMovies } = usePopularMovies({ page: 1 })
 
   return (
     <Container
       flexDirectionColumn
       alignStart
       justifyContentCenter
-      className={className}
+      className={styles.generalContainer}
     >
       {children}
+      <Container className={styles.gradient}></Container>
       {popularMovies.length > 0 && (
         <GeneralMoviePreview
           movie={popularMovies[0]}
           key={popularMovies[0].id}
-          className={styles.container}
+          className={styles.generalMovie}
         />
       )}
     </Container>

@@ -1,4 +1,14 @@
-.container {
+.generalContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  height: 648px;
+}
+
+.generalMovie {
   width: 100vw;
   height: 648px;
   display: flex;
@@ -6,6 +16,22 @@
   align-items: center;
   flex-direction: column;
 
-  position: relative;
+  position: absolute;
   z-index: 1;
+}
+
+.gradient {
+  width: 100vw;
+  height: 648px;
+  display: flex;
+  background: linear-gradient(
+    -0.55deg,
+    rgb(13, 12, 15) 0.737%,
+    rgba(13, 12, 15, 0.85) 28.516%,
+    rgba(13, 12, 15, 0) 48.816%,
+    rgba(13, 12, 15, 0.28) 70.719%,
+    rgb(13, 12, 15) 103.306%
+  );
+  position: absolute;
+  z-index: 2;
 }

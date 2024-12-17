@@ -6,7 +6,7 @@ interface Props
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
   > {
-  children: React.ReactNode
+  children?: React.ReactNode
   justifyStart?: boolean
   justifyCenter?: boolean
   justifyEnd?: boolean
