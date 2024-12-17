@@ -15,11 +15,11 @@ export function PopularMoviesPreview() {
       gap="16px"
       className={styles.container}
     >
-      <Container>
+      {/* <Container>
         <Button>Add Watchlist</Button>
         <Button>Add Watchlist</Button>
         <Button>Add Watchlist</Button>
-      </Container>
+      </Container> */}
       <Header className={styles.title}>Popular Movies for you</Header>
       <Container flexWrap justifyBetween gap="16px">
         {popularMovies.map(movie => (

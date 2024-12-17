@@ -4,9 +4,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 24;
-  width: 1290px;
-  padding: 40px 75px 40px 75px;
+  gap: 24px;
+
+  padding: 40px 160px 40px 160px;
+
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .title {
@@ -17,4 +20,5 @@
   line-height: 32px;
   letter-spacing: 0.5%;
   text-align: left;
+  padding-bottom: 8px;
 }

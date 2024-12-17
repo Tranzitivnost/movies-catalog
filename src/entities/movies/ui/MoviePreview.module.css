@@ -1,10 +1,19 @@
 .container {
-  width: 150px;
+  width: 280px;
+  display: flex;
 }
 
+.imageContainer {
+  width: 280px;
+  height: 310px;
+  overflow: hidden;
+  border-radius: 16px;
+}
 .img {
   width: 100%;
-  border-radius: 16px;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .movieTitle {
@@ -15,4 +24,26 @@
   line-height: 24px;
   letter-spacing: 0.5%;
   text-align: left;
+  padding-top: 12px;
+}
+
+.imgStar {
+  width: 15px;
+  height: 14.88px;
+  margin-top: 2px;
+  margin-right: 8px;
+}
+
+.popularity {
+  color: rgb(120, 130, 138);
+  font-family: Rubik;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.5%;
+  text-align: left;
+}
+
+.starContainer {
+  margin-top: 8px;
 }
