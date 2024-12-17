@@ -1,3 +1,24 @@
 .container {
   padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+
+  padding: 40px 160px 40px 160px;
+
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  color: rgb(249, 249, 249);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.5%;
+  text-align: left;
+  padding-bottom: 8px;
 }
