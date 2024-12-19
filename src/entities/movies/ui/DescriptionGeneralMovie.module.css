@@ -1,0 +1,82 @@
+.title {
+  color: rgb(255, 255, 255);
+  font-family: Rubik;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.5%;
+  text-align: left;
+}
+.date {
+  color: rgb(156, 164, 171);
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.5%;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: relative;
+  z-index: 4;
+
+  width: 78%;
+  height: 100%;
+  padding: 64px 160px 64px 160px;
+}
+
+.firstButton {
+  width: 215px;
+  height: 46px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10;
+  padding: 12px 24px 12px 24px;
+  margin-right: 24px;
+
+  border-radius: 10px;
+
+  background: rgb(0, 146, 93);
+
+  color: rgb(249, 249, 249);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.5%;
+  text-align: left;
+}
+
+.secondButton {
+  width: 180px;
+  height: 46px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10;
+  padding: 12px 24px 12px 24px;
+  background: transparent;
+  box-sizing: border-box;
+
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+
+  color: rgb(255, 255, 255);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.5%;
+  text-align: left;
+}

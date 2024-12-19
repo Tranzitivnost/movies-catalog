@@ -5,9 +5,9 @@
   align-items: center;
   justify-content: space-around;
 
-  width: 1440px;
+  width: 100vw;
   height: 110px;
-
+  margin: 0px 160px 0px 160px;
   position: absolute;
   bottom: 83%;
   z-index: 3;
