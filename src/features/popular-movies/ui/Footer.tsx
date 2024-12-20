@@ -25,7 +25,7 @@ export function Footer() {
         </Container>
       </Container>
       <Container className={styles.thirdTitleContainer}>
-        <Container>
+        <Container className={styles.anotherTitleContainer}>
           <Link to="Home" className={styles.linkDecoration}>
             Home
           </Link>

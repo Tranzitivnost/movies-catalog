@@ -77,4 +77,9 @@
   flex-direction: column;
   justify-content: end;
   align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.anotherTitleContainer {
+  margin-bottom: 73px;
 }
