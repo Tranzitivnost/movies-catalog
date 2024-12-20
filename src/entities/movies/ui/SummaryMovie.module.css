@@ -1,0 +1,28 @@
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0px 211px 40px 211px;
+  width: 50%;
+}
+
+.storyTitle {
+  color: rgb(249, 249, 249);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.5%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.text {
+  color: rgb(156, 164, 171);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.5%;
+  text-align: left;
+}
