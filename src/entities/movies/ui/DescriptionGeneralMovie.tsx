@@ -3,6 +3,8 @@ import { Container, Header } from "@shared/ui"
 import styles from "./DescriptionGeneralMovie.module.css"
 import type { Movie } from "@shared/api"
 import { Button } from "@shared/ui"
+import { Image } from "@/shared/ui/components/Image"
+import Like from "@/shared/ui/assets/Icon_Like.svg"
 
 type Props = {
   movie: Movie
@@ -22,7 +24,9 @@ export function DescriptionGeneralMovie({ movie, className }: Props) {
       </Header>
       <Container>
         <Button className={styles.firstButton}>Add Watchlist</Button>
-        <Button className={styles.secondButton}>Like</Button>
+        <Button className={styles.secondButton}>
+          <Image src={Like} alt="icon-like" className={styles.img}></Image>Like
+        </Button>
       </Container>
     </Container>
   )

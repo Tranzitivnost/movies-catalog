@@ -1,0 +1,80 @@
+.container {
+  height: 287px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 70px 211px 40px 211px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.titleContainer {
+  width: 444px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.secondTitleContainer {
+  display: flex;
+  flex-direction: row;
+  width: 216px;
+  justify-content: space-between;
+}
+.title {
+  color: rgb(255, 255, 255);
+  font-family: Rubik;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.secondTitle {
+  color: rgb(255, 255, 255);
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+
+  opacity: 0.7;
+}
+
+.linkDecoration {
+  color: rgb(255, 255, 255);
+  font-family: Rubik;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: right;
+  text-decoration: none;
+}
+
+.text {
+  color: rgb(255, 255, 255);
+  font-family: Rubik;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: right;
+  text-decoration: none;
+  margin: 0px 20px;
+}
+
+.thirdTitleContainer {
+  width: 444px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+}

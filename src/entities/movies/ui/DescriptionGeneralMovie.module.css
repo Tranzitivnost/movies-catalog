@@ -80,3 +80,13 @@
   letter-spacing: 0.5%;
   text-align: left;
 }
+
+.img {
+  margin-right: 10px;
+
+  position: relative;
+  width: 18.67px;
+  height: 19.2px;
+
+  top: 1.4px;
+}
