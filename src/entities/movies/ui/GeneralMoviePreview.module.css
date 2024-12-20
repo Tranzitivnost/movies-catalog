@@ -3,14 +3,16 @@
   height: 648px;
   display: flex;
   overflow: hidden;
+  margin: 0px 211px;
 }
 
 .img {
-  width: 100%;
+  width: 1650px;
   height: 100%;
   object-position: top;
 
   object-fit: cover;
+  margin: 0px 211px 0px 211px;
 }
 
 .title {

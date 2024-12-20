@@ -5,6 +5,7 @@ import type { Movie } from "@shared/api"
 import { Button } from "@shared/ui"
 import { Image } from "@/shared/ui/components/Image"
 import Like from "@/shared/ui/assets/Icon_Like.svg"
+import { Text } from "@shared/ui"
 
 type Props = {
   movie: Movie
