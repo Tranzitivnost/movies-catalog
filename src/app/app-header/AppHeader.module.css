@@ -10,7 +10,7 @@
   margin: 0px 160px 0px 160px;
   position: absolute;
   top: 0;
-  z-index: 3;
+  z-index: 4;
 }
 
 .buttonContainer {
@@ -27,6 +27,8 @@
   font-weight: 400;
   line-height: 19px;
   letter-spacing: 0%;
+
+  cursor: pointer;
 }
 
 .iconContainer {

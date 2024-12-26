@@ -13,6 +13,7 @@ type Props = {
 export function MoviePreview({ movie, className }: Props) {
   return (
     <Container
+      container
       flexDirectionColumn
       className={clsx(styles.container, className)}
     >

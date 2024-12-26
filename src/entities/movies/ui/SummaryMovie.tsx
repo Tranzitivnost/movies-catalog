@@ -8,9 +8,14 @@ type Props = {
   className?: string
 }
 
-export function SummaryMovie({ movie, className }: Props) {
+export function SummaryMovie({ movie }: Props) {
   return (
-    <Container className={styles.summary}>
+    <Container
+      container
+      flexDirectionColumn
+      justifyAround
+      className={styles.summary}
+    >
       <Header className={styles.storyTitle}>Story Line</Header>
       <Text className={styles.text}>{movie.overview}</Text>
     </Container>

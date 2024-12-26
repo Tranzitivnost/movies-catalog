@@ -14,7 +14,10 @@ type Props = {
 export function DescriptionGeneralMovie({ movie, className }: Props) {
   return (
     <Container
+      container
       flexDirectionColumn
+      justifyEnd
+      alignStart
       className={clsx(styles.titleContainer, className)}
     >
       <Header className={styles.title}>{movie.title}</Header>

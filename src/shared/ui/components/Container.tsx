@@ -17,6 +17,7 @@ interface Props
   flexDirectionColumn?: boolean
   justifyBetween?: boolean
   flexWrap?: boolean
+  justifyAround?: boolean
   className?: string
   gap?: string
 }
@@ -34,6 +35,7 @@ export const Container = ({
   flexDirectionColumn,
   justifyBetween,
   flexWrap,
+  justifyAround,
   gap,
   ...rest
 }: Props) => {
@@ -56,6 +58,7 @@ export const Container = ({
           [styles.flexDirectionColumn]: flexDirectionColumn,
           [styles.justifyBetween]: justifyBetween,
           [styles.flexWrap]: flexWrap,
+          [styles.justifyAround]: justifyAround,
         },
       ])}
     >

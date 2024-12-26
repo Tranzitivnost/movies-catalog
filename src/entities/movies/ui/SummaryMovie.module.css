@@ -1,7 +1,4 @@
 .summary {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   padding: 0px 211px 40px 211px;
   width: 50%;
 }

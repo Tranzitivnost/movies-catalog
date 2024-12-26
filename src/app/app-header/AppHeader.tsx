@@ -25,8 +25,12 @@ export function AppHeader() {
         </Link>
       </Container>
       <Container container justifyBetween className={styles.iconContainer}>
-        <Image src={Search} alt="button-search" />
-        <Image src={Bell} alt="button-bell"></Image>
+        <Link href="#" className={styles.linkDecoration}>
+          <Image src={Search} alt="button-search" />
+        </Link>
+        <Link href="#" className={styles.linkDecoration}>
+          <Image src={Bell} alt="button-bell" />
+        </Link>
       </Container>
     </header>
   )

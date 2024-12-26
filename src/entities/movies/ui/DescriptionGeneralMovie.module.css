@@ -19,12 +19,8 @@
 }
 
 .titleContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
   position: relative;
-  z-index: 4;
+  z-index: 3;
 
   width: 78%;
   height: 100%;

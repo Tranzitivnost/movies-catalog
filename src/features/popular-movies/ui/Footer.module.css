@@ -1,8 +1,6 @@
 .container {
   height: 287px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+
   padding: 70px 211px 40px 211px;
 
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -11,18 +9,12 @@
 .titleContainer {
   width: 444px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
 }
 
 .secondTitleContainer {
-  display: flex;
-  flex-direction: row;
   width: 216px;
-  justify-content: space-between;
 }
+
 .title {
   color: rgb(255, 255, 255);
   font-family: Rubik;
@@ -73,10 +65,6 @@
 .thirdTitleContainer {
   width: 444px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: flex-end;
   margin-bottom: 40px;
 }
 

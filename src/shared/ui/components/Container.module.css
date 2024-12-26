@@ -37,3 +37,7 @@
 .flexWrap {
   flex-wrap: wrap;
 }
+
+.justifyAround {
+  justify-content: space-around;
+}

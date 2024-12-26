@@ -15,7 +15,7 @@ export function PopularMoviesPreview() {
       className={styles.container}
     >
       <Header className={styles.title}>Popular Movies for you</Header>
-      <Container flexWrap justifyBetween gap="16px">
+      <Container justifyStart flexWrap gap="16px">
         {popularMovies.map(movie => (
           <MoviePreview movie={movie} key={movie.id} />
         ))}

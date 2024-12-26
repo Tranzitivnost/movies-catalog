@@ -1,7 +1,7 @@
 .container {
   width: 100vw;
   height: 648px;
-  display: flex;
+
   overflow: hidden;
   margin: 0px 211px;
 }
