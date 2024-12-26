@@ -2,7 +2,6 @@ import { Container, Header } from "@shared/ui"
 import { MoviePreview } from "@entities/movies"
 import styles from "./PopularMoviewPreview.module.css"
 import { usePopularMovies } from "@entities/popular-movies"
-import { Button } from "@shared/ui"
 
 export function PopularMoviesPreview() {
   const { popularMovies } = usePopularMovies({ page: 1 })
@@ -11,7 +10,7 @@ export function PopularMoviesPreview() {
     <Container
       flexDirectionColumn
       alignStart
-      justifyContentCenter
+      justifyCenter
       gap="16px"
       className={styles.container}
     >

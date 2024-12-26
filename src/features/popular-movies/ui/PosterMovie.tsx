@@ -20,7 +20,7 @@ export function PosterMovie({ children, className }: Props) {
     <Container
       flexDirectionColumn
       alignStart
-      justifyContentCenter
+      justifyCenter
       className={styles.generalContainer}
     >
       {children}

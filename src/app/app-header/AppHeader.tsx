@@ -9,22 +9,22 @@ import { Link } from "@/shared/ui"
 export function AppHeader() {
   return (
     <header className={styles.header}>
-      <Image src={Logo} alt="logo"></Image>
-      <Container className={styles.buttonContainer}>
-        <a href="/" className={styles.linkDecoration}>
+      <Image src={Logo} alt="logo" />
+      <Container container justifyBetween className={styles.buttonContainer}>
+        <Link href="#" className={styles.linkDecoration}>
           Home
-        </a>
-        <a href="/movie_release" className={styles.linkDecoration}>
+        </Link>
+        <Link href="#" className={styles.linkDecoration}>
           Movie Release
-        </a>
-        <a href="/about" className={styles.linkDecoration}>
+        </Link>
+        <Link href="#" className={styles.linkDecoration}>
           About
-        </a>
-        <a href="/contact" className={styles.linkDecoration}>
+        </Link>
+        <Link href="#" className={styles.linkDecoration}>
           Contact
-        </a>
+        </Link>
       </Container>
-      <Container className={styles.iconContainer}>
+      <Container container justifyBetween className={styles.iconContainer}>
         <Image src={Search} alt="button-search" />
         <Image src={Bell} alt="button-bell"></Image>
       </Container>

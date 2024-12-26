@@ -3,18 +3,14 @@
 }
 
 .justifyStart {
-  justify-items: flex-start;
+  justify-content: flex-start;
 }
 
 .justifyEnd {
-  justify-items: flex-end;
+  justify-content: flex-end;
 }
 
 .justifyCenter {
-  justify-items: center;
-}
-
-.justifyContentCenter {
   justify-content: center;
 }
 
@@ -23,11 +19,11 @@
 }
 
 .alignStart {
-  align-items: start;
+  align-items: flex-start;
 }
 
 .alignEnd {
-  align-items: end;
+  align-items: flex-end;
 }
 
 .alignCenter {

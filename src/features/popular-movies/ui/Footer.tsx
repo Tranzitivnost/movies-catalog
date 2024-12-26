@@ -3,17 +3,11 @@ import { Container, Header } from "@shared/ui"
 import styles from "./Footer.module.css"
 
 import { Link } from "react-router-dom"
-import { Image } from "@/shared/ui/components/Image"
 import { Text } from "@shared/ui"
 
 export function Footer() {
   return (
-    <Container
-      alignStart
-      justifyContentCenter
-      gap="16px"
-      className={styles.container}
-    >
+    <Container alignStart justifyCenter gap="16px" className={styles.container}>
       <Container className={styles.titleContainer}>
         <Header className={styles.title}>
           Our platform is trusted by millions & features best updated movies all

@@ -1,4 +1,3 @@
-import clsx from "clsx"
 import { Container, Header } from "@shared/ui"
 import styles from "./SummaryMovie.module.css"
 import type { Movie } from "@shared/api"
