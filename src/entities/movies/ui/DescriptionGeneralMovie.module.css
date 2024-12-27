@@ -1,12 +1,12 @@
 .title {
   color: rgb(255, 255, 255);
-  font-family: Rubik;
-  font-size: 38px;
+  composes: scheme-primary-large from global;
   font-weight: 700;
   line-height: 40px;
   letter-spacing: 0.5%;
   text-align: left;
 }
+
 .date {
   color: rgb(156, 164, 171);
   font-family: Rubik;
