@@ -1,5 +1,5 @@
 import styles from "./PageHeader.module.css"
-import { Image } from "@/shared/ui/components/Image"
+import { Image } from "@/shared/ui"
 import Logo from "@/shared/ui/assets/Component-logo.svg"
 import { Container } from "@/shared/ui"
 import Bell from "@/shared/ui/assets/Icon_Outline_bell.svg"

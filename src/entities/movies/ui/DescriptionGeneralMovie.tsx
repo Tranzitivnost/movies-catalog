@@ -3,7 +3,7 @@ import { Container, Header } from "@shared/ui"
 import styles from "./DescriptionGeneralMovie.module.css"
 import type { Movie } from "@shared/api"
 import { Button } from "@shared/ui"
-import { Image } from "@/shared/ui/components/Image"
+import { Image } from "@/shared/ui"
 import Like from "@/shared/ui/assets/Icon_Like.svg"
 
 type Props = {

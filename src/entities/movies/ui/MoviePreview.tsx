@@ -3,7 +3,7 @@ import { Container, Header } from "@shared/ui"
 import styles from "./MoviePreview.module.css"
 import type { Movie } from "@shared/api"
 import Star from "@/shared/ui/assets/Star.svg"
-import { Image } from "@/shared/ui/components/Image"
+import { Image } from "@/shared/ui"
 
 type Props = {
   movie: Movie
