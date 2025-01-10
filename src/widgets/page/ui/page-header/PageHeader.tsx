@@ -1,4 +1,4 @@
-import styles from "./AppHeader.module.css"
+import styles from "./PageHeader.module.css"
 import { Image } from "@/shared/ui/components/Image"
 import Logo from "@/shared/ui/assets/Component-logo.svg"
 import { Container } from "@/shared/ui"
@@ -6,7 +6,7 @@ import Bell from "@/shared/ui/assets/Icon_Outline_bell.svg"
 import Search from "@/shared/ui/assets/Icon_Outline_search.svg"
 import { Link } from "@/shared/ui"
 
-export function AppHeader() {
+export function PageHeader() {
   return (
     <header className={styles.header}>
       <Image src={Logo} alt="logo" />

@@ -1,9 +1,9 @@
 import { Container, Header } from "@shared/ui"
-import styles from "./Footer.module.css"
+import styles from "./PageFooter.module.css"
 import { Link } from "@shared/ui"
 import { Text } from "@shared/ui"
 
-export function Footer() {
+export function PageFooter() {
   return (
     <Container
       alignStart

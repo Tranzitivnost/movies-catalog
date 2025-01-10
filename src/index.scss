@@ -1,8 +1,10 @@
 // @import "shared/ui/styles/scheme.scss";
 // @import "shared/ui/styles/mixins-theme.scss";
 
-// body {
-//   .current-theme {
-//     @include applyTheme($scheme-primary-large);
-//   }
-// }
+body {
+  display: flex;
+
+  flex-direction: column;
+  background-color: rgb(13, 12, 15);
+  overflow-x: hidden;
+}

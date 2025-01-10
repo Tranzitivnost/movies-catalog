@@ -1,11 +1,14 @@
 import { Container, Header } from "@shared/ui"
 import { MoviePreview } from "@entities/movies"
-import styles from "./PopularMoviewPreview.module.css"
-import { usePopularMovies } from "@entities/popular-movies"
+import styles from "./MoviesList.module.css"
+import type { Movie } from "@/shared/api"
 
-export function PopularMoviesPreview() {
-  const { popularMovies } = usePopularMovies({ page: 1 })
+type Props = {
+  movies: Movie[]
+  title: string
+}
 
+export function MoviesList({ movies, title }: Props) {
   return (
     <Container
       flexDirectionColumn
@@ -16,7 +19,7 @@ export function PopularMoviesPreview() {
     >
       <Header className={styles.title}>Popular Movies for you</Header>
       <Container justifyStart flexWrap gap="16px">
-        {popularMovies.map(movie => (
+        {movies.map(movie => (
           <MoviePreview movie={movie} key={movie.id} />
         ))}
       </Container>

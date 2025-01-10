@@ -9,7 +9,7 @@ interface Props
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
   > {
-  children: React.ReactNode
+  children?: React.ReactNode
   className?: string
 }
 
