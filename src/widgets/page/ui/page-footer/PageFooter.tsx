@@ -53,7 +53,7 @@ export function PageFooter() {
           </Link>
         </Container>
 
-        <Header className={styles.secondTitle}>© 2024</Header>
+        <Header className={styles.secondTitle}>© 2025</Header>
       </Container>
     </Container>
   )

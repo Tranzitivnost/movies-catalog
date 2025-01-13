@@ -1,8 +1,16 @@
 import { MoviesList } from "@/features/movies-list"
-import { usePopularMovies } from "@entities/popular-movies"
 
-export function PopularMoviesPreview() {
-  const { popularMovies } = usePopularMovies({ page: 1 })
+import type { Movie } from "@/shared/api"
+interface Props
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
+  movies: Movie[]
+  children?: React.ReactNode
+  className?: string
+}
 
-  return <MoviesList title="Popular movies" movies={popularMovies} />
+export function PopularMoviesPreview({ children, movies, className }: Props) {
+  return <MoviesList title="Popular movies" movies={movies} />
 }

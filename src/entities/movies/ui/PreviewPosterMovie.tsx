@@ -1,6 +1,6 @@
 import clsx from "clsx"
 import { Container } from "@shared/ui"
-import styles from "./GeneralMoviePreview.module.css"
+import styles from "./PreviewPosterMovie.module.css"
 import type { Movie } from "@shared/api"
 import { Image } from "@/shared/ui"
 
@@ -9,7 +9,7 @@ type Props = {
   className?: string
 }
 
-export function GeneralMoviePreview({ movie, className }: Props) {
+export function PreviewPosterMovie({ movie, className }: Props) {
   return (
     <Container
       container

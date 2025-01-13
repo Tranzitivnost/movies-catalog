@@ -1,5 +1,5 @@
 import { Container, Header } from "@shared/ui"
-import styles from "./SummaryMovie.module.css"
+import styles from "./SummaryPosterMovie.module.css"
 import type { Movie } from "@shared/api"
 import { Text } from "@shared/ui"
 
@@ -8,7 +8,7 @@ type Props = {
   className?: string
 }
 
-export function SummaryMovie({ movie }: Props) {
+export function SummaryPosterMovie({ movie }: Props) {
   return (
     <Container
       container
