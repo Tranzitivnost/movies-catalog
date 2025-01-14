@@ -5,6 +5,8 @@ import { usePopularMovies } from "@entities/popular-movies"
 import { DescriptionPosterMovie } from "@/entities/movies"
 import { SummaryPosterMovie } from "@/entities/movies"
 import type { Movie } from "@/shared/api"
+import { Image } from "@/shared/ui"
+import clsx from "clsx"
 
 interface Props
   extends React.DetailedHTMLProps<
@@ -31,11 +33,18 @@ export function PosterMovie({ children, movies, className }: Props) {
         {children}
         <Container className={styles.gradient}></Container>
         {movies.length > 0 && (
-          <PreviewPosterMovie
-            movie={movies[0]}
-            key={movies[0].id}
-            className={styles.generalMovie}
-          />
+          <Container
+            container
+            flexDirectionColumn
+            className={clsx(styles.container, styles.generalMovie)}
+          >
+            <Image
+              className={styles.img}
+              src={movies[0].backdrop_path}
+              alt={movies[0].title}
+              key={movies[0].id}
+            />
+          </Container>
         )}
         {popularMovies.length > 0 && (
           <DescriptionPosterMovie movie={movies[0]} key={movies[0].id} />

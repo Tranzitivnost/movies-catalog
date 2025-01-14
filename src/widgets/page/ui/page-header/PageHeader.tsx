@@ -5,10 +5,19 @@ import { Container } from "@/shared/ui"
 import Bell from "@/shared/ui/assets/Icon_Outline_bell.svg"
 import Search from "@/shared/ui/assets/Icon_Outline_search.svg"
 import { Link } from "@/shared/ui"
+import clsx from "clsx"
+interface Props
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
+  className?: string
+  position?: string
+}
 
-export function PageHeader() {
+export function PageHeader({ position = "absolute" }: Props) {
   return (
-    <header className={styles.header}>
+    <header className={clsx(styles.header, styles[position])}>
       <Image src={Logo} alt="logo" />
       <Container container justifyBetween className={styles.buttonContainer}>
         <Link href="#" className={styles.linkDecoration}>

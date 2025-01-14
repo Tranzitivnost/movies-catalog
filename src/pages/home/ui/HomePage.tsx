@@ -9,7 +9,7 @@ export function HomePage() {
   const { popularMovies } = usePopularMovies({ page: 1 })
   return (
     <Container className={styles.container}>
-      <PageHeader />
+      <PageHeader position="absolute" />
       <PosterMovie movies={popularMovies} />
       <PopularMoviesPreview movies={popularMovies} />
       <PageFooter />
