@@ -1,11 +1,11 @@
-import { Container } from "@shared/ui"
-import { PreviewPosterMovie } from "@/entities/movies"
 import styles from "./PosterMovie.module.css"
-import { usePopularMovies } from "@entities/popular-movies"
-import { DescriptionPosterMovie } from "@/entities/movies"
-import { SummaryPosterMovie } from "@/entities/movies"
 import type { Movie } from "@/shared/api"
+import { Container } from "@shared/ui"
 import { Image } from "@/shared/ui"
+import { Header } from "@shared/ui"
+import { Button } from "@shared/ui"
+import { Text } from "@shared/ui"
+import Like from "@/shared/ui/assets/Icon_Like.svg"
 import clsx from "clsx"
 
 interface Props
@@ -18,9 +18,7 @@ interface Props
   className?: string
 }
 
-export function PosterMovie({ children, movies, className }: Props) {
-  const { popularMovies } = usePopularMovies({ page: 1 })
-
+export function PosterMovie({ movies, className }: Props) {
   return (
     <Container container flexDirectionColumn alignStart justifyCenter>
       <Container
@@ -30,8 +28,7 @@ export function PosterMovie({ children, movies, className }: Props) {
         justifyCenter
         className={styles.generalContainer}
       >
-        {children}
-        <Container className={styles.gradient}></Container>
+        <Container className={styles.gradient} />
         {movies.length > 0 && (
           <Container
             container
@@ -46,12 +43,46 @@ export function PosterMovie({ children, movies, className }: Props) {
             />
           </Container>
         )}
-        {popularMovies.length > 0 && (
-          <DescriptionPosterMovie movie={movies[0]} key={movies[0].id} />
+        {movies.length > 0 && (
+          <Container
+            container
+            flexDirectionColumn
+            justifyEnd
+            alignStart
+            className={clsx(styles.titleContainer, className)}
+          >
+            <Header className={styles["second-title"]}>
+              {movies[0].title}
+            </Header>
+            <Header className={styles.date}>
+              original language: {movies[0].original_language} •{" "}
+              {movies[0].release_date} • viewings: {movies[0].popularity} •
+              average score: {movies[0].vote_average}
+            </Header>
+            <Container>
+              <Button className={styles.firstButton}>Add Watchlist</Button>
+              <Button className={styles.secondButton}>
+                <Image
+                  src={Like}
+                  alt="icon-like"
+                  className={styles["second-img"]}
+                />
+                Like
+              </Button>
+            </Container>
+          </Container>
         )}
       </Container>
-      {popularMovies.length > 0 && (
-        <SummaryPosterMovie movie={movies[0]} key={movies[0].id} />
+      {movies.length > 0 && (
+        <Container
+          container
+          flexDirectionColumn
+          justifyAround
+          className={styles.summary}
+        >
+          <Header className={styles.storyTitle}>Story Line</Header>
+          <Text className={styles.text}>{movies[0].overview}</Text>
+        </Container>
       )}
     </Container>
   )

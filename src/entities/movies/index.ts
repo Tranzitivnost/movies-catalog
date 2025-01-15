@@ -1,5 +1,2 @@
 export { mapMovie } from "./model/mapMovie"
-export { SummaryPosterMovie } from "./ui"
-export { DescriptionPosterMovie } from "./ui"
-export { PreviewPosterMovie } from "./ui"
 export { MoviePreview } from "./ui"
