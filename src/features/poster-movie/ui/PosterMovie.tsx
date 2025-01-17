@@ -3,10 +3,9 @@ import type { Movie } from "@/shared/api"
 import { Container } from "@shared/ui"
 import { Image } from "@/shared/ui"
 import { Header } from "@shared/ui"
-import { Button } from "@shared/ui"
+import { LikeButton } from "@shared/ui"
+import { AddWatchListButton } from "@shared/ui"
 import { Text } from "@shared/ui"
-import Like from "@/shared/ui/assets/Icon_Like.svg"
-import clsx from "clsx"
 
 interface Props
   extends React.DetailedHTMLProps<
@@ -19,8 +18,18 @@ interface Props
 }
 
 export function PosterMovie({ movie, className }: Props) {
+  const sentences = movie.overview
+    .split(".")
+    .map((sentence, index) => <p key={index}>{sentence}</p>)
+
   return (
-    <Container container flexDirectionColumn alignCenter justifyBetween>
+    <Container
+      container
+      flexDirectionColumn
+      alignCenter
+      justifyCenter
+      className={styles.posterContainer}
+    >
       <Container
         container
         flexDirectionColumn
@@ -37,7 +46,7 @@ export function PosterMovie({ movie, className }: Props) {
           className={styles.generalMovie}
         >
           <Image
-            className={styles.img}
+            className={styles["movie-img"]}
             src={movie.backdrop_path}
             alt={movie.title}
             key={movie.id}
@@ -48,23 +57,16 @@ export function PosterMovie({ movie, className }: Props) {
           flexDirectionColumn
           justifyEnd
           alignStart
-          className={clsx(styles.titleContainer, className)}
+          className={styles.titleContainer}
         >
-          <Header className={styles["second-title"]}>{movie.title}</Header>
-          <Header className={styles.date}>
+          <Header className={styles["movie-title"]}>{movie.title}</Header>
+          <Header className={styles.information}>
             original language: {movie.original_language} • {movie.release_date}{" "}
             • viewings: {movie.popularity} • average score: {movie.vote_average}
           </Header>
           <Container>
-            <Button className={styles.firstButton}>Add Watchlist</Button>
-            <Button className={styles.secondButton}>
-              <Image
-                src={Like}
-                alt="icon-like"
-                className={styles["second-img"]}
-              />
-              Like
-            </Button>
+            <AddWatchListButton />
+            <LikeButton />
           </Container>
         </Container>
       </Container>
@@ -75,7 +77,8 @@ export function PosterMovie({ movie, className }: Props) {
         className={styles.summary}
       >
         <Header className={styles.storyTitle}>Story Line</Header>
-        <Text className={styles.text}>{movie.overview}</Text>
+
+        <Text className={styles.storyText}>{sentences}</Text>
       </Container>
     </Container>
   )

@@ -1,13 +1,14 @@
 .container {
-  height: 287px;
+  height: 397px;
+  width: 100%;
+  box-sizing: border-box;
 
-  padding: 70px 211px 40px 211px;
+  padding: 70px 242px 40px 242px;
 
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .titleContainer {
-  width: 444px;
   height: 100%;
 }
 
@@ -23,8 +24,6 @@
   line-height: 48px;
   letter-spacing: 0px;
   text-align: left;
-  display: flex;
-  flex-direction: column;
 }
 
 .secondTitle {
@@ -63,7 +62,6 @@
 }
 
 .thirdTitleContainer {
-  width: 444px;
   height: 100%;
   margin-bottom: 40px;
 }

@@ -20,8 +20,10 @@ export function PageFooter() {
         className={styles.titleContainer}
       >
         <Header className={styles.title}>
-          Our platform is trusted by millions & features best updated movies all
-          around the world.
+          <p>Our platform is trusted </p>
+          <p> by millions & features </p>
+          <p> best updated movies </p>
+          <p>all around the world. </p>
         </Header>
         <Container
           container

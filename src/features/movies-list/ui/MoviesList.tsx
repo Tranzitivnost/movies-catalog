@@ -14,12 +14,12 @@ export function MoviesList({ movies, title }: Props) {
       container
       flexDirectionColumn
       alignStart
-      justifyCenter
+      justifyAround
       gap="24px"
       className={styles.container}
     >
       <Header className={styles.title}>{title}</Header>
-      <Container justifyStart flexWrap gap="16px">
+      <Container justifyCenter flexWrap justifyBetween gap="16px">
         {movies.length > 0
           ? movies.map(movie => <MoviePreview movie={movie} key={movie.id} />)
           : "No available films"}

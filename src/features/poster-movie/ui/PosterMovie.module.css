@@ -1,3 +1,6 @@
+.posterContainer {
+  width: 100%;
+}
 .generalContainer {
   position: relative;
   width: 100%;
@@ -11,7 +14,7 @@
   background: linear-gradient(
     -0.55deg,
     rgb(13, 12, 15) 0.737%,
-    rgba(13, 12, 15, 0.85) 11%,
+    rgba(13, 12, 15, 0.85) 28.516%,
     rgba(13, 12, 15, 0) 48.816%,
     rgba(13, 12, 15, 0.28) 70.719%,
     rgb(13, 12, 15) 103.306%
@@ -30,25 +33,24 @@
   margin: 0px 211px;
 }
 
-.img {
+.movie-img {
   width: 100%;
   height: 100%;
-  object-position: top;
-
+  object-position: center;
   object-fit: cover;
-  margin: 0px 211px 0px 211px;
+  /* margin: 0px 242px 0px 242px; */
 }
 
 .titleContainer {
   position: relative;
   z-index: 3;
-
-  width: 78%;
+  box-sizing: border-box;
+  width: 100%;
   height: 100%;
-  padding: 64px 160px 64px 160px;
+  padding: 64px 242px 64px 242px;
 }
 
-.title {
+.movie-title {
   color: rgb(255, 255, 255);
   font-family: Rubik;
   font-size: 32px;
@@ -58,16 +60,7 @@
   text-align: left;
 }
 
-.second-title {
-  color: rgb(255, 255, 255);
-  composes: scheme-primary-large from global;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: 0.5%;
-  text-align: left;
-}
-
-.date {
+.information {
   color: rgb(156, 164, 171);
   font-family: Rubik;
   font-size: 14px;
@@ -78,69 +71,10 @@
   margin-bottom: 24px;
 }
 
-.firstButton {
-  width: 215px;
-  height: 46px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10;
-  padding: 12px 24px 12px 24px;
-  margin-right: 24px;
-
-  border-radius: 10px;
-
-  background: linear-gradient(135deg, rgb(0, 146, 93), rgb(0, 200, 140));
-
-  color: rgb(249, 249, 249);
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0.5%;
-  text-align: left;
-}
-
-.secondButton {
-  width: 180px;
-  height: 46px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 10;
-  padding: 12px 24px 12px 24px;
-  background: transparent;
-  box-sizing: border-box;
-
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 10px;
-
-  color: rgb(255, 255, 255);
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0.5%;
-  text-align: left;
-}
-
-.second-img {
-  margin-right: 10px;
-
-  position: relative;
-  width: 18.67px;
-  height: 19.2px;
-
-  top: 1.4px;
-}
-
 .summary {
-  padding: 0px 211px 40px 211px;
-  width: 50%;
+  box-sizing: border-box;
+  padding: 0px 242px 40px 242px;
+  width: 100%;
 }
 
 .storyTitle {
@@ -154,7 +88,7 @@
   margin-bottom: 20px;
 }
 
-.text {
+.storyText {
   color: rgb(156, 164, 171);
   font-family: Inter;
   font-size: 16px;
@@ -162,4 +96,8 @@
   line-height: 24px;
   letter-spacing: 0.5%;
   text-align: left;
+}
+
+p {
+  margin: 0 0 0 0;
 }

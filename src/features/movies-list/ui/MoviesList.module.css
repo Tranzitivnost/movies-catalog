@@ -1,8 +1,8 @@
 .container {
-  padding: 40px 211px 40px 211px;
+  padding: 40px 242px 40px 242px;
 
-  /* box-sizing: border-box; 
-  I don't know if this style is necessary.*/
+  /* box-sizing: border-box;  */
+  /* I don't know if this style is necessary. */
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
