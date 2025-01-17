@@ -13,14 +13,14 @@ interface Props
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
   > {
-  movies: Movie[]
+  movie: Movie
   children?: React.ReactNode
   className?: string
 }
 
-export function PosterMovie({ movies, className }: Props) {
+export function PosterMovie({ movie, className }: Props) {
   return (
-    <Container container flexDirectionColumn alignStart justifyCenter>
+    <Container container flexDirectionColumn alignCenter justifyBetween>
       <Container
         container
         flexDirectionColumn
@@ -29,61 +29,54 @@ export function PosterMovie({ movies, className }: Props) {
         className={styles.generalContainer}
       >
         <Container className={styles.gradient} />
-        {movies.length > 0 && (
-          <Container
-            container
-            flexDirectionColumn
-            className={clsx(styles.container, styles.generalMovie)}
-          >
-            <Image
-              className={styles.img}
-              src={movies[0].backdrop_path}
-              alt={movies[0].title}
-              key={movies[0].id}
-            />
-          </Container>
-        )}
-        {movies.length > 0 && (
-          <Container
-            container
-            flexDirectionColumn
-            justifyEnd
-            alignStart
-            className={clsx(styles.titleContainer, className)}
-          >
-            <Header className={styles["second-title"]}>
-              {movies[0].title}
-            </Header>
-            <Header className={styles.date}>
-              original language: {movies[0].original_language} •{" "}
-              {movies[0].release_date} • viewings: {movies[0].popularity} •
-              average score: {movies[0].vote_average}
-            </Header>
-            <Container>
-              <Button className={styles.firstButton}>Add Watchlist</Button>
-              <Button className={styles.secondButton}>
-                <Image
-                  src={Like}
-                  alt="icon-like"
-                  className={styles["second-img"]}
-                />
-                Like
-              </Button>
-            </Container>
-          </Container>
-        )}
-      </Container>
-      {movies.length > 0 && (
         <Container
           container
           flexDirectionColumn
-          justifyAround
-          className={styles.summary}
+          justifyCenter
+          alignCenter
+          className={styles.generalMovie}
         >
-          <Header className={styles.storyTitle}>Story Line</Header>
-          <Text className={styles.text}>{movies[0].overview}</Text>
+          <Image
+            className={styles.img}
+            src={movie.backdrop_path}
+            alt={movie.title}
+            key={movie.id}
+          />
         </Container>
-      )}
+        <Container
+          container
+          flexDirectionColumn
+          justifyEnd
+          alignStart
+          className={clsx(styles.titleContainer, className)}
+        >
+          <Header className={styles["second-title"]}>{movie.title}</Header>
+          <Header className={styles.date}>
+            original language: {movie.original_language} • {movie.release_date}{" "}
+            • viewings: {movie.popularity} • average score: {movie.vote_average}
+          </Header>
+          <Container>
+            <Button className={styles.firstButton}>Add Watchlist</Button>
+            <Button className={styles.secondButton}>
+              <Image
+                src={Like}
+                alt="icon-like"
+                className={styles["second-img"]}
+              />
+              Like
+            </Button>
+          </Container>
+        </Container>
+      </Container>
+      <Container
+        container
+        flexDirectionColumn
+        justifyAround
+        className={styles.summary}
+      >
+        <Header className={styles.storyTitle}>Story Line</Header>
+        <Text className={styles.text}>{movie.overview}</Text>
+      </Container>
     </Container>
   )
 }
