@@ -6,6 +6,7 @@ import { Header } from "@shared/ui"
 import { LikeButton } from "@shared/ui"
 import { AddWatchListButton } from "@shared/ui"
 import { Text } from "@shared/ui"
+import clsx from "clsx"
 
 interface Props
   extends React.DetailedHTMLProps<
@@ -35,7 +36,7 @@ export function PosterMovie({ movie, className }: Props) {
         flexDirectionColumn
         alignCenter
         justifyCenter
-        className={styles.generalContainer}
+        className={clsx(styles.generalContainer, className)}
       >
         <Container className={styles.gradient} />
         <Container

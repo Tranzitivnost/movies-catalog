@@ -1,8 +1,5 @@
 .container {
   padding: 40px 242px 40px 242px;
-
-  /* box-sizing: border-box;  */
-  /* I don't know if this style is necessary. */
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -15,4 +12,10 @@
   letter-spacing: 0.5%;
   text-align: left;
   padding-bottom: 8px;
+}
+
+.warning {
+  color: rgb(249, 249, 249);
+  font-family: Rubik;
+  font-size: 24px;
 }

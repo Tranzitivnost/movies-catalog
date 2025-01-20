@@ -17,14 +17,7 @@ export function MoviePreview({ movie, className }: Props) {
       flexDirectionColumn
       className={clsx(styles.container, className)}
     >
-      <Container className={styles.imageContainer}>
-        <Image
-          className={styles.img}
-          src={movie.poster_path}
-          alt={movie.title}
-        />
-      </Container>
-
+      <Image className={styles.img} src={movie.poster_path} alt={movie.title} />
       <Header className={styles.movieTitle}>{movie.title}</Header>
       <Container className={styles.starContainer}>
         <Image className={styles.imgStar} src={Star} alt="star-logo" />

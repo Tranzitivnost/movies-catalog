@@ -17,7 +17,9 @@ export function HomePage() {
       className={styles.container}
     >
       <PageHeader position="absolute" />
-      {firstMovie && <PosterMovie movie={firstMovie} />}
+      {firstMovie && (
+        <PosterMovie movie={firstMovie} className={styles.posterContainer} />
+      )}
       <MoviesList title="Popular movies for you" movies={popularMovies} />
       <PageFooter />
     </Container>
