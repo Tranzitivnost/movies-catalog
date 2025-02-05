@@ -20,8 +20,8 @@ interface Props
 
 export function PosterMovie({ movie, className }: Props) {
   const sentences = movie.overview
-    .split(".")
-    .map((sentence, index) => <p key={index}>{sentence}</p>)
+    ?.match(/[^.!?]+[.!?]+|\w+$/g)
+    ?.map((sentence, index) => <p key={index}>{sentence.trim()}</p>)
 
   return (
     <Container

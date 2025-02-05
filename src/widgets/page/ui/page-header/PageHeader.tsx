@@ -12,12 +12,18 @@ interface Props
     HTMLDivElement
   > {
   className?: string
-  position?: string
+
+  positionAbsolute?: boolean
 }
 
-export function PageHeader({ position = "absolute" }: Props) {
+export function PageHeader({ positionAbsolute }: Props) {
   return (
-    <header className={clsx(styles.header, styles[position])}>
+    <header
+      className={clsx([
+        styles.header,
+        { [styles.positionAbsolute]: positionAbsolute },
+      ])}
+    >
       <Image src={Logo} alt="logo" />
       <Container container justifyBetween className={styles.buttonContainer}>
         <Link href="#" className={styles.linkDecoration}>

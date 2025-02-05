@@ -16,7 +16,7 @@ export function HomePage() {
       alignCenter
       className={styles.container}
     >
-      <PageHeader position="absolute" />
+      <PageHeader positionAbsolute />
       {firstMovie && (
         <PosterMovie movie={firstMovie} className={styles.posterContainer} />
       )}

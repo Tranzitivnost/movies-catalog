@@ -3,7 +3,7 @@ interface Props
     React.AnchorHTMLAttributes<HTMLAnchorElement>,
     HTMLAnchorElement
   > {
-  children?: React.ReactNode
+  children: React.ReactNode
   href: string
   target?: string
   className?: string
