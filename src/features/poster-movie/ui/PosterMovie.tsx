@@ -20,7 +20,7 @@ interface Props
 
 export function PosterMovie({ movie, className }: Props) {
   const sentences = movie.overview
-    ?.match(/[^.!?]+[.!?]+|\w+$/g)
+    .match(/[^.!?]+[.!?]+|\w+$/g)
     ?.map((sentence, index) => <p key={index}>{sentence.trim()}</p>)
 
   return (
@@ -39,20 +39,14 @@ export function PosterMovie({ movie, className }: Props) {
         className={clsx(styles.generalContainer, className)}
       >
         <Container className={styles.gradient} />
-        <Container
-          container
-          flexDirectionColumn
-          justifyCenter
-          alignCenter
-          className={styles.generalMovie}
-        >
-          <Image
-            className={styles["movie-img"]}
-            src={movie.backdrop_path}
-            alt={movie.title}
-            key={movie.id}
-          />
-        </Container>
+
+        <Image
+          className={styles["movie-img"]}
+          src={movie.backdrop_path}
+          alt={movie.title}
+          key={movie.id}
+        />
+
         <Container
           container
           flexDirectionColumn

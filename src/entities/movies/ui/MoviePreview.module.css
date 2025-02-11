@@ -1,13 +1,9 @@
-.container {
-  width: 280px;
-}
-
 .img {
   object-fit: cover;
   object-position: top;
   width: 312px;
   height: 312px;
-  overflow: hidden;
+
   border-radius: 16px;
 }
 

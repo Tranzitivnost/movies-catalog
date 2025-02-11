@@ -23,7 +23,7 @@ export function MoviesList({ movies, title }: Props) {
         {movies.length > 0 ? (
           movies.map(movie => <MoviePreview movie={movie} key={movie.id} />)
         ) : (
-          <Text className={styles.warning} children="No available films" />
+          <Text className={styles.warning}>No available films</Text>
         )}
       </Container>
     </Container>
