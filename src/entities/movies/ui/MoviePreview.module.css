@@ -1,7 +1,40 @@
-.container {
-  width: 150px;
+.img {
+  object-fit: cover;
+  object-position: top;
+  width: 312px;
+  height: 312px;
+
+  border-radius: 16px;
 }
 
-.img {
-  width: 100%;
+.movieTitle {
+  color: rgb(249, 249, 249);
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.5%;
+  text-align: left;
+  padding-top: 12px;
+}
+
+.imgStar {
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
+  margin-right: 8px;
+}
+
+.popularity {
+  color: rgb(120, 130, 138);
+  font-family: Rubik;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.5%;
+  text-align: left;
+}
+
+.starContainer {
+  margin-top: 8px;
 }

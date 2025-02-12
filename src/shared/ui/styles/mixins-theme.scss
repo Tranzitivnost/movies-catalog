@@ -1,42 +1,14 @@
 @mixin applyTheme(
-  $bg-primary,
-  $bg-secondary,
-  $bg-third,
-  $color-primary,
-  $color-secondary,
-  $color-toggle
+  $ff-primary,
+  $ff-secondary,
+  $fs-largest,
+  $fs-large,
+  $fs-medium,
+  $fs-small,
+  $fs-mini
 ) {
-  .color-scheme-primary {
-    background-color: $bg-primary;
-    color: $color-primary;
-  }
-
-  .color-scheme-secondary {
-    background-color: $bg-secondary;
-    color: $bg-secondary;
-  }
-
-  .color-scheme-third {
-    background-color: $bg-third;
-    color: $color-primary;
-  }
-
-  .color-scheme-third-hover {
-    &:hover {
-      box-shadow: inset 0px 2px 10px 0px $bg-secondary;
-      border: 1px solid $bg-secondary;
-    }
-  }
-
-  .typography-primary {
-    color: $color-primary;
-  }
-
-  .typography-secondary {
-    color: $color-secondary;
-  }
-
-  .color-toggle-scheme {
-    background-color: $color-toggle;
+  .scheme-primary-large {
+    font-family: $ff-primary;
+    font-size: $fs-large;
   }
 }

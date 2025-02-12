@@ -6,7 +6,8 @@ interface Props
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
   > {
-  children: React.ReactNode
+  children?: React.ReactNode
+  container?: boolean
   justifyStart?: boolean
   justifyCenter?: boolean
   justifyEnd?: boolean
@@ -14,8 +15,9 @@ interface Props
   alignCenter?: boolean
   alignEnd?: boolean
   flexDirectionColumn?: boolean
-  justifyContentCenter?: boolean
+  justifyBetween?: boolean
   flexWrap?: boolean
+  justifyAround?: boolean
   className?: string
   gap?: string
 }
@@ -23,6 +25,7 @@ interface Props
 export const Container = ({
   className,
   children,
+  container,
   justifyStart,
   justifyCenter,
   justifyEnd,
@@ -30,8 +33,9 @@ export const Container = ({
   alignCenter,
   alignEnd,
   flexDirectionColumn,
-  justifyContentCenter,
+  justifyBetween,
   flexWrap,
+  justifyAround,
   gap,
   ...rest
 }: Props) => {
@@ -44,6 +48,7 @@ export const Container = ({
         styles.container,
         className,
         {
+          [styles.container]: container,
           [styles.justifyStart]: justifyStart,
           [styles.justifyCenter]: justifyCenter,
           [styles.justifyEnd]: justifyEnd,
@@ -51,8 +56,9 @@ export const Container = ({
           [styles.alignCenter]: alignCenter,
           [styles.alignEnd]: alignEnd,
           [styles.flexDirectionColumn]: flexDirectionColumn,
-          [styles.justifyContentCenter]: justifyContentCenter,
+          [styles.justifyBetween]: justifyBetween,
           [styles.flexWrap]: flexWrap,
+          [styles.justifyAround]: justifyAround,
         },
       ])}
     >

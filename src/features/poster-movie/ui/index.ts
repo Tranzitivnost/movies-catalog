@@ -1,0 +1,1 @@
+export { PosterMovie } from "./PosterMovie"

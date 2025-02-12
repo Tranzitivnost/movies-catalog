@@ -1,0 +1,91 @@
+.posterContainer {
+  width: 100%;
+}
+.generalContainer {
+  position: relative;
+  width: 100%;
+}
+
+.gradient {
+  width: 100%;
+  height: 648px;
+  display: flex;
+  background: linear-gradient(
+    -0.55deg,
+    rgb(13, 12, 15) 0.737%,
+    rgba(13, 12, 15, 0.85) 28.516%,
+    rgba(13, 12, 15, 0) 48.816%,
+    rgba(13, 12, 15, 0.28) 70.719%,
+    rgb(13, 12, 15) 103.306%
+  );
+  position: absolute;
+  z-index: 2;
+}
+
+.movie-img {
+  width: 100%;
+  height: 648px;
+  object-position: center;
+  object-fit: cover;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.titleContainer {
+  position: relative;
+  z-index: 3;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 64px 242px 64px 242px;
+}
+
+.movie-title {
+  color: rgb(255, 255, 255);
+  font-family: Rubik;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.5%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.information {
+  color: rgb(156, 164, 171);
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.5%;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.summary {
+  box-sizing: border-box;
+  padding: 0px 242px 40px 242px;
+  width: 100%;
+}
+
+.storyTitle {
+  color: rgb(249, 249, 249);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.5%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.storyText {
+  color: rgb(156, 164, 171);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.5%;
+  text-align: left;
+}

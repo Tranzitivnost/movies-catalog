@@ -1,0 +1,19 @@
+.addButton {
+  width: 215px;
+  height: 46px;
+  text-align: center;
+
+  padding: 12px 24px 12px 24px;
+  margin-right: 24px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, rgb(0, 146, 93), rgb(0, 200, 140));
+
+  color: rgb(249, 249, 249);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.5%;
+}

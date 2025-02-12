@@ -7,7 +7,7 @@ interface Props
     HTMLDivElement
   > {
   children: React.ReactNode
-  className: string
+  className?: string
 }
 
 export const Text = ({ children, className, ...rest }: Props) => {
