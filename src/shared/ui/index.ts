@@ -5,7 +5,6 @@ export {
   THEMES,
   THEME_PREFIX,
 } from "./theme/useTheme";
-export * from "./theme/theme-switcher";
 export { Button } from "./components/Button";
 export { Avatar } from "./components/Avatar";
 export { Container } from "./components/Container";
