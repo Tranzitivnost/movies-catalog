@@ -1,0 +1,40 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run FSD check",
+      "type": "npm",
+      "script": "lint:fsd",
+      "problemMatcher": ["$eslint-stylish"]
+    },
+    {
+      "label": "Run Dev Server",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "dev"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Build Project",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Fix Format Errors",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "format"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Fix Linter Errors",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "lint:fix"]
+    }
+  ]
+}

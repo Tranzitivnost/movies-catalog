@@ -3,13 +3,13 @@ import clsx from "clsx"
 import { useState } from "react"
 
 interface Props {
-  defaultValue: boolean
+  defaultChecked: boolean
   onChange: (value: boolean) => void
   className?: string
 }
 
-export const Switch = ({ onChange, defaultValue, className }: Props) => {
-  const [isChecked, setIsChecked] = useState(defaultValue)
+export const Switch = ({ onChange, defaultChecked, className }: Props) => {
+  const [isChecked, setIsChecked] = useState(defaultChecked)
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked)
     onChange(event.target.checked)
