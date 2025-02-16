@@ -1,15 +1,15 @@
-import { API_READ_ACCESS_TOKEN } from "@/../config"
+import { API_READ_ACCESS_TOKEN } from "@/../config";
 
-const BASE_URL = `https://api.themoviedb.org/3`
+const BASE_URL = `https://api.themoviedb.org/3`;
 
-type RequestType = "GET" | "POST" | "PUT" | "DELETE" | "PATCH" | "OPTIONS"
+type RequestType = "GET" | "POST" | "PUT" | "DELETE" | "PATCH" | "OPTIONS";
 
 type Response<FieldType> = {
-  page: number
-  results: FieldType[]
-  total_pages: number
-  total_results: number
-}
+  page: number;
+  results: FieldType[];
+  total_pages: number;
+  total_results: number;
+};
 
 export async function apiRequest<FieldType, BodyType = unknown>(
   url: string,
@@ -18,7 +18,7 @@ export async function apiRequest<FieldType, BodyType = unknown>(
   options?: RequestInit,
 ): Promise<Response<FieldType>> {
   if (method === "GET") {
-    url = `${url}?${new URLSearchParams(body as Record<string, string>).toString()}`
+    url = `${url}?${new URLSearchParams(body as Record<string, string>).toString()}`;
   }
 
   const response = await fetch(`${BASE_URL}${url}`, {
@@ -29,7 +29,7 @@ export async function apiRequest<FieldType, BodyType = unknown>(
     },
     body: method === "GET" ? undefined : JSON.stringify(body),
     ...options,
-  })
+  });
 
-  return await response.json()
+  return await response.json();
 }

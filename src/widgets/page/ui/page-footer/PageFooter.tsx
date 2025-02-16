@@ -1,7 +1,7 @@
-import { Container, Header } from "@shared/ui"
-import styles from "./PageFooter.module.css"
-import { Link } from "@shared/ui"
-import { Text } from "@shared/ui"
+import { Container, Header } from "@shared/ui";
+import styles from "./PageFooter.module.css";
+import { Link } from "@shared/ui";
+import { Text } from "@shared/ui";
 
 export function PageFooter() {
   return (
@@ -58,5 +58,5 @@ export function PageFooter() {
         <Header className={styles.secondTitle}>© 2025</Header>
       </Container>
     </Container>
-  )
+  );
 }

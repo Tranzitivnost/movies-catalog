@@ -1,1 +1,1 @@
-export type { ErrorType } from "./errorTypes"
+export type { ErrorType } from "./errorTypes";

@@ -1,1 +1,1 @@
-export { makeStore, store } from "./store"
+export { makeStore, store } from "./store";

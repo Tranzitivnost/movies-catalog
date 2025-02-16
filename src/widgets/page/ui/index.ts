@@ -1,2 +1,2 @@
-export { PageHeader } from "./page-header"
-export { PageFooter } from "./page-footer"
+export { PageHeader } from "./page-header";
+export { PageFooter } from "./page-footer";

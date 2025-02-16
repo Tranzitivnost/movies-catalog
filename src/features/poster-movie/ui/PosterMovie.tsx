@@ -1,27 +1,27 @@
-import styles from "./PosterMovie.module.css"
-import type { Movie } from "@/shared/api"
-import { Container } from "@shared/ui"
-import { Image } from "@/shared/ui"
-import { Header } from "@shared/ui"
-import { LikeButton } from "@shared/ui"
-import { AddWatchListButton } from "@shared/ui"
-import { Text } from "@shared/ui"
-import clsx from "clsx"
+import styles from "./PosterMovie.module.css";
+import type { Movie } from "@/shared/api";
+import { Container } from "@shared/ui";
+import { Image } from "@/shared/ui";
+import { Header } from "@shared/ui";
+import { LikeButton } from "@shared/ui";
+import { AddWatchListButton } from "@shared/ui";
+import { Text } from "@shared/ui";
+import clsx from "clsx";
 
 interface Props
   extends React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
   > {
-  movie: Movie
-  children?: React.ReactNode
-  className?: string
+  movie: Movie;
+  children?: React.ReactNode;
+  className?: string;
 }
 
 export function PosterMovie({ movie, className }: Props) {
   const sentences = movie.overview
     .match(/[^.!?]+[.!?]+|\w+$/g)
-    ?.map((sentence, index) => <p key={index}>{sentence.trim()}</p>)
+    ?.map((sentence, index) => <p key={index}>{sentence.trim()}</p>);
 
   return (
     <Container
@@ -76,5 +76,5 @@ export function PosterMovie({ movie, className }: Props) {
         <Text className={styles.storyText}>{sentences}</Text>
       </Container>
     </Container>
-  )
+  );
 }

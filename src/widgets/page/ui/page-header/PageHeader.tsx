@@ -1,19 +1,19 @@
-import styles from "./PageHeader.module.css"
-import { Image } from "@/shared/ui"
-import Logo from "@/shared/ui/assets/Component-logo.svg"
-import { Container } from "@/shared/ui"
-import Bell from "@/shared/ui/assets/Icon_Outline_bell.svg"
-import Search from "@/shared/ui/assets/Icon_Outline_search.svg"
-import { Link } from "@/shared/ui"
-import clsx from "clsx"
+import styles from "./PageHeader.module.css";
+import { Image } from "@/shared/ui";
+import Logo from "@/shared/ui/assets/Component-logo.svg";
+import { Container } from "@/shared/ui";
+import Bell from "@/shared/ui/assets/Icon_Outline_bell.svg";
+import Search from "@/shared/ui/assets/Icon_Outline_search.svg";
+import { Link } from "@/shared/ui";
+import clsx from "clsx";
 interface Props
   extends React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
   > {
-  className?: string
+  className?: string;
 
-  positionAbsolute?: boolean
+  positionAbsolute?: boolean;
 }
 
 export function PageHeader({ positionAbsolute }: Props) {
@@ -48,5 +48,5 @@ export function PageHeader({ positionAbsolute }: Props) {
         </Link>
       </Container>
     </header>
-  )
+  );
 }

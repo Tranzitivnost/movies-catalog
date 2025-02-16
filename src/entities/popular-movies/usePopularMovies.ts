@@ -1,17 +1,17 @@
-import { selectPopularMovies } from "."
+import { selectPopularMovies } from ".";
 
-import { useAppSelector, useAppDispatch } from "@shared/lib"
+import { useAppSelector, useAppDispatch } from "@shared/lib";
 
-import { fetchPopularMovies } from "."
-import { useEffect } from "react"
-import type { GetPopularMoviesQueryType } from "@shared/api"
+import { fetchPopularMovies } from ".";
+import { useEffect } from "react";
+import type { GetPopularMoviesQueryType } from "@shared/api";
 
 export function usePopularMovies(options?: GetPopularMoviesQueryType) {
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(fetchPopularMovies(options))
-  }, [])
+    dispatch(fetchPopularMovies(options));
+  }, []);
 
-  return useAppSelector(selectPopularMovies)
+  return useAppSelector(selectPopularMovies);
 }

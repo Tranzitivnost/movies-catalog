@@ -1,6 +1,6 @@
 export interface ErrorType {
-  readonly message: string
+  readonly message: string;
   readonly response: {
-    readonly status?: string
-  }
+    readonly status?: string;
+  };
 }

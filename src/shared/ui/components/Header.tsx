@@ -1,17 +1,17 @@
-import styles from "./Header.module.css"
-import clsx from "clsx"
+import styles from "./Header.module.css";
+import clsx from "clsx";
 
-type TSize = "s" | "m" | "l" | "xl"
+type TSize = "s" | "m" | "l" | "xl";
 
-type TColor = "blue" | "white" | "yellow"
+type TColor = "blue" | "white" | "yellow";
 interface Props
   extends React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLHeadingElement>,
     HTMLHeadingElement
   > {
-  children: React.ReactNode
-  size?: TSize
-  color?: TColor
+  children: React.ReactNode;
+  size?: TSize;
+  color?: TColor;
 }
 
 export const Header = ({
@@ -20,10 +20,10 @@ export const Header = ({
   children,
   ...rest
 }: Props) => {
-  const headerStyles = clsx(styles[`color-${color}`], styles[`text-${size}`])
+  const headerStyles = clsx(styles[`color-${color}`], styles[`text-${size}`]);
   return (
     <h2 className={headerStyles} {...rest}>
       {children}
     </h2>
-  )
-}
+  );
+};

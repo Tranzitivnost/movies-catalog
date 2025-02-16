@@ -1,20 +1,20 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit"
-import { setupListeners } from "@reduxjs/toolkit/query"
-import { popularMoviesSliceReducer } from "@entities/popular-movies"
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { setupListeners } from "@reduxjs/toolkit/query";
+import { popularMoviesSliceReducer } from "@entities/popular-movies";
 
 const rootReducer = combineReducers({
   popularMovies: popularMoviesSliceReducer,
-})
+});
 
-type RootState = ReturnType<typeof rootReducer>
+type RootState = ReturnType<typeof rootReducer>;
 
 export const makeStore = (preloadedState?: Partial<RootState>) => {
   const store = configureStore({
     reducer: rootReducer,
     preloadedState,
-  })
-  setupListeners(store.dispatch)
-  return store
-}
+  });
+  setupListeners(store.dispatch);
+  return store;
+};
 
-export const store = makeStore()
+export const store = makeStore();
