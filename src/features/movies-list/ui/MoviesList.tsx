@@ -1,12 +1,12 @@
-import { Container, Header, Text } from "@shared/ui"
-import { MoviePreview } from "@entities/movies"
-import styles from "./MoviesList.module.css"
-import type { Movie } from "@/shared/api"
+import { Container, Header, Text } from "@shared/ui";
+import { MoviePreview } from "@entities/movies";
+import styles from "./MoviesList.module.css";
+import type { Movie } from "@/shared/api";
 
 type Props = {
-  movies: Movie[]
-  title: string
-}
+  movies: Movie[];
+  title: string;
+};
 
 export function MoviesList({ movies, title }: Props) {
   return (
@@ -27,5 +27,5 @@ export function MoviesList({ movies, title }: Props) {
         )}
       </Container>
     </Container>
-  )
+  );
 }

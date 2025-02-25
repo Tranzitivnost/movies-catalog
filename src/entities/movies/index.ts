@@ -1,2 +1,2 @@
-export { mapMovie } from "./model/mapMovie"
-export { MoviePreview } from "./ui"
+export { mapMovie } from "./model/mapMovie";
+export { MoviePreview } from "./ui";

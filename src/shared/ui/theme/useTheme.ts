@@ -1,68 +1,68 @@
-import { LocalStorage } from "../../lib/storage/LocalStorage"
+import { LocalStorage } from "@/shared/lib";
 
 export enum Theme {
   Dark = "dark",
   Light = "light",
 }
-export const DEFAULT_THEME = Theme.Dark
-export const THEMES: Theme[] = [Theme.Dark, Theme.Light]
-export const THEME_PREFIX = "current-theme"
+export const DEFAULT_THEME = Theme.Dark;
+export const THEMES: Theme[] = [Theme.Dark, Theme.Light];
+export const THEME_PREFIX = "current-theme";
 
-const THEME_NAMESPACE_KEY = "app-theme"
-const THEME_KEY = "current-theme"
-const REG_EXP = new RegExp(`${THEME_PREFIX}\\w+`)
+const THEME_NAMESPACE_KEY = "app-theme";
+const THEME_KEY = "current-theme";
+const REG_EXP = new RegExp(`${THEME_PREFIX}\\w+`);
 
 export function useTheme() {
-  const themeCache = new LocalStorage(THEME_NAMESPACE_KEY)
+  const themeCache = new LocalStorage(THEME_NAMESPACE_KEY);
 
   function getClassNameFromTheme(theme: Theme) {
-    return `${THEME_PREFIX}-${theme}`
+    return `${THEME_PREFIX}-${theme}`;
   }
 
   function getThemeFromClassName(className: string) {
-    return className.split("-").at(-1)
+    return className.split("-").at(-1);
   }
 
   function getTheme() {
-    const currentTheme = document.body.className.match(REG_EXP)?.[0]
-    const themeFromCache = themeCache.getItem(THEME_KEY)
+    const currentTheme = document.body.className.match(REG_EXP)?.[0];
+    const themeFromCache = themeCache.getItem(THEME_KEY);
 
     return getThemeFromClassName(
       currentTheme || themeFromCache || DEFAULT_THEME,
-    )
+    );
   }
 
   function setTheme(theme: Theme) {
     if (!THEMES.includes(theme)) {
-      return
+      return;
     }
 
-    const themeClassName = getClassNameFromTheme(theme)
-    const themeClassNames = THEMES.map(getClassNameFromTheme)
+    const themeClassName = getClassNameFromTheme(theme);
+    const themeClassNames = THEMES.map(getClassNameFromTheme);
 
     for (const className of themeClassNames) {
-      document.body.classList.remove(className)
+      document.body.classList.remove(className);
     }
 
-    document.body.classList.add(themeClassName)
+    document.body.classList.add(themeClassName);
 
-    themeCache.setItem(THEME_KEY, theme)
+    themeCache.setItem(THEME_KEY, theme);
   }
 
   function getThemeFromCache(): Theme | null {
-    return themeCache.getItem(THEME_KEY) as Theme | null
+    return themeCache.getItem(THEME_KEY) as Theme | null;
   }
 
   function restoreTheme() {
-    const themeFromCache = getThemeFromCache()
+    const themeFromCache = getThemeFromCache();
 
     if (!themeFromCache || !THEMES.includes(themeFromCache)) {
-      setTheme(DEFAULT_THEME)
-      return
+      setTheme(DEFAULT_THEME);
+      return;
     }
 
-    setTheme(themeFromCache)
+    setTheme(themeFromCache);
   }
 
-  return { getTheme, setTheme, restoreTheme }
+  return { getTheme, setTheme, restoreTheme };
 }

@@ -1,12 +1,12 @@
-import styles from "./Button.module.css"
-import clsx from "clsx"
+import styles from "./Button.module.css";
+import clsx from "clsx";
 
 interface Props
   extends React.DetailedHTMLProps<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export const Button = ({ children, className, ...rest }: Props) => {
@@ -14,5 +14,5 @@ export const Button = ({ children, className, ...rest }: Props) => {
     <button className={clsx([className, styles.button])} {...rest}>
       {children}
     </button>
-  )
-}
+  );
+};

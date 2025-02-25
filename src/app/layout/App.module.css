@@ -1,0 +1,4 @@
+.container {
+  composes: scheme-primary from global;
+  overflow-x: hidden;
+}

@@ -1,10 +1,14 @@
+.switch {
+  composes: scheme-tetriary from global;
+}
+
 .checkbox {
   opacity: 0;
 }
 
 .checkbox-label {
-  width: 40px;
-  height: 16px;
+  width: 58px;
+  height: 28px;
   border-radius: 50px;
   position: relative;
   padding: 5px;
@@ -27,9 +31,5 @@
 }
 
 .checkbox:checked + .checkbox-label .ball {
-  transform: translateX(24px);
-}
-
-.switch {
-  composes: color-toggle-scheme from global;
+  transform: translateX(31px);
 }

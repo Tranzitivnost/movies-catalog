@@ -1,13 +1,13 @@
-import styles from "./Text.module.css"
-import clsx from "clsx"
+import styles from "./Text.module.css";
+import clsx from "clsx";
 
 interface Props
   extends React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
   > {
-  children: React.ReactNode
-  className?: string
+  children: React.ReactNode;
+  className?: string;
 }
 
 export const Text = ({ children, className, ...rest }: Props) => {
@@ -15,5 +15,5 @@ export const Text = ({ children, className, ...rest }: Props) => {
     <div className={clsx([styles.text, className])} {...rest}>
       {children}
     </div>
-  )
-}
+  );
+};

@@ -1,0 +1,26 @@
+@import "./theme-variables.scss";
+@import "./theme-mixins.scss";
+
+body {
+  &.current-theme-light {
+    @include applyTheme(
+      $light-theme-background-primary,
+      $light-theme-background-secondary,
+      $light-theme-background-tetriary-color,
+      $light-theme-color-primary,
+      $light-theme-color-secondary,
+      $light-theme-color-tertiary
+    );
+  }
+
+  &.current-theme-dark {
+    @include applyTheme(
+      $dark-theme-background-primary,
+      $dark-theme-background-secondary,
+      $dark-theme-background-tetriary-color,
+      $dark-theme-color-primary,
+      $dark-theme-color-secondary,
+      $dark-theme-color-tertiary
+    );
+  }
+}

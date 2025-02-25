@@ -4,5 +4,5 @@ export const Image: React.FunctionComponent<
     HTMLImageElement
   >
 > = ({ src, alt, className, ...rest }) => {
-  return <img className={className} {...rest} src={src} alt={alt} />
-}
+  return <img className={className} {...rest} src={src} alt={alt} />;
+};

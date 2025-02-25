@@ -1,1 +1,1 @@
-export { PosterMovie } from "./ui"
+export { PosterMovie } from "./ui";

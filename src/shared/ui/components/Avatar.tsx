@@ -1,17 +1,17 @@
-import styles from "./Avatar.module.css"
-import clsx from "clsx"
+import styles from "./Avatar.module.css";
+import clsx from "clsx";
 
-type TSize = "s" | "m" | "l" | "xl"
+type TSize = "s" | "m" | "l" | "xl";
 
 interface Props
   extends React.DetailedHTMLProps<
     React.ImgHTMLAttributes<HTMLImageElement>,
     HTMLImageElement
   > {
-  src: string
-  size?: TSize
-  alt?: string
-  className?: string
+  src: string;
+  size?: TSize;
+  alt?: string;
+  className?: string;
 }
 
 export const Avatar: React.FunctionComponent<Props> = ({
@@ -21,6 +21,6 @@ export const Avatar: React.FunctionComponent<Props> = ({
   className,
   ...rest
 }) => {
-  const avatarStyles = clsx([className, styles[`img-${size}`]])
-  return <img className={avatarStyles} {...rest} src={src} alt={alt} />
-}
+  const avatarStyles = clsx([className, styles[`img-${size}`]]);
+  return <img className={avatarStyles} {...rest} src={src} alt={alt} />;
+};

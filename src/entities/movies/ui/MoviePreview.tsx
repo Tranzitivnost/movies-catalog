@@ -1,14 +1,14 @@
-import clsx from "clsx"
-import { Container, Header } from "@shared/ui"
-import styles from "./MoviePreview.module.css"
-import type { Movie } from "@shared/api"
-import Star from "@/shared/ui/assets/Star.svg"
-import { Image } from "@/shared/ui"
+import clsx from "clsx";
+import { Container, Header } from "@shared/ui";
+import styles from "./MoviePreview.module.css";
+import type { Movie } from "@shared/api";
+import Star from "@/shared/ui/assets/Star.svg";
+import { Image } from "@/shared/ui";
 
 type Props = {
-  movie: Movie
-  className?: string
-}
+  movie: Movie;
+  className?: string;
+};
 
 export function MoviePreview({ movie, className }: Props) {
   return (
@@ -24,5 +24,5 @@ export function MoviePreview({ movie, className }: Props) {
         <Header className={styles.popularity}>{movie.vote_average}</Header>
       </Container>
     </Container>
-  )
+  );
 }

@@ -1,25 +1,25 @@
-import styles from "./Container.module.css"
-import clsx from "clsx"
+import styles from "./Container.module.css";
+import clsx from "clsx";
 
 interface Props
   extends React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
   > {
-  children?: React.ReactNode
-  container?: boolean
-  justifyStart?: boolean
-  justifyCenter?: boolean
-  justifyEnd?: boolean
-  alignStart?: boolean
-  alignCenter?: boolean
-  alignEnd?: boolean
-  flexDirectionColumn?: boolean
-  justifyBetween?: boolean
-  flexWrap?: boolean
-  justifyAround?: boolean
-  className?: string
-  gap?: string
+  children?: React.ReactNode;
+  container?: boolean;
+  justifyStart?: boolean;
+  justifyCenter?: boolean;
+  justifyEnd?: boolean;
+  alignStart?: boolean;
+  alignCenter?: boolean;
+  alignEnd?: boolean;
+  flexDirectionColumn?: boolean;
+  justifyBetween?: boolean;
+  flexWrap?: boolean;
+  justifyAround?: boolean;
+  className?: string;
+  gap?: string;
 }
 
 export const Container = ({
@@ -39,7 +39,7 @@ export const Container = ({
   gap,
   ...rest
 }: Props) => {
-  const style = { gap: gap ?? "0", ...rest.style } as React.CSSProperties
+  const style = { gap: gap ?? "0", ...rest.style } as React.CSSProperties;
   return (
     <div
       {...rest}
@@ -64,5 +64,5 @@ export const Container = ({
     >
       {children}
     </div>
-  )
-}
+  );
+};
