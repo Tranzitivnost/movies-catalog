@@ -17,7 +17,7 @@
 }
 
 .title {
-  color: rgb(255, 255, 255);
+  composes: text-primary from global;
   font-family: Rubik;
   font-size: 40px;
   font-weight: 500;
@@ -27,7 +27,7 @@
 }
 
 .secondTitle {
-  color: rgb(255, 255, 255);
+  composes: text-primary from global;
   font-family: Rubik;
   font-size: 14px;
   font-weight: 400;
@@ -39,7 +39,7 @@
 }
 
 .linkDecoration {
-  color: rgb(255, 255, 255);
+  composes: text-primary from global;
   font-family: Rubik;
   font-size: 20px;
   font-weight: 400;
@@ -50,7 +50,7 @@
 }
 
 .text {
-  color: rgb(255, 255, 255);
+  composes: text-primary from global;
   font-family: Rubik;
   font-size: 20px;
   font-weight: 400;

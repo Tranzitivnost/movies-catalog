@@ -1,7 +1,7 @@
 @mixin applyTheme(
   $bg-primary,
   $bg-secondary,
-  $bg-tetriary,
+  $bg-gradient,
   $color-primary,
   $color-secondary,
   $color-tertiary
@@ -16,9 +16,8 @@
     color: $color-secondary;
   }
 
-  .scheme-tetriary {
-    background-color: $bg-tetriary;
-    color: $color-tertiary;
+  .scheme-gradient {
+    background: $bg-gradient;
   }
 
   .text-primary {
@@ -41,7 +40,7 @@
     background-color: $bg-secondary;
   }
 
-  .bg-tetriary {
-    background-color: $bg-tetriary;
+  .bg-gradient {
+    background-color: $bg-gradient;
   }
 }

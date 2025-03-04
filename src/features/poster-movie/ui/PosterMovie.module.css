@@ -10,14 +10,7 @@
   width: 100%;
   height: 648px;
   display: flex;
-  background: linear-gradient(
-    -0.55deg,
-    rgb(13, 12, 15) 0.737%,
-    rgba(13, 12, 15, 0.85) 28.516%,
-    rgba(13, 12, 15, 0) 48.816%,
-    rgba(13, 12, 15, 0.28) 70.719%,
-    rgb(13, 12, 15) 103.306%
-  );
+  composes: scheme-gradient from global;
   position: absolute;
   z-index: 2;
 }
@@ -42,7 +35,7 @@
 }
 
 .movie-title {
-  color: rgb(255, 255, 255);
+  composes: text-primary from global;
   font-family: Rubik;
   font-size: 32px;
   font-weight: 700;
@@ -53,7 +46,7 @@
 }
 
 .information {
-  color: rgb(156, 164, 171);
+  composes: text-tertiary from global;
   font-family: Rubik;
   font-size: 14px;
   font-weight: 400;
@@ -70,7 +63,7 @@
 }
 
 .storyTitle {
-  color: rgb(249, 249, 249);
+  composes: text-primary from global;
   font-family: Rubik;
   font-size: 24px;
   font-weight: 700;
@@ -81,7 +74,7 @@
 }
 
 .storyText {
-  color: rgb(156, 164, 171);
+  composes: text-tertiary from global;
   font-family: Inter;
   font-size: 16px;
   font-weight: 600;
