@@ -6,10 +6,10 @@ body {
     @include applyTheme(
       $light-theme-background-primary,
       $light-theme-background-secondary,
-      $light-theme-background-tetriary-color,
-      $light-theme-color-primary,
-      $light-theme-color-secondary,
-      $light-theme-color-tertiary
+      $light-theme-background-gradient,
+      $light-text-color-primary,
+      $light-text-color-secondary,
+      $light-text-color-tertiary
     );
   }
 
@@ -17,10 +17,10 @@ body {
     @include applyTheme(
       $dark-theme-background-primary,
       $dark-theme-background-secondary,
-      $dark-theme-background-tetriary-color,
-      $dark-theme-color-primary,
-      $dark-theme-color-secondary,
-      $dark-theme-color-tertiary
+      $dark-theme-background-gradient,
+      $dark-text-color-primary,
+      $dark-text-color-secondary,
+      $dark-text-color-tertiary
     );
   }
 }

@@ -8,7 +8,7 @@
 }
 
 .movieTitle {
-  color: rgb(249, 249, 249);
+  composes: text-primary from global;
   font-family: Rubik;
   font-size: 16px;
   font-weight: 700;
