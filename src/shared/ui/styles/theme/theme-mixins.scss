@@ -1,46 +1,41 @@
 @mixin applyTheme(
   $bg-primary,
-  $bg-secondary,
   $bg-gradient,
-  $color-primary,
-  $color-secondary,
-  $color-tertiary
+  $text-color-primary,
+  $text-color-secondary,
+  $border-color,
+  $icon-filter,
+  $container-border
 ) {
   .scheme-primary {
     background-color: $bg-primary;
-    color: $color-primary;
+    color: $text-color-primary;
   }
 
   .scheme-secondary {
-    background-color: $bg-secondary;
-    color: $color-secondary;
+    border: $border-color;
+    color: $text-color-primary;
   }
 
   .scheme-gradient {
     background: $bg-gradient;
   }
-
+  .container-border {
+    border-top: $container-border;
+  }
   .text-primary {
-    color: $color-primary;
+    color: $text-color-primary;
   }
 
   .text-secondary {
-    color: $color-secondary;
-  }
-
-  .text-tertiary {
-    color: $color-tertiary;
-  }
-
-  .bg-primary {
-    background-color: $bg-primary;
-  }
-
-  .bg-secondary {
-    background-color: $bg-secondary;
+    color: $text-color-secondary;
   }
 
   .bg-gradient {
     background-color: $bg-gradient;
+  }
+
+  .scheme-icon {
+    filter: $icon-filter;
   }
 }

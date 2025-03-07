@@ -46,10 +46,10 @@
 }
 
 .information {
-  composes: text-tertiary from global;
+  composes: text-secondary from global;
   font-family: Rubik;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 22px;
   letter-spacing: 0.5%;
   text-align: left;
@@ -74,7 +74,7 @@
 }
 
 .storyText {
-  composes: text-tertiary from global;
+  composes: text-secondary from global;
   font-family: Inter;
   font-size: 16px;
   font-weight: 600;

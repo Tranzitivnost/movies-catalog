@@ -5,7 +5,7 @@
 
   padding: 70px 242px 40px 242px;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  composes: container-border from global;
 }
 
 .titleContainer {

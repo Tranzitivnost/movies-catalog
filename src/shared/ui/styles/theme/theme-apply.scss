@@ -5,22 +5,24 @@ body {
   &.current-theme-light {
     @include applyTheme(
       $light-theme-background-primary,
-      $light-theme-background-secondary,
       $light-theme-background-gradient,
       $light-text-color-primary,
       $light-text-color-secondary,
-      $light-text-color-tertiary
+      $light-theme-border,
+      $light-icon-filter,
+      $light-theme-container
     );
   }
 
   &.current-theme-dark {
     @include applyTheme(
       $dark-theme-background-primary,
-      $dark-theme-background-secondary,
       $dark-theme-background-gradient,
       $dark-text-color-primary,
       $dark-text-color-secondary,
-      $dark-text-color-tertiary
+      $dark-theme-border,
+      $dark-icon-filter,
+      $dark-theme-container
     );
   }
 }

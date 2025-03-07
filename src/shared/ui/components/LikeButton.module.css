@@ -11,10 +11,9 @@
   background: transparent;
   box-sizing: border-box;
 
-  border: 1px solid rgb(255, 255, 255);
   border-radius: 10px;
+  composes: scheme-secondary from global;
 
-  color: rgb(255, 255, 255);
   font-family: Inter;
   font-size: 14px;
   font-weight: 700;
@@ -24,11 +23,12 @@
 }
 
 .like-img {
+  composes: scheme-icon from global;
   margin-right: 10px;
 
   position: relative;
-  width: 18.67px;
-  height: 19.2px;
+  width: 19px;
+  height: 19px;
 
   top: 1.4px;
 }
