@@ -1,10 +1,10 @@
 .container {
   padding: 40px 242px 40px 242px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  composes: container-border from global;
 }
 
 .title {
-  color: rgb(249, 249, 249);
+  composes: text-primary from global;
   font-family: Rubik;
   font-size: 24px;
   font-weight: 700;
@@ -15,7 +15,7 @@
 }
 
 .warning {
-  color: rgb(249, 249, 249);
+  composes: text-primary from global;
   font-family: Rubik;
   font-size: 24px;
 }
