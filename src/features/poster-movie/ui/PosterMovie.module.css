@@ -35,8 +35,7 @@
 }
 
 .movie-title {
-  composes: text-primary from global;
-  font-family: Rubik;
+  composes: text-primary primary-font from global;
   font-size: 32px;
   font-weight: 700;
   line-height: 40px;
@@ -46,8 +45,7 @@
 }
 
 .information {
-  composes: text-secondary from global;
-  font-family: Rubik;
+  composes: text-secondary primary-font from global;
   font-size: 14px;
   font-weight: 500;
   line-height: 22px;
@@ -63,8 +61,7 @@
 }
 
 .storyTitle {
-  composes: text-primary from global;
-  font-family: Rubik;
+  composes: text-primary primary-font from global;
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
@@ -74,8 +71,7 @@
 }
 
 .storyText {
-  composes: text-secondary from global;
-  font-family: Inter;
+  composes: text-secondary secondary-font from global;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;

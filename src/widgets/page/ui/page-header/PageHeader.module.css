@@ -21,10 +21,10 @@
 }
 
 .linkDecoration {
+  composes: secondary-font from global;
   text-decoration: none;
   color: #ffffff;
 
-  font-family: Inter;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;

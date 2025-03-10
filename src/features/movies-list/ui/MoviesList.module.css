@@ -4,8 +4,7 @@
 }
 
 .title {
-  composes: text-primary from global;
-  font-family: Rubik;
+  composes: text-primary primary-font from global;
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
@@ -15,7 +14,6 @@
 }
 
 .warning {
-  composes: text-primary from global;
-  font-family: Rubik;
+  composes: text-primary primary-font from global;
   font-size: 24px;
 }

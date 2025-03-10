@@ -12,9 +12,8 @@
   box-sizing: border-box;
 
   border-radius: 10px;
-  composes: scheme-secondary from global;
+  composes: scheme-secondary secondary-font from global;
 
-  font-family: Inter;
   font-size: 14px;
   font-weight: 700;
   line-height: 22px;

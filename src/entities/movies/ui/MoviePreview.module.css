@@ -8,8 +8,7 @@
 }
 
 .movieTitle {
-  composes: text-primary from global;
-  font-family: Rubik;
+  composes: text-primary primary-font from global;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
@@ -26,8 +25,7 @@
 }
 
 .popularity {
-  composes: text-secondary from global;
-  font-family: Rubik;
+  composes: text-secondary primary-font from global;
   font-size: 12px;
   font-weight: 500;
   line-height: 20px;

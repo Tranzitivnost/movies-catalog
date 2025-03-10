@@ -1,4 +1,5 @@
 .addButton {
+  composes: secondary-font from global;
   width: 215px;
   height: 46px;
   text-align: center;
@@ -11,7 +12,7 @@
   background: linear-gradient(135deg, rgb(0, 146, 93), rgb(0, 200, 140));
 
   color: rgb(249, 249, 249);
-  font-family: Inter;
+
   font-size: 14px;
   font-weight: 700;
   line-height: 22px;
