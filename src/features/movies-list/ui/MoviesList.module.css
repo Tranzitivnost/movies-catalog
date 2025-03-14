@@ -4,16 +4,13 @@
 }
 
 .title {
-  composes: text-primary primary-font from global;
-  font-size: 24px;
+  composes: text-primary primary-font size-xl from global;
+
   font-weight: 700;
-  line-height: 32px;
-  letter-spacing: 0.5%;
   text-align: left;
   padding-bottom: 8px;
 }
 
 .warning {
-  composes: text-primary primary-font from global;
-  font-size: 24px;
+  composes: text-primary primary-font size-xl from global;
 }

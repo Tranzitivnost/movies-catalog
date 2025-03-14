@@ -7,10 +7,10 @@
 }
 
 .gradient {
+  composes: scheme-gradient from global;
   width: 100%;
   height: 648px;
   display: flex;
-  composes: scheme-gradient from global;
   position: absolute;
   z-index: 2;
 }
@@ -35,21 +35,16 @@
 }
 
 .movie-title {
-  composes: text-primary primary-font from global;
-  font-size: 32px;
+  composes: text-primary primary-font size-xxl from global;
   font-weight: 700;
-  line-height: 40px;
-  letter-spacing: 0.5%;
   text-align: left;
   margin-bottom: 20px;
 }
 
 .information {
-  composes: text-secondary primary-font from global;
-  font-size: 14px;
+  composes: text-secondary primary-font size-m from global;
   font-weight: 500;
-  line-height: 22px;
-  letter-spacing: 0.5%;
+  letter-spacing: 0.5px;
   text-align: left;
   margin-bottom: 24px;
 }
@@ -61,20 +56,15 @@
 }
 
 .storyTitle {
-  composes: text-primary primary-font from global;
-  font-size: 24px;
+  composes: text-primary primary-font size-xl from global;
   font-weight: 700;
-  line-height: 32px;
-  letter-spacing: 0.5%;
   text-align: left;
   margin-bottom: 20px;
 }
 
 .storyText {
-  composes: text-secondary secondary-font from global;
-  font-size: 16px;
+  composes: text-secondary secondary-font size-l from global;
   font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0.5%;
+
   text-align: left;
 }

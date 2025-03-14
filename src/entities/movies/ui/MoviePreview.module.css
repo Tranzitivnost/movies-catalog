@@ -3,16 +3,12 @@
   object-position: top;
   width: 312px;
   height: 312px;
-
   border-radius: 16px;
 }
 
 .movieTitle {
-  composes: text-primary primary-font from global;
-  font-size: 16px;
+  composes: text-primary primary-font size-l from global;
   font-weight: 700;
-  line-height: 24px;
-  letter-spacing: 0.5%;
   text-align: left;
   padding-top: 12px;
 }
@@ -25,11 +21,8 @@
 }
 
 .popularity {
-  composes: text-secondary primary-font from global;
-  font-size: 12px;
+  composes: text-secondary primary-font size-sm from global;
   font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0.5%;
   text-align: left;
 }
 

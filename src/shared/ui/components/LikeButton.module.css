@@ -12,12 +12,10 @@
   box-sizing: border-box;
 
   border-radius: 10px;
-  composes: scheme-secondary secondary-font from global;
+  composes: scheme-secondary secondary-font size-m from global;
 
-  font-size: 14px;
   font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0.5%;
+  letter-spacing: 0.2px;
   text-align: left;
 }
 

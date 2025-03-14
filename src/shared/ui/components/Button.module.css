@@ -1,9 +1,7 @@
 .button {
-  composes: color-scheme-third color-scheme-third-hover from global;
-  font-size: 14px;
+  composes: color-scheme-third color-scheme-third-hover size-m from global;
+
   font-weight: 500;
-  line-height: 25px;
-  letter-spacing: 0.2px;
   display: flex;
   height: 50px;
 
