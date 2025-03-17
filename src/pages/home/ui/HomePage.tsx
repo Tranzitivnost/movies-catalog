@@ -4,10 +4,13 @@ import styles from "./HomePage.module.css";
 import { usePopularMovies } from "@entities/popular-movies";
 import { PosterMovie } from "@/features/poster-movie";
 import { MoviesList } from "@/features/movies-list";
+import { ThemeToggle } from "@/features/theme-toggle";
 
 export function HomePage() {
   const { popularMovies } = usePopularMovies({ page: 1 });
   const firstMovie = popularMovies?.[0];
+  const { handleCheckboxChange, isCurrentThemeLight } = ThemeToggle();
+
   return (
     <Container
       container
@@ -16,7 +19,11 @@ export function HomePage() {
       alignCenter
       className={styles.container}
     >
-      <PageHeader positionAbsolute />
+      <PageHeader
+        onToggle={handleCheckboxChange}
+        defaultChecked={isCurrentThemeLight}
+        positionAbsolute
+      />
       {firstMovie && (
         <PosterMovie movie={firstMovie} className={styles.posterContainer} />
       )}

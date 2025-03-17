@@ -30,6 +30,8 @@
   cursor: pointer;
 }
 
-.iconContainer {
-  width: 70px;
+.custom_switch {
+  display: flex;
+  transform: scale(0.9);
+  transform-origin: top left;
 }

@@ -5,6 +5,7 @@ import { Container } from "@/shared/ui";
 import Bell from "@/shared/ui/assets/Icon_Outline_bell.svg";
 import Search from "@/shared/ui/assets/Icon_Outline_search.svg";
 import { Link } from "@/shared/ui";
+import { Switch } from "@/shared/ui";
 import clsx from "clsx";
 interface Props
   extends React.DetailedHTMLProps<
@@ -12,11 +13,16 @@ interface Props
     HTMLDivElement
   > {
   className?: string;
-
+  onToggle: (value: boolean) => void;
+  defaultChecked: boolean;
   positionAbsolute?: boolean;
 }
 
-export function PageHeader({ positionAbsolute }: Props) {
+export function PageHeader({
+  positionAbsolute,
+  onToggle,
+  defaultChecked,
+}: Props) {
   return (
     <header
       className={clsx([
@@ -39,13 +45,23 @@ export function PageHeader({ positionAbsolute }: Props) {
           Contact
         </Link>
       </Container>
-      <Container container justifyBetween className={styles.iconContainer}>
+      <Container
+        container
+        justifyBetween
+        alignCenter
+        className={styles.iconContainer}
+      >
         <Link href="#" className={styles.linkDecoration}>
           <Image src={Search} alt="button-search" />
         </Link>
-        <Link href="#" className={styles.linkDecoration}>
+        {/* <Link href="#" className={styles.linkDecoration}>
           <Image src={Bell} alt="button-bell" />
-        </Link>
+        </Link> */}
+        <Switch
+          onChange={onToggle}
+          className={styles.custom_switch}
+          defaultChecked={defaultChecked}
+        />
       </Container>
     </header>
   );
