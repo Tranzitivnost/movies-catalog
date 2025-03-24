@@ -7,7 +7,11 @@ import { MoviesList } from "@/features/movies-list";
 import { ThemeToggle } from "@/features/theme-toggle";
 
 export function HomePage() {
-  const { popularMovies } = usePopularMovies({ page: 1 });
+  const { popularMovies } = usePopularMovies({
+    page: 1,
+    sort_by: "vote_count.desc",
+    primary_release_year: "2025",
+  });
   const firstMovie = popularMovies?.[0];
   const { handleCheckboxChange, isCurrentThemeLight } = ThemeToggle();
 

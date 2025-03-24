@@ -9,7 +9,7 @@
 .gradient {
   composes: scheme-gradient from global;
   width: 100%;
-  height: 648px;
+  height: 100%;
   display: flex;
   position: absolute;
   z-index: 2;
@@ -17,8 +17,8 @@
 
 .movie-img {
   width: 100%;
-  height: 648px;
-  object-position: center;
+  height: 800px;
+  object-position: top;
   object-fit: cover;
 
   position: absolute;

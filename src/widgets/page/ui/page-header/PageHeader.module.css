@@ -30,7 +30,7 @@
   cursor: pointer;
 }
 
-.custom_switch {
+.customSwitch {
   display: flex;
   transform: scale(0.9);
   transform-origin: top left;

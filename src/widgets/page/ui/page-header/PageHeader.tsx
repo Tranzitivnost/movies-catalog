@@ -59,7 +59,7 @@ export function PageHeader({
         </Link> */}
         <Switch
           onChange={onToggle}
-          className={styles.custom_switch}
+          className={styles.customSwitch}
           defaultChecked={defaultChecked}
         />
       </Container>
