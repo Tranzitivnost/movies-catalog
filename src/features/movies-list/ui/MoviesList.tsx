@@ -19,7 +19,7 @@ export function MoviesList({ movies, title }: Props) {
       className={styles.container}
     >
       <Header className={styles.title}>{title}</Header>
-      <Container justifyCenter flexWrap gap="16px">
+      <Container justifyBetween flexWrap gap="16px">
         {movies.length > 0 ? (
           movies.map(movie => <MoviePreview movie={movie} key={movie.id} />)
         ) : (

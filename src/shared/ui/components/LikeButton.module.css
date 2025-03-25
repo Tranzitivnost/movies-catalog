@@ -12,7 +12,7 @@
   box-sizing: border-box;
 
   border-radius: 10px;
-  composes: scheme-secondary secondary-font size-m from global;
+  composes: scheme-button secondary-font size-m from global;
 
   font-weight: 700;
   letter-spacing: 0.2px;
@@ -20,7 +20,7 @@
 }
 
 .like-img {
-  composes: scheme-icon from global;
+  composes: filter-color-inversion from global;
   margin-right: 10px;
 
   position: relative;

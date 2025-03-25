@@ -2,10 +2,9 @@ import styles from "./PageHeader.module.css";
 import { Image } from "@/shared/ui";
 import Logo from "@/shared/ui/assets/Component-logo.svg";
 import { Container } from "@/shared/ui";
-import Bell from "@/shared/ui/assets/Icon_Outline_bell.svg";
 import Search from "@/shared/ui/assets/Icon_Outline_search.svg";
 import { Link } from "@/shared/ui";
-import { Switch } from "@/shared/ui";
+import { ThemeSwitcher } from "@/shared/ui";
 import clsx from "clsx";
 interface Props
   extends React.DetailedHTMLProps<
@@ -13,16 +12,10 @@ interface Props
     HTMLDivElement
   > {
   className?: string;
-  onToggle: (value: boolean) => void;
-  defaultChecked: boolean;
   positionAbsolute?: boolean;
 }
 
-export function PageHeader({
-  positionAbsolute,
-  onToggle,
-  defaultChecked,
-}: Props) {
+export function PageHeader({ positionAbsolute }: Props) {
   return (
     <header
       className={clsx([
@@ -54,14 +47,7 @@ export function PageHeader({
         <Link href="#" className={styles.linkDecoration}>
           <Image src={Search} alt="button-search" />
         </Link>
-        {/* <Link href="#" className={styles.linkDecoration}>
-          <Image src={Bell} alt="button-bell" />
-        </Link> */}
-        <Switch
-          onChange={onToggle}
-          className={styles.customSwitch}
-          defaultChecked={defaultChecked}
-        />
+        <ThemeSwitcher className={styles.customSwitch} />
       </Container>
     </header>
   );

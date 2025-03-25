@@ -1,18 +1,21 @@
-import styles from "./Switch.module.css";
+import styles from "./ThemeSwitcher.module.css";
 import clsx from "clsx";
 import { useState } from "react";
+import { useTheme, Theme } from "@/shared/ui";
 
 interface Props {
-  defaultChecked: boolean;
-  onChange: (value: boolean) => void;
   className?: string;
 }
 
-export const Switch = ({ onChange, defaultChecked, className }: Props) => {
-  const [isChecked, setIsChecked] = useState(defaultChecked);
+export const ThemeSwitcher = ({ className }: Props) => {
+  const { setTheme, getTheme } = useTheme();
+
+  const [isChecked, setIsChecked] = useState(
+    getTheme() === "light" ? true : false,
+  );
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked);
-    onChange(event.target.checked);
+    setTheme(getTheme() === Theme.Dark ? Theme.Light : Theme.Dark);
   };
 
   return (

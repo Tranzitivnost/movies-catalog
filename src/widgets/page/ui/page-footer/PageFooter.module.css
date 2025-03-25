@@ -1,5 +1,4 @@
 .container {
-  composes: container-border from global;
   height: 397px;
   width: 100%;
   box-sizing: border-box;
@@ -15,7 +14,7 @@
 }
 
 .title {
-  composes: text-primary primary-font size-xxxl from global;
+  composes: text-primary primary-font size-4xl from global;
   font-weight: 500;
   line-height: 48px;
   text-align: left;
@@ -29,14 +28,14 @@
 }
 
 .linkDecoration {
-  composes: text-primary primary-font size-ll from global;
+  composes: text-primary primary-font size-xl from global;
   font-weight: 400;
   text-align: right;
   text-decoration: none;
 }
 
 .text {
-  composes: text-primary primary-font size-ll from global;
+  composes: text-primary primary-font size-xl from global;
   font-weight: 400;
   text-align: right;
   text-decoration: none;

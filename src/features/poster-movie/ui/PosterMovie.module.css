@@ -35,7 +35,7 @@
 }
 
 .movie-title {
-  composes: text-primary primary-font size-xxl from global;
+  composes: text-primary primary-font size-xxxl from global;
   font-weight: 700;
   text-align: left;
   margin-bottom: 20px;
@@ -56,7 +56,7 @@
 }
 
 .storyTitle {
-  composes: text-primary primary-font size-xl from global;
+  composes: text-primary primary-font size-xxl from global;
   font-weight: 700;
   text-align: left;
   margin-bottom: 20px;

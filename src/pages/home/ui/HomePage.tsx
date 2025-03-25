@@ -4,7 +4,7 @@ import styles from "./HomePage.module.css";
 import { usePopularMovies } from "@entities/popular-movies";
 import { PosterMovie } from "@/features/poster-movie";
 import { MoviesList } from "@/features/movies-list";
-import { ThemeToggle } from "@/features/theme-toggle";
+import { Divider } from "@shared/ui";
 
 export function HomePage() {
   const { popularMovies } = usePopularMovies({
@@ -13,7 +13,6 @@ export function HomePage() {
     primary_release_year: "2025",
   });
   const firstMovie = popularMovies?.[0];
-  const { handleCheckboxChange, isCurrentThemeLight } = ThemeToggle();
 
   return (
     <Container
@@ -23,15 +22,13 @@ export function HomePage() {
       alignCenter
       className={styles.container}
     >
-      <PageHeader
-        onToggle={handleCheckboxChange}
-        defaultChecked={isCurrentThemeLight}
-        positionAbsolute
-      />
+      <PageHeader positionAbsolute />
       {firstMovie && (
         <PosterMovie movie={firstMovie} className={styles.posterContainer} />
       )}
+      <Divider />
       <MoviesList title="Popular movies for you" movies={popularMovies} />
+      <Divider />
       <PageFooter />
     </Container>
   );
