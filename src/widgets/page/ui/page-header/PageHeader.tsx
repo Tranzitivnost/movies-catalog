@@ -47,7 +47,7 @@ export function PageHeader({ positionAbsolute }: Props) {
         <Link href="#" className={styles.linkDecoration}>
           <Image src={Search} alt="button-search" />
         </Link>
-        <ThemeSwitcher className={styles.customSwitch} />
+        <ThemeSwitcher />
       </Container>
     </header>
   );

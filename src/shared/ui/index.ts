@@ -16,3 +16,4 @@ export { AddWatchListButton } from "./components/AddWatchListButton";
 export { LikeButton } from "./components/LikeButton";
 export { ThemeSwitcher } from "./components/ThemeSwitcher";
 export { Divider } from "./components/Divider";
+export { Switcher } from "./components/Switcher";

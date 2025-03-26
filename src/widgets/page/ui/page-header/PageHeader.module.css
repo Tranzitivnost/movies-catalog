@@ -29,9 +29,3 @@
 
   cursor: pointer;
 }
-
-.customSwitch {
-  display: flex;
-  transform: scale(0.9);
-  transform-origin: top left;
-}

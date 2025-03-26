@@ -12,16 +12,16 @@
     color: $text-color-primary;
   }
 
-  .scheme-button {
-    border: $border-primary;
-    color: $text-color-primary;
-  }
-
   .scheme-gradient {
     background: $bg-gradient-primary;
   }
 
-  .scheme-dividor {
+  .button-primary {
+    border: $border-primary;
+    color: $text-color-primary;
+  }
+
+  .background-secondary {
     background-color: $bg-secondary;
   }
 

@@ -3,5 +3,5 @@ export type GetPopularMoviesQueryType = {
   language?: string;
   region?: string;
   sort_by?: "vote_count.desc";
-  primary_release_year?: "2025";
+  primary_release_year?: number;
 };
