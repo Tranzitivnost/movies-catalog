@@ -25,7 +25,7 @@ export function PageHeader({ positionAbsolute }: Props) {
     >
       <Image src={Logo} alt="logo" />
       <Container container justifyBetween className={styles.buttonContainer}>
-        <Link href="#" className={styles.linkDecoration}>
+        <Link href="/" className={styles.linkDecoration}>
           Home
         </Link>
         <Link href="#" className={styles.linkDecoration}>
@@ -34,7 +34,7 @@ export function PageHeader({ positionAbsolute }: Props) {
         <Link href="#" className={styles.linkDecoration}>
           About
         </Link>
-        <Link href="#" className={styles.linkDecoration}>
+        <Link href="/#/contact" className={styles.linkDecoration}>
           Contact
         </Link>
       </Container>

@@ -1,0 +1,50 @@
+.container {
+  height: 100vh;
+
+  box-sizing: border-box;
+  padding: 70px 242px 40px 242px;
+}
+.titleContainer {
+  height: 600px;
+}
+.title {
+  composes: text-primary primary-font size-xxxl from global;
+  display: flex;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+}
+
+.secondTitleContainer {
+  width: 100%;
+}
+
+.secondTitle {
+  composes: text-primary primary-font size-m from global;
+  font-weight: 400;
+  text-align: left;
+  opacity: 0.7;
+}
+
+.anotherTitleContainer {
+  margin-bottom: 73px;
+  width: 30%;
+}
+
+.phone {
+  composes: text-primary primary-font size-xxl from global;
+  font-weight: 400;
+  text-align: right;
+  text-decoration: none;
+}
+
+.phoneTitle {
+  composes: text-primary primary-font size-m from global;
+  font-weight: 200;
+  text-align: right;
+  text-decoration: none;
+}
+
+.information {
+  height: 40%;
+}
