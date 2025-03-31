@@ -14,6 +14,6 @@ export { Text } from "./components/Text";
 export { Image } from "./components/Image";
 export { AddWatchListButton } from "./components/AddWatchListButton";
 export { LikeButton } from "./components/LikeButton";
-export { ThemeSwitcher } from "./components/ThemeSwitcher";
+export { ThemeSwitcher } from "./theme/ThemeSwitcher";
 export { Divider } from "./components/Divider";
 export { Switcher } from "./components/Switcher";

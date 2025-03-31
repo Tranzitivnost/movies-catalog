@@ -7,10 +7,11 @@ import { MoviesList } from "@/features/movies-list";
 import { Divider } from "@shared/ui";
 
 export function HomePage() {
+  const currentYear = new Date().getFullYear();
   const { popularMovies } = usePopularMovies({
     page: 1,
     sort_by: "vote_count.desc",
-    primary_release_year: 2025,
+    primary_release_year: currentYear,
   });
   const firstMovie = popularMovies?.[0];
 
