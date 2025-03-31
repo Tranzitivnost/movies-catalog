@@ -1,19 +1,18 @@
+.container {
+  width: 312px;
+}
+
 .img {
   object-fit: cover;
   object-position: top;
   width: 312px;
-  height: 312px;
-
+  height: 420px;
   border-radius: 16px;
 }
 
 .movieTitle {
-  color: rgb(249, 249, 249);
-  font-family: Rubik;
-  font-size: 16px;
+  composes: text-primary primary-font size-l from global;
   font-weight: 700;
-  line-height: 24px;
-  letter-spacing: 0.5%;
   text-align: left;
   padding-top: 12px;
 }
@@ -26,12 +25,8 @@
 }
 
 .popularity {
-  color: rgb(120, 130, 138);
-  font-family: Rubik;
-  font-size: 12px;
+  composes: text-secondary primary-font size-sm from global;
   font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0.5%;
   text-align: left;
 }
 

@@ -1,15 +1,14 @@
-import styles from "./Switch.module.css";
-import clsx from "clsx";
+import styles from "./Switcher.module.css";
 import { useState } from "react";
 
 interface Props {
-  defaultChecked: boolean;
+  defaultValue: boolean;
   onChange: (value: boolean) => void;
   className?: string;
 }
 
-export const Switch = ({ onChange, defaultChecked, className }: Props) => {
-  const [isChecked, setIsChecked] = useState(defaultChecked);
+export const Switcher = ({ onChange, defaultValue, className }: Props) => {
+  const [isChecked, setIsChecked] = useState(defaultValue);
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked);
     onChange(event.target.checked);
@@ -24,10 +23,7 @@ export const Switch = ({ onChange, defaultChecked, className }: Props) => {
         className={styles.checkbox}
         id="checkbox"
       />
-      <label
-        htmlFor="checkbox"
-        className={clsx(styles["checkbox-label"], styles.switch)}
-      >
+      <label htmlFor="checkbox" className={styles["checkbox-label"]}>
         <span className={styles.ball}></span>
       </label>
     </div>

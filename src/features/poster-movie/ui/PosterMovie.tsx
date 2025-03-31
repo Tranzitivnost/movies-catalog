@@ -21,7 +21,11 @@ interface Props
 export function PosterMovie({ movie, className }: Props) {
   const sentences = movie.overview
     .match(/[^.!?]+[.!?]+|\w+$/g)
-    ?.map((sentence, index) => <p key={index}>{sentence.trim()}</p>);
+    ?.map((sentence, index) => (
+      <p className={styles.storyText} key={index}>
+        {sentence.trim()}
+      </p>
+    ));
 
   return (
     <Container

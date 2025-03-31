@@ -6,7 +6,7 @@ export const getPopularMovies = async (
   query?: GetPopularMoviesQueryType,
 ): Promise<Movie[]> => {
   const response = await apiRequest<Movie, GetPopularMoviesQueryType>(
-    "/movie/popular",
+    "/discover/movie",
     "GET",
     query,
   );

@@ -1,4 +1,5 @@
 .likeButton {
+  composes: button-primary secondary-font size-m from global;
   width: 180px;
   height: 46px;
 
@@ -11,24 +12,20 @@
   background: transparent;
   box-sizing: border-box;
 
-  border: 1px solid rgb(255, 255, 255);
   border-radius: 10px;
 
-  color: rgb(255, 255, 255);
-  font-family: Inter;
-  font-size: 14px;
   font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0.5%;
+  letter-spacing: 0.2px;
   text-align: left;
 }
 
 .like-img {
+  composes: filter-color-inversion from global;
   margin-right: 10px;
 
   position: relative;
-  width: 18.67px;
-  height: 19.2px;
+  width: 19px;
+  height: 19px;
 
   top: 1.4px;
 }
