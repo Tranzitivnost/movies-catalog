@@ -1,12 +1,11 @@
 .container {
   height: 100vh;
+  position: relative;
 
   box-sizing: border-box;
-  padding: 70px 242px 40px 242px;
+  padding: 190px 242px 70px 242px;
 }
-.titleContainer {
-  height: 600px;
-}
+
 .title {
   composes: text-primary primary-font size-xxxl from global;
   display: flex;

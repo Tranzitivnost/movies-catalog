@@ -50,7 +50,7 @@ export function PageFooter() {
             About
           </Link>
           <Text className={styles.text}>/</Text>
-          <Link href="#" className={styles.linkDecoration}>
+          <Link href="/#/contact" className={styles.linkDecoration}>
             Contact
           </Link>
         </Container>
