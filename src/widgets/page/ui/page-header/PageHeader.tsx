@@ -11,7 +11,6 @@ interface Props
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
   > {
-  className?: string;
   positionAbsolute?: boolean;
 }
 

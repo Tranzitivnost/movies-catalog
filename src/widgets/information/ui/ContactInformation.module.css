@@ -26,21 +26,20 @@
 }
 
 .anotherTitleContainer {
-  margin-bottom: 73px;
   width: 30%;
 }
 
 .phone {
   composes: text-primary primary-font size-xxl from global;
   font-weight: 400;
-  text-align: right;
+  text-align: left;
   text-decoration: none;
 }
 
 .phoneTitle {
   composes: text-primary primary-font size-m from global;
   font-weight: 200;
-  text-align: right;
+  text-align: left;
   text-decoration: none;
 }
 

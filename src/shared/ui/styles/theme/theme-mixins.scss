@@ -5,7 +5,8 @@
   $text-color-secondary,
   $border-primary,
   $image-filter,
-  $bg-secondary
+  $bg-secondary,
+  $bg-gradient-secondary
 ) {
   .scheme-primary {
     background-color: $bg-primary;
@@ -14,6 +15,9 @@
 
   .scheme-gradient {
     background: $bg-gradient-primary;
+  }
+  .scheme-gradient-secondary {
+    background: $bg-gradient-secondary;
   }
 
   .button-primary {
