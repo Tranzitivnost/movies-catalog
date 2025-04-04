@@ -11,36 +11,30 @@
   display: flex;
   font-weight: 500;
   line-height: 48px;
-  text-align: left;
 }
 
-.secondTitleContainer {
+.secondContainer {
   width: 100%;
 }
 
 .secondTitle {
   composes: text-primary primary-font size-m from global;
   font-weight: 400;
-  text-align: left;
   opacity: 0.7;
 }
 
-.anotherTitleContainer {
+.footer {
   width: 30%;
 }
 
-.phone {
+.contactInfo {
   composes: text-primary primary-font size-xxl from global;
   font-weight: 400;
-  text-align: left;
-  text-decoration: none;
 }
 
-.phoneTitle {
+.contactTitle {
   composes: text-primary primary-font size-m from global;
   font-weight: 200;
-  text-align: left;
-  text-decoration: none;
 }
 
 .information {

@@ -32,38 +32,32 @@ export function ContactInformation({ className }: Props) {
         className={styles.information}
       >
         <Container container flexDirectionColumn justifyBetween alignStart>
-          <Header className={styles.phoneTitle}>CONTACT US</Header>
-          <Text className={styles.phone}>+381 98 765 4321</Text>
+          <Text className={styles.contactTitle}>CONTACT US</Text>
+          <Text className={styles.contactInfo}>+381 98 765 4321</Text>
         </Container>
 
         <Container container flexDirectionColumn justifyBetween alignStart>
-          <Header className={styles.phoneTitle}>ADDRESS</Header>
-          <Text className={styles.phone}>
+          <Text className={styles.contactTitle}>ADDRESS</Text>
+          <Text className={styles.contactInfo}>
             1071 Fifth Avenue at 89th Street Manhattan, New York City
           </Text>
         </Container>
 
         <Container container flexDirectionColumn justifyBetween alignStart>
-          <Header className={styles.phoneTitle}>
+          <Text className={styles.contactTitle}>
             YOUR QUESTIONS AND SPECIAL REQUESTS ARE ALWAYS WELCOME! 🚀🎉
-          </Header>
-          <Text className={styles.phone}>saintstream_support@gmail.com</Text>
+          </Text>
+          <Text className={styles.contactInfo}>
+            saintstream_support@gmail.com
+          </Text>
         </Container>
       </Container>
-      <Container
-        container
-        justifyBetween
-        className={styles.secondTitleContainer}
-      >
-        <Container
-          container
-          justifyBetween
-          className={styles.anotherTitleContainer}
-        >
-          <Header className={styles.secondTitle}>Privacy policy</Header>
-          <Header className={styles.secondTitle}>Term of service</Header>
+      <Container container justifyBetween className={styles.secondContainer}>
+        <Container container justifyBetween className={styles.footer}>
+          <Text className={styles.secondTitle}>Privacy policy</Text>
+          <Text className={styles.secondTitle}>Term of service</Text>
         </Container>
-        <Header className={styles.secondTitle}>© 2025</Header>
+        <Text className={styles.secondTitle}>© 2025</Text>
       </Container>
     </Container>
   );
