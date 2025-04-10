@@ -54,8 +54,8 @@ export function ContactInformation({ className }: Props) {
       </Container>
       <Container container justifyBetween className={styles.secondContainer}>
         <Container container justifyBetween className={styles.footer}>
-          <Text className={styles.secondTitle}>Privacy policy</Text>
-          <Text className={styles.secondTitle}>Term of service</Text>
+          <Text className={styles.firstTitle}>Privacy policy</Text>
+          <Text className={styles.firstTitle}>Term of service</Text>
         </Container>
         <Text className={styles.secondTitle}>© 2025</Text>
       </Container>

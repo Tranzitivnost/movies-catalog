@@ -1,9 +1,8 @@
 .container {
   height: 100vh;
-  position: relative;
+  width: 670px;
 
-  box-sizing: border-box;
-  padding: 190px 242px 70px 242px;
+  padding: 210px 0px 100px 0px;
 }
 
 .title {
@@ -13,18 +12,8 @@
   line-height: 48px;
 }
 
-.secondContainer {
-  width: 100%;
-}
-
-.secondTitle {
-  composes: text-primary primary-font size-m from global;
-  font-weight: 400;
-  opacity: 0.7;
-}
-
-.footer {
-  width: 30%;
+.information {
+  height: 270px;
 }
 
 .contactInfo {
@@ -37,6 +26,21 @@
   font-weight: 200;
 }
 
-.information {
-  height: 40%;
+.secondContainer {
+  width: 100%;
+}
+.footer {
+  width: 240px;
+}
+.firstTitle {
+  composes: text-primary primary-font size-m from global;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.secondTitle {
+  composes: text-primary primary-font size-m from global;
+  font-weight: 400;
+  opacity: 0.7;
+  display: flex;
 }

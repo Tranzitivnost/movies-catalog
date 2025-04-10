@@ -30,8 +30,8 @@ export function PageFooter() {
           justifyBetween
           className={styles.secondTitleContainer}
         >
-          <Header className={styles.secondTitle}>Privacy policy</Header>
-          <Header className={styles.secondTitle}>Term of service</Header>
+          <Text className={styles.secondTitle}>Privacy policy</Text>
+          <Text className={styles.secondTitle}>Term of service</Text>
         </Container>
       </Container>
       <Container
@@ -55,7 +55,7 @@ export function PageFooter() {
           </Link>
         </Container>
 
-        <Header className={styles.secondTitle}>© 2025</Header>
+        <Text className={styles.secondTitle}>© 2025</Text>
       </Container>
     </Container>
   );
