@@ -17,7 +17,7 @@
     background: $bg-gradient-primary;
   }
   .scheme-gradient-secondary {
-    background: $bg-gradient-secondary;
+    background-image: $bg-gradient-secondary, var(--poster-url);
   }
 
   .button-primary {
