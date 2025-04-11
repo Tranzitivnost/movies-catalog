@@ -1,5 +1,4 @@
-export const ROUTES = {
-  HOME: "/",
-  CONTACT: "/contact",
-  ABOUT: "/about",
-} as const;
+export class Routes {
+  static readonly HOME = "/";
+  static readonly CONTACT = "/contact";
+}

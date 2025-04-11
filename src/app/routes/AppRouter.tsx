@@ -6,12 +6,13 @@ import {
 } from "react-router-dom";
 import { HomePage } from "@pages/home";
 import { ContactPage } from "@pages/contact";
+import { Routes } from "./routes";
 
 export const AppRouter = () => {
   const routers = createRoutesFromElements(
     <>
-      <Route path="/" element={<HomePage />} />,
-      <Route path="/contact" element={<ContactPage />} />,
+      <Route path={Routes.HOME} element={<HomePage />} />,
+      <Route path={Routes.CONTACT} element={<ContactPage />} />,
     </>,
   );
 
