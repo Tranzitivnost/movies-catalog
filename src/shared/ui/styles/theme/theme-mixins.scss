@@ -5,7 +5,8 @@
   $text-color-secondary,
   $border-primary,
   $image-filter,
-  $bg-secondary
+  $bg-secondary,
+  $bg-tertiary
 ) {
   .scheme-primary {
     background-color: $bg-primary;
@@ -35,5 +36,11 @@
 
   .filter-color-inversion {
     filter: $image-filter;
+  }
+
+  .background-tertiary-hover {
+    &:hover {
+      background-color: $bg-tertiary;
+    }
   }
 }

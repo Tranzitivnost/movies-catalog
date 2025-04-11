@@ -6,6 +6,7 @@ import Search from "@/shared/ui/assets/Icon_Outline_search.svg";
 import { Link } from "@/shared/ui";
 import { ThemeSwitcher } from "@/shared/ui";
 import clsx from "clsx";
+import { Routes } from "@shared/routes";
 interface Props
   extends React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLDivElement>,
@@ -25,16 +26,16 @@ export function PageHeader({ positionAbsolute }: Props) {
     >
       <Image src={Logo} alt="logo" />
       <Container container justifyBetween className={styles.buttonContainer}>
-        <Link href="#" className={styles.linkDecoration}>
+        <Link href={Routes.HOME} className={styles.linkDecoration}>
           Home
         </Link>
-        <Link href="#" className={styles.linkDecoration}>
+        <Link href={Routes.HOME} className={styles.linkDecoration}>
           Movie Release
         </Link>
-        <Link href="#" className={styles.linkDecoration}>
+        <Link href={Routes.HOME} className={styles.linkDecoration}>
           About
         </Link>
-        <Link href="#" className={styles.linkDecoration}>
+        <Link href={Routes.HOME} className={styles.linkDecoration}>
           Contact
         </Link>
       </Container>
