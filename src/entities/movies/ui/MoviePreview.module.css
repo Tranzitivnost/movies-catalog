@@ -1,3 +1,18 @@
+.link {
+  composes: background-tertiary-hover from global;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    border-radius: 16px;
+  }
+}
+
+/* .link:visited {
+  background-color: #8f8e8e;
+  border-radius: 16px;
+} */
+
 .container {
   width: 312px;
 }
@@ -10,11 +25,14 @@
   border-radius: 16px;
 }
 
+.movieContainer {
+  padding: 10px 15px;
+}
+
 .movieTitle {
   composes: text-primary primary-font size-l from global;
   font-weight: 700;
   text-align: left;
-  padding-top: 12px;
 }
 
 .imgStar {

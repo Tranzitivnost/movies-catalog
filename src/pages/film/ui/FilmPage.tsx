@@ -1,19 +1,24 @@
 import { Container } from "@shared/ui";
 import { PageFooter, PageHeader } from "@/widgets/page";
-import styles from "./HomePage.module.css";
+import styles from "./FilmPage.module.css";
 import { usePopularMovies } from "@entities/popular-movies";
 import { PosterMovie } from "@/features/poster-movie";
 import { MoviesList } from "@/features/movies-list";
 import { Divider } from "@shared/ui";
+import type { Movie } from "@/shared/api";
 
-export function FilmPage() {
+type Props = {
+  id?: number;
+};
+
+export function FilmPage({ id }: Props) {
   const currentYear = new Date().getFullYear();
   const { popularMovies } = usePopularMovies({
     page: 1,
     sort_by: "vote_count.desc",
     primary_release_year: currentYear,
   });
-  const firstMovie = popularMovies?.[0];
+  const currentFilm = popularMovies?.find(movie => movie.id === id);
 
   return (
     <Container
@@ -24,8 +29,9 @@ export function FilmPage() {
       className={styles.container}
     >
       <PageHeader positionAbsolute />
-      {firstMovie && (
-        <PosterMovie movie={firstMovie} className={styles.posterContainer} />
+
+      {currentFilm && (
+        <PosterMovie movie={currentFilm} className={styles.posterContainer} />
       )}
       <Divider />
       <MoviesList title="Popular movies for you" movies={popularMovies} />

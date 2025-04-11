@@ -1,3 +1,5 @@
+import { Link as RouterLink } from "react-router-dom";
+
 interface Props
   extends React.DetailedHTMLProps<
     React.AnchorHTMLAttributes<HTMLAnchorElement>,
@@ -11,8 +13,8 @@ interface Props
 
 export const Link = ({ href, children, target, className, ...rest }: Props) => {
   return (
-    <a href={href} className={className} {...rest} target={target}>
+    <RouterLink to={href} className={className} {...rest} target={target}>
       {children}
-    </a>
+    </RouterLink>
   );
 };
