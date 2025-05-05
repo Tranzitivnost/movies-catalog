@@ -1,7 +1,8 @@
 import { Container, Header } from "@shared/ui";
 import styles from "./PageFooter.module.css";
-import { Link } from "@shared/ui";
+import { Link } from "react-router-dom";
 import { Text } from "@shared/ui";
+import { Routes } from "@shared/routes";
 
 export function PageFooter() {
   return (
@@ -42,15 +43,15 @@ export function PageFooter() {
         className={styles.thirdTitleContainer}
       >
         <Container container className={styles.anotherTitleContainer}>
-          <Link href="#" className={styles.linkDecoration}>
+          <Link to={Routes.HOME} className={styles.linkDecoration}>
             Home
           </Link>
           <Text className={styles.text}>/</Text>
-          <Link href="#" className={styles.linkDecoration}>
+          <Link to={Routes.ABOUT} className={styles.linkDecoration}>
             About
           </Link>
           <Text className={styles.text}>/</Text>
-          <Link href="/#/contact" className={styles.linkDecoration}>
+          <Link to={Routes.CONTACT} className={styles.linkDecoration}>
             Contact
           </Link>
         </Container>

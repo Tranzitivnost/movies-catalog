@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import { HomePage } from "@pages/home";
 import { ContactPage } from "@pages/contact";
-import { Routes } from "./routes";
+import { Routes } from "@shared/routes";
 
 export const AppRouter = () => {
   const routers = createRoutesFromElements(

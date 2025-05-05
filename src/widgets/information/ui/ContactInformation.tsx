@@ -22,7 +22,7 @@ export function ContactInformation({ className }: Props) {
       className={clsx([styles.container, className])}
     >
       <Header className={styles.title}>
-        <p>Best site to watch movies around the world</p>
+        Best site to watch movies around the world
       </Header>
       <Container
         container

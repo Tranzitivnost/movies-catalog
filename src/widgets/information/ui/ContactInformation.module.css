@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  min-height: 100vh;
   width: 670px;
 
   padding: 210px 0px 100px 0px;
@@ -8,8 +8,6 @@
 .title {
   composes: text-primary primary-font size-xxxl from global;
   display: flex;
-  font-weight: 500;
-  line-height: 48px;
 }
 
 .information {
@@ -18,7 +16,6 @@
 
 .contactInfo {
   composes: text-primary primary-font size-xxl from global;
-  font-weight: 400;
 }
 
 .contactTitle {
@@ -34,13 +31,12 @@
 }
 .firstTitle {
   composes: text-primary primary-font size-m from global;
-  font-weight: 400;
+
   opacity: 0.7;
 }
 
 .secondTitle {
   composes: text-primary primary-font size-m from global;
-  font-weight: 400;
   opacity: 0.7;
   display: flex;
 }
