@@ -1,9 +1,6 @@
-:root {
-  --poster-url: url("@/shared/ui/assets/poster.png");
-}
-
 .container {
-  composes: scheme-gradient-secondary from global;
+  background-image: var(--bg-gradient-secondary),
+    url("@/shared/ui/assets/poster.png");
   width: 100%;
   background-repeat: no-repeat;
   background-position: top;

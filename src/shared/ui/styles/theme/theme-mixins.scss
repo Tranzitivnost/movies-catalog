@@ -8,16 +8,18 @@
   $bg-secondary,
   $bg-gradient-secondary
 ) {
+  --bg-primary: #{$bg-primary};
+  --bg-gradient-primary: #{$bg-gradient-primary};
+  --text-color-primary: #{$text-color-primary};
+  --text-color-secondary: #{$text-color-secondary};
+  --border-primary: #{$border-primary};
+  // --image-color: #{$image-color};
+  --bg-secondary: #{$bg-secondary};
+  --bg-gradient-secondary: #{$bg-gradient-secondary};
+
   .scheme-primary {
     background-color: $bg-primary;
     color: $text-color-primary;
-  }
-
-  .scheme-gradient {
-    background: $bg-gradient-primary;
-  }
-  .scheme-gradient-secondary {
-    background-image: $bg-gradient-secondary, var(--poster-url);
   }
 
   .button-primary {
