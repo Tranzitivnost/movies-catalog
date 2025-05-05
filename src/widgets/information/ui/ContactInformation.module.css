@@ -13,30 +13,3 @@
 .information {
   height: 270px;
 }
-
-.contactInfo {
-  composes: text-primary primary-font size-xxl from global;
-}
-
-.contactTitle {
-  composes: text-primary primary-font size-m from global;
-  font-weight: 200;
-}
-
-.secondContainer {
-  width: 100%;
-}
-.footer {
-  width: 240px;
-}
-.firstTitle {
-  composes: text-primary primary-font size-m from global;
-
-  opacity: 0.7;
-}
-
-.secondTitle {
-  composes: text-primary primary-font size-m from global;
-  opacity: 0.7;
-  display: flex;
-}

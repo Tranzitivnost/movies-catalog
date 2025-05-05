@@ -1,0 +1,8 @@
+.contactInfo {
+  composes: text-primary primary-font size-xxl from global;
+}
+
+.contactTitle {
+  composes: text-primary primary-font size-m from global;
+  font-weight: 200;
+}

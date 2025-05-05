@@ -2,6 +2,8 @@ import { Container, Header } from "@shared/ui";
 import styles from "./ContactInformation.module.css";
 import { Text } from "@shared/ui";
 import clsx from "clsx";
+import { FooterBottom } from "@/entities/footer";
+import { TextBlock } from "@/entities/text-block";
 
 interface Props
   extends React.DetailedHTMLProps<
@@ -31,34 +33,17 @@ export function ContactInformation({ className }: Props) {
         alignStart
         className={styles.information}
       >
-        <Container container flexDirectionColumn justifyBetween alignStart>
-          <Text className={styles.contactTitle}>CONTACT US</Text>
-          <Text className={styles.contactInfo}>+381 98 765 4321</Text>
-        </Container>
-
-        <Container container flexDirectionColumn justifyBetween alignStart>
-          <Text className={styles.contactTitle}>ADDRESS</Text>
-          <Text className={styles.contactInfo}>
-            1071 Fifth Avenue at 89th Street Manhattan, New York City
-          </Text>
-        </Container>
-
-        <Container container flexDirectionColumn justifyBetween alignStart>
-          <Text className={styles.contactTitle}>
-            YOUR QUESTIONS AND SPECIAL REQUESTS ARE ALWAYS WELCOME! 🚀🎉
-          </Text>
-          <Text className={styles.contactInfo}>
-            saintstream_support@gmail.com
-          </Text>
-        </Container>
+        <TextBlock header="CONTACT US" information="+381 98 765 4321" />
+        <TextBlock
+          header="ADDRESS"
+          information="1071 Fifth Avenue at 89th Street Manhattan, New York City"
+        />
+        <TextBlock
+          header="YOUR QUESTIONS AND SPECIAL REQUESTS ARE ALWAYS WELCOME! 🚀🎉"
+          information="saintstream_support@gmail.com"
+        />
       </Container>
-      <Container container justifyBetween className={styles.secondContainer}>
-        <Container container justifyBetween className={styles.footer}>
-          <Text className={styles.firstTitle}>Privacy policy</Text>
-          <Text className={styles.firstTitle}>Term of service</Text>
-        </Container>
-        <Text className={styles.secondTitle}>© 2025</Text>
-      </Container>
+      <FooterBottom />
     </Container>
   );
 }

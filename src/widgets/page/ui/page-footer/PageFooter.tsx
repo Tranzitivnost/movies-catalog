@@ -3,46 +3,24 @@ import styles from "./PageFooter.module.css";
 import { Link } from "react-router-dom";
 import { Text } from "@shared/ui";
 import { Routes } from "@shared/routes";
+import { FooterBottom } from "@/entities/footer";
 
 export function PageFooter() {
   return (
     <Container
-      alignStart
       container
       justifyBetween
-      gap="16px"
+      flexDirectionColumn
       className={styles.container}
     >
-      <Container
-        container
-        flexDirectionColumn
-        justifyBetween
-        alignStart
-        className={styles.titleContainer}
-      >
+      <Container container justifyBetween className={styles.titleContainer}>
         <Header className={styles.title}>
           <p>Our platform is trusted </p>
           <p> by millions & features </p>
           <p> best updated movies </p>
           <p>all around the world. </p>
         </Header>
-        <Container
-          container
-          justifyBetween
-          className={styles.secondTitleContainer}
-        >
-          <Text className={styles.secondTitle}>Privacy policy</Text>
-          <Text className={styles.secondTitle}>Term of service</Text>
-        </Container>
-      </Container>
-      <Container
-        container
-        flexDirectionColumn
-        justifyEnd
-        alignEnd
-        className={styles.thirdTitleContainer}
-      >
-        <Container container className={styles.anotherTitleContainer}>
+        <Container container alignEnd className={styles.secondContainer}>
           <Link to={Routes.HOME} className={styles.linkDecoration}>
             Home
           </Link>
@@ -55,9 +33,8 @@ export function PageFooter() {
             Contact
           </Link>
         </Container>
-
-        <Text className={styles.secondTitle}>© 2025</Text>
       </Container>
+      <FooterBottom />
     </Container>
   );
 }
