@@ -6,21 +6,24 @@
 }
 
 .title {
-  composes: text-primary primary-font size-4xl from global;
+  composes: primary-font size-4xl from global;
+  color: var(--text-color-primary);
   font-weight: 500;
   line-height: 48px;
   text-align: left;
 }
 
 .linkDecoration {
-  composes: text-primary primary-font size-xl from global;
+  composes: primary-font size-xl from global;
+  color: var(--text-color-primary);
   font-weight: 400;
   text-align: right;
   text-decoration: none;
 }
 
 .text {
-  composes: text-primary primary-font size-xl from global;
+  composes: primary-font size-xl from global;
+  color: var(--text-color-primary);
   font-weight: 400;
   text-align: right;
   text-decoration: none;

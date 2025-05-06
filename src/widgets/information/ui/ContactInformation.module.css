@@ -6,7 +6,8 @@
 }
 
 .title {
-  composes: text-primary primary-font size-xxxl from global;
+  composes: primary-font size-xxxl from global;
+  color: var(--text-color-primary);
   display: flex;
 }
 

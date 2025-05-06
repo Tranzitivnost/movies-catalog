@@ -1,8 +1,10 @@
 .contactInfo {
-  composes: text-primary primary-font size-xxl from global;
+  composes: primary-font size-xxl from global;
+  color: var(--text-color-primary);
 }
 
 .contactTitle {
-  composes: text-primary primary-font size-m from global;
+  composes: primary-font size-m from global;
+  color: var(--text-color-primary);
   font-weight: 200;
 }

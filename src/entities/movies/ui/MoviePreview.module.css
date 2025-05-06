@@ -11,7 +11,8 @@
 }
 
 .movieTitle {
-  composes: text-primary primary-font size-l from global;
+  composes: primary-font size-l from global;
+  color: var(--text-color-primary);
   font-weight: 700;
   text-align: left;
   padding-top: 12px;
@@ -25,7 +26,8 @@
 }
 
 .popularity {
-  composes: text-secondary primary-font size-sm from global;
+  composes: primary-font size-sm from global;
+  color: var(--text-color-secondary);
   font-weight: 500;
   text-align: left;
 }

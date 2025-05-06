@@ -3,13 +3,14 @@
 }
 
 .title {
-  composes: text-primary primary-font size-xxl from global;
-
+  composes: primary-font size-xxl from global;
+  color: var(--text-color-primary);
   font-weight: 700;
   text-align: left;
   padding-bottom: 8px;
 }
 
 .warning {
-  composes: text-primary primary-font size-xxl from global;
+  composes: primary-font size-xxl from global;
+  color: var(--text-color-primary);
 }

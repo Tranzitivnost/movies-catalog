@@ -35,14 +35,16 @@
 }
 
 .movie-title {
-  composes: text-primary primary-font size-xxxl from global;
+  composes: primary-font size-xxxl from global;
+  color: var(--text-color-primary);
   font-weight: 700;
   text-align: left;
   margin-bottom: 20px;
 }
 
 .information {
-  composes: text-secondary primary-font size-m from global;
+  composes: primary-font size-m from global;
+  color: var(--text-color-secondary);
   font-weight: 500;
   letter-spacing: 0.5px;
   text-align: left;
@@ -56,14 +58,16 @@
 }
 
 .storyTitle {
-  composes: text-primary primary-font size-xxl from global;
+  composes: primary-font size-xxl from global;
+  color: var(--text-color-primary);
   font-weight: 700;
   text-align: left;
   margin-bottom: 20px;
 }
 
 .storyText {
-  composes: text-secondary secondary-font size-l from global;
+  composes: secondary-font size-l from global;
+  color: var(--text-color-secondary);
   font-weight: 600;
 
   text-align: left;
