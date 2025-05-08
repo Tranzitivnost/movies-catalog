@@ -17,3 +17,4 @@ export { LikeButton } from "./components/LikeButton";
 export { ThemeSwitcher } from "./theme/ThemeSwitcher";
 export { Divider } from "./components/Divider";
 export { Switcher } from "./components/Switcher";
+export { TextBlock } from "./components/TextBlock";

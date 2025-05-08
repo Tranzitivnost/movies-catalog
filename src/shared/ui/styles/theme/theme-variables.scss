@@ -7,6 +7,16 @@ $dark-theme-background-gradient-primary: linear-gradient(
   rgba(13, 12, 15, 0.28) 70.719%,
   rgb(13, 12, 15) 103.306%
 );
+
+$dark-theme-background-gradient-secondary: linear-gradient(
+  -0.55deg,
+  rgb(13, 12, 15) 0.737%,
+  rgba(13, 12, 15, 0.961) 35.563%,
+  rgba(13, 12, 15, 0.753) 67.607%,
+  rgba(13, 12, 15, 0.46) 84.812%,
+  rgba(13, 12, 15, 0.83) 94.714%,
+  rgb(13, 12, 15) 103.306%
+);
 $dark-text-color-primary: #fff;
 $dark-text-color-secondary: rgb(156, 164, 171);
 $dark-theme-border-primary: 1px solid rgba(255, 255, 255, 0.741);
@@ -22,6 +32,17 @@ $light-theme-background-gradient-primary: linear-gradient(
   rgba(13, 12, 15, 0.28) 70.719%,
   rgb(13, 12, 15) 103.306%
 );
+
+$light-theme-background-gradient-secondary: linear-gradient(
+  -0.55deg,
+  rgb(255, 255, 255) 0.737%,
+  rgba(255, 255, 255, 0.961) 35.563%,
+  rgba(255, 255, 255, 0.753) 67.607%,
+  rgba(13, 12, 15, 0.46) 84.812%,
+  rgba(13, 12, 15, 0.83) 94.714%,
+  rgb(13, 12, 15) 103.306%
+);
+
 $light-text-color-primary: rgb(13, 12, 15);
 $light-text-color-secondary: rgb(99, 101, 102);
 $light-theme-border-primary: 1px solid rgba(66, 66, 66, 0.884);

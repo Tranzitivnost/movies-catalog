@@ -10,7 +10,8 @@ body {
       $light-text-color-secondary,
       $light-theme-border-primary,
       $light-image-filter,
-      $light-theme-background-secondary
+      $light-theme-background-secondary,
+      $light-theme-background-gradient-secondary
     );
   }
 
@@ -22,7 +23,8 @@ body {
       $dark-text-color-secondary,
       $dark-theme-border-primary,
       $dark-image-filter,
-      $dark-theme-background-secondary
+      $dark-theme-background-secondary,
+      $dark-theme-background-gradient-secondary
     );
   }
 }

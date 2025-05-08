@@ -20,7 +20,7 @@
 }
 
 .like-img {
-  composes: filter-color-inversion from global;
+  filter: var(--image-filter);
   margin-right: 10px;
 
   position: relative;

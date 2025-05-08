@@ -1,5 +1,5 @@
 .line {
-  composes: background-secondary from global;
+  background-color: var(--bg-secondary);
   display: block;
   width: 100%;
   height: 1px;

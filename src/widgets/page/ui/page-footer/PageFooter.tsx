@@ -1,62 +1,40 @@
 import { Container, Header } from "@shared/ui";
 import styles from "./PageFooter.module.css";
-import { Link } from "@shared/ui";
+import { Link } from "@shared/ui/components/Link";
 import { Text } from "@shared/ui";
+import { Routes } from "@shared/routes";
+import { FooterBottom } from "@/entities/footer";
 
 export function PageFooter() {
   return (
     <Container
-      alignStart
       container
       justifyBetween
-      gap="16px"
+      flexDirectionColumn
       className={styles.container}
     >
-      <Container
-        container
-        flexDirectionColumn
-        justifyBetween
-        alignStart
-        className={styles.titleContainer}
-      >
+      <Container container justifyBetween className={styles.titleContainer}>
         <Header className={styles.title}>
           <p>Our platform is trusted </p>
           <p> by millions & features </p>
           <p> best updated movies </p>
           <p>all around the world. </p>
         </Header>
-        <Container
-          container
-          justifyBetween
-          className={styles.secondTitleContainer}
-        >
-          <Header className={styles.secondTitle}>Privacy policy</Header>
-          <Header className={styles.secondTitle}>Term of service</Header>
-        </Container>
-      </Container>
-      <Container
-        container
-        flexDirectionColumn
-        justifyEnd
-        alignEnd
-        className={styles.thirdTitleContainer}
-      >
-        <Container container className={styles.anotherTitleContainer}>
-          <Link href="#" className={styles.linkDecoration}>
+        <Container container alignEnd className={styles.linksContainer}>
+          <Link to={Routes.HOME} className={styles.linkDecoration}>
             Home
           </Link>
           <Text className={styles.text}>/</Text>
-          <Link href="#" className={styles.linkDecoration}>
+          <Link to={Routes.ABOUT} className={styles.linkDecoration}>
             About
           </Link>
           <Text className={styles.text}>/</Text>
-          <Link href="#" className={styles.linkDecoration}>
+          <Link to={Routes.CONTACT} className={styles.linkDecoration}>
             Contact
           </Link>
         </Container>
-
-        <Header className={styles.secondTitle}>© 2025</Header>
       </Container>
+      <FooterBottom />
     </Container>
   );
 }

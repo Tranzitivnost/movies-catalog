@@ -1,0 +1,8 @@
+.container {
+  background-image: var(--bg-gradient-secondary),
+    url("@/shared/ui/assets/poster.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}

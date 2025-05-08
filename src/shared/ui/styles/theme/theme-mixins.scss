@@ -5,35 +5,25 @@
   $text-color-secondary,
   $border-primary,
   $image-filter,
-  $bg-secondary
+  $bg-secondary,
+  $bg-gradient-secondary
 ) {
+  --bg-primary: #{$bg-primary};
+  --bg-gradient-primary: #{$bg-gradient-primary};
+  --text-color-primary: #{$text-color-primary};
+  --text-color-secondary: #{$text-color-secondary};
+  --border-primary: #{$border-primary};
+  --image-filter: #{$image-filter};
+  --bg-secondary: #{$bg-secondary};
+  --bg-gradient-secondary: #{$bg-gradient-secondary};
+
   .scheme-primary {
     background-color: $bg-primary;
     color: $text-color-primary;
   }
 
-  .scheme-gradient {
-    background: $bg-gradient-primary;
-  }
-
   .button-primary {
     border: $border-primary;
     color: $text-color-primary;
-  }
-
-  .background-secondary {
-    background-color: $bg-secondary;
-  }
-
-  .text-primary {
-    color: $text-color-primary;
-  }
-
-  .text-secondary {
-    color: $text-color-secondary;
-  }
-
-  .filter-color-inversion {
-    filter: $image-filter;
   }
 }

@@ -1,0 +1,10 @@
+.contactInfo {
+  composes: primary-font size-xxl from global;
+  color: var(--text-color-primary);
+}
+
+.contactTitle {
+  composes: primary-font size-m from global;
+  color: var(--text-color-primary);
+  font-weight: 200;
+}
