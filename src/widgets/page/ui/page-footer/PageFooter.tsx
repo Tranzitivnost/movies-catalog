@@ -21,15 +21,15 @@ export function PageFooter() {
           <p>all around the world. </p>
         </Header>
         <Container container alignEnd className={styles.linksContainer}>
-          <Link isRoute to={Routes.HOME} className={styles.linkDecoration}>
+          <Link to={Routes.HOME} className={styles.linkDecoration}>
             Home
           </Link>
           <Text className={styles.text}>/</Text>
-          <Link isRoute to={Routes.ABOUT} className={styles.linkDecoration}>
+          <Link to={Routes.ABOUT} className={styles.linkDecoration}>
             About
           </Link>
           <Text className={styles.text}>/</Text>
-          <Link isRoute to={Routes.CONTACT} className={styles.linkDecoration}>
+          <Link to={Routes.CONTACT} className={styles.linkDecoration}>
             Contact
           </Link>
         </Container>

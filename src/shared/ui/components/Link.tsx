@@ -10,7 +10,6 @@ interface Props
   to?: string;
   target?: string;
   className?: string;
-  isRoute?: boolean;
 }
 
 export const Link = ({
@@ -19,10 +18,9 @@ export const Link = ({
   children,
   target,
   className,
-  isRoute,
   ...rest
 }: Props) => {
-  if (isRoute && to) {
+  if (to) {
     return (
       <RouterLink to={to} className={className}>
         {children}

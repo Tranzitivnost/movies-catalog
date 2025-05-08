@@ -25,20 +25,16 @@ export function PageHeader({ positionAbsolute }: Props) {
     >
       <Image src={Logo} alt="logo" />
       <Container container justifyBetween className={styles.buttonContainer}>
-        <Link isRoute to={Routes.HOME} className={styles.linkDecoration}>
+        <Link to={Routes.HOME} className={styles.linkDecoration}>
           Home
         </Link>
-        <Link
-          isRoute
-          to={Routes.MOVIE_RELEASE}
-          className={styles.linkDecoration}
-        >
+        <Link to={Routes.MOVIE_RELEASE} className={styles.linkDecoration}>
           Movie Release
         </Link>
-        <Link isRoute to={Routes.ABOUT} className={styles.linkDecoration}>
+        <Link to={Routes.ABOUT} className={styles.linkDecoration}>
           About
         </Link>
-        <Link isRoute to={Routes.CONTACT} className={styles.linkDecoration}>
+        <Link to={Routes.CONTACT} className={styles.linkDecoration}>
           Contact
         </Link>
       </Container>
@@ -48,7 +44,7 @@ export function PageHeader({ positionAbsolute }: Props) {
         alignCenter
         className={styles.iconContainer}
       >
-        <Link isRoute to="#" className={styles.linkDecoration}>
+        <Link to="#" className={styles.linkDecoration}>
           <Image src={Search} alt="button-search" />
         </Link>
         <ThemeSwitcher />
