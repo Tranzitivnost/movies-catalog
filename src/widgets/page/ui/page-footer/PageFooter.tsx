@@ -1,6 +1,6 @@
 import { Container, Header } from "@shared/ui";
 import styles from "./PageFooter.module.css";
-import { Link } from "react-router-dom";
+import { Link } from "@shared/ui/components/Link";
 import { Text } from "@shared/ui";
 import { Routes } from "@shared/routes";
 import { FooterBottom } from "@/entities/footer";
@@ -20,16 +20,16 @@ export function PageFooter() {
           <p> best updated movies </p>
           <p>all around the world. </p>
         </Header>
-        <Container container alignEnd className={styles.secondContainer}>
-          <Link to={Routes.HOME} className={styles.linkDecoration}>
+        <Container container alignEnd className={styles.linksContainer}>
+          <Link isRoute to={Routes.HOME} className={styles.linkDecoration}>
             Home
           </Link>
           <Text className={styles.text}>/</Text>
-          <Link to={Routes.ABOUT} className={styles.linkDecoration}>
+          <Link isRoute to={Routes.ABOUT} className={styles.linkDecoration}>
             About
           </Link>
           <Text className={styles.text}>/</Text>
-          <Link to={Routes.CONTACT} className={styles.linkDecoration}>
+          <Link isRoute to={Routes.CONTACT} className={styles.linkDecoration}>
             Contact
           </Link>
         </Container>

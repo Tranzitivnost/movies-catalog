@@ -1,9 +1,8 @@
 import { Container, Header } from "@shared/ui";
 import styles from "./ContactInformation.module.css";
-import { Text } from "@shared/ui";
 import clsx from "clsx";
 import { FooterBottom } from "@/entities/footer";
-import { TextBlock } from "@/entities/text-block";
+import { TextBlock } from "@/shared/ui";
 
 interface Props
   extends React.DetailedHTMLProps<
@@ -33,14 +32,14 @@ export function ContactInformation({ className }: Props) {
         alignStart
         className={styles.information}
       >
-        <TextBlock header="CONTACT US" information="+381 98 765 4321" />
+        <TextBlock header="CONTACT US" description="+381 98 765 4321" />
         <TextBlock
           header="ADDRESS"
-          information="1071 Fifth Avenue at 89th Street Manhattan, New York City"
+          description="1071 Fifth Avenue at 89th Street Manhattan, New York City"
         />
         <TextBlock
           header="YOUR QUESTIONS AND SPECIAL REQUESTS ARE ALWAYS WELCOME! 🚀🎉"
-          information="saintstream_support@gmail.com"
+          description="saintstream_support@gmail.com"
         />
       </Container>
       <FooterBottom />

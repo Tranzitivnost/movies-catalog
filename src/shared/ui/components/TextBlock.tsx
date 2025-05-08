@@ -8,14 +8,14 @@ interface Props
   > {
   className?: string;
   header: string;
-  information: string;
+  description: string;
 }
 
-export function TextBlock({ className, header, information }: Props) {
+export function TextBlock({ className, header, description }: Props) {
   return (
     <Container container flexDirectionColumn justifyBetween alignStart>
       <Text className={styles.contactTitle}>{header}</Text>
-      <Text className={styles.contactInfo}>{information}</Text>
+      <Text className={styles.contactInfo}>{description}</Text>
     </Container>
   );
 }
