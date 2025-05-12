@@ -29,11 +29,11 @@ export function PageHeader({ positionAbsolute }: Props) {
           Home
         </Link>
         {/* TODO replace it to the movie release when we have this page */}
-        <Link to={Routes.HOME} className={styles.linkDecoration}>
+        <Link to={Routes.MOVIE_RELEASE} className={styles.linkDecoration}>
           Movie Release
         </Link>
         {/* TODO replace it to the about when we have this page */}
-        <Link to={Routes.HOME} className={styles.linkDecoration}>
+        <Link to={Routes.ABOUT} className={styles.linkDecoration}>
           About
         </Link>
         <Link to={Routes.CONTACT} className={styles.linkDecoration}>

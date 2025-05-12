@@ -14,7 +14,7 @@ export const AppRouter = () => {
     <>
       <Route path={Routes.HOME} element={<HomePage />} />,
       <Route path={Routes.CONTACT} element={<ContactPage />} />,
-      <Route path={Routes.FILM} element={<FilmPage />} />,
+      <Route path={Routes.FILM_TEMPLATE} element={<FilmPage />} />,
     </>,
   );
 
