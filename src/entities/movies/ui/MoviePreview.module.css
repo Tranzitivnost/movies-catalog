@@ -1,5 +1,19 @@
+.link {
+  composes: background-tertiary from global;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    border-radius: 16px;
+  }
+}
+
 .container {
   width: 312px;
+}
+
+.movieContainer {
+  padding: 10px 15px;
 }
 
 .img {
@@ -15,7 +29,6 @@
   color: var(--text-color-primary);
   font-weight: 700;
   text-align: left;
-  padding-top: 12px;
 }
 
 .imgStar {

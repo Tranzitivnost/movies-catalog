@@ -3,4 +3,5 @@ export class Routes {
   static readonly CONTACT = "/contact";
   static readonly ABOUT = "/about";
   static readonly MOVIE_RELEASE = "/movie-release";
+  static readonly FILM = "/film";
 }
