@@ -2,10 +2,7 @@
   composes: background-tertiary from global;
   text-decoration: none;
   cursor: pointer;
-
-  &:hover {
-    border-radius: 16px;
-  }
+  border-radius: 16px;
 }
 
 .container {

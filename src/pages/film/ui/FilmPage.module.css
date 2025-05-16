@@ -1,5 +1,5 @@
 .container {
-  width: 1800px;
+  composes: main-grid from global;
 }
 
 .posterContainer {

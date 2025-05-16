@@ -7,8 +7,8 @@ import { Divider } from "@shared/ui";
 import { useParams } from "react-router-dom";
 
 export function FilmPage() {
-  const { id } = useParams<{ id: string }>(); // получаем id из URL
-  const numericId = Number(id); // приводим к числу
+  const { id } = useParams<{ id: string }>();
+  const numericId = Number(id);
 
   const currentYear = new Date().getFullYear();
   const { popularMovies } = usePopularMovies({
