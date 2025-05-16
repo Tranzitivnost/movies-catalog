@@ -22,6 +22,7 @@ $dark-text-color-secondary: rgb(156, 164, 171);
 $dark-theme-border-primary: 1px solid rgba(255, 255, 255, 0.741);
 $dark-theme-background-secondary: rgba(255, 255, 255, 0.1);
 $dark-image-filter: invert(0%);
+$dark-theme-background-tertiary: #222222cc;
 
 $light-theme-background-primary: #fff;
 $light-theme-background-gradient-primary: linear-gradient(
@@ -48,3 +49,4 @@ $light-text-color-secondary: rgb(99, 101, 102);
 $light-theme-border-primary: 1px solid rgba(66, 66, 66, 0.884);
 $light-theme-background-secondary: rgba(10, 10, 10, 0.137);
 $light-image-filter: invert(100%);
+$light-theme-background-tertiary: #deddddcc;

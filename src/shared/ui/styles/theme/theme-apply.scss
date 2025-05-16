@@ -11,7 +11,8 @@ body {
       $light-theme-border-primary,
       $light-image-filter,
       $light-theme-background-secondary,
-      $light-theme-background-gradient-secondary
+      $light-theme-background-gradient-secondary,
+      $light-theme-background-tertiary
     );
   }
 
@@ -24,7 +25,8 @@ body {
       $dark-theme-border-primary,
       $dark-image-filter,
       $dark-theme-background-secondary,
-      $dark-theme-background-gradient-secondary
+      $dark-theme-background-gradient-secondary,
+      $dark-theme-background-tertiary
     );
   }
 }

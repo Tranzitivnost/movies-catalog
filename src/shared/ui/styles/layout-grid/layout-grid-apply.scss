@@ -1,7 +1,7 @@
 @import "./layout-grid-variables.scss";
 
 .main-grid {
-  max-width: $main-grid-width;
+  min-width: $main-grid-width;
 }
 
 .inner-grid {

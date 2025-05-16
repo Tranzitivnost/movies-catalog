@@ -6,7 +6,8 @@
   $border-primary,
   $image-filter,
   $bg-secondary,
-  $bg-gradient-secondary
+  $bg-gradient-secondary,
+  $bg-tertiary
 ) {
   --bg-primary: #{$bg-primary};
   --bg-gradient-primary: #{$bg-gradient-primary};
@@ -25,5 +26,11 @@
   .button-primary {
     border: $border-primary;
     color: $text-color-primary;
+  }
+
+  .background-tertiary {
+    &:hover {
+      background-color: $bg-tertiary;
+    }
   }
 }
