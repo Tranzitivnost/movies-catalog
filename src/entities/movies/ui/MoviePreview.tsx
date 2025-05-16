@@ -13,7 +13,7 @@ type Props = {
 
 export function MoviePreview({ movie, className }: Props) {
   return (
-    <Link to={Routes.FILM(movie.id)} className={styles.link}>
+    <Link to={Routes.GET_FILM_URL(movie.id)} className={styles.link}>
       <Container
         container
         flexDirectionColumn

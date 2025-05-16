@@ -4,9 +4,9 @@ export class Routes {
   static readonly CONTACT = "/contact";
   static readonly ABOUT = "/about";
   static readonly MOVIE_RELEASE = "/movie-release";
-  static readonly FILM_TEMPLATE = getUrlWithParams("FILM_TEMPLATE", {});
+  static readonly FILM = "/film/:id";
 
-  static FILM(id: string | number) {
-    return getUrlWithParams("FILM", { id });
+  static GET_FILM_URL(id: string | number) {
+    return getUrlWithParams(this.FILM, { id });
   }
 }
