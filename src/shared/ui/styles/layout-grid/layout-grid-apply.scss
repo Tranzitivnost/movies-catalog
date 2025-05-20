@@ -1,9 +1,13 @@
 @import "./layout-grid-variables.scss";
 
 .main-grid {
-  max-width: $main-grid-width;
+  min-width: $main-grid-width;
 }
 
 .inner-grid {
   max-width: $inner-grid-width;
+}
+
+.poster-grid {
+  height: $main-grid-height;
 }

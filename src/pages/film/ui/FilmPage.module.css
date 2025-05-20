@@ -3,5 +3,5 @@
 }
 
 .posterContainer {
-  height: 800px;
+  composes: poster-grid from global;
 }
