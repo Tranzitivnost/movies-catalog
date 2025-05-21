@@ -5,8 +5,14 @@ import { usePopularMovies } from "@entities/popular-movies";
 import { PosterMovie } from "@/features/poster-movie";
 import { Divider } from "@shared/ui";
 import { useParams } from "react-router-dom";
+import { ImageSlider } from "@/widgets/page";
+import type { Movie } from "@/shared/api";
 
-export function FilmPage() {
+type Props = {
+  movies: Movie[];
+};
+
+export function FilmPage({ movies }: Props) {
   const { id } = useParams<{ id: string }>();
   const numericId = Number(id);
 
@@ -30,6 +36,8 @@ export function FilmPage() {
       {currentFilm && (
         <PosterMovie movie={currentFilm} className={styles.posterContainer} />
       )}
+      <Divider />
+      <ImageSlider slides={popularMovies} />
       <Divider />
       <PageFooter />
     </Container>
