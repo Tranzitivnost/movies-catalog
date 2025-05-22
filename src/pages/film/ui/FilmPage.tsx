@@ -6,6 +6,7 @@ import { PosterMovie } from "@/features/poster-movie";
 import { Divider } from "@shared/ui";
 import { useParams } from "react-router-dom";
 import { ImageSlider } from "@/widgets/page";
+import { MoviePreview } from "@/entities/movies";
 import type { Movie } from "@/shared/api";
 
 type Props = {
@@ -37,7 +38,9 @@ export function FilmPage({ movies }: Props) {
         <PosterMovie movie={currentFilm} className={styles.posterContainer} />
       )}
       <Divider />
-      <ImageSlider slides={popularMovies} />
+      <ImageSlider slides={popularMovies} > 
+          <MoviePreview/>
+       </ImageSlider>
       <Divider />
       <PageFooter />
     </Container>

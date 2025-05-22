@@ -1,16 +1,20 @@
 import type { Movie } from "@/shared/api";
-import { Container, Text } from "@/shared/ui";
+import { Container, Button } from "@/shared/ui";
 import { useState } from "react";
 import styles from "./ImageSlider.module.css";
 import { Image } from "@/shared/ui";
 import { MoviePreview } from "@/entities/movies";
 
-type Props = {
+interface Props extends React.DetailedHTMLProps<
+    React.AnchorHTMLAttributes<HTMLAnchorElement>,
+    HTMLAnchorElement
+  > {
+  children: React.ReactNode;
   slides: Movie[];
   visibleCount?: number;
 };
 
-export function ImageSlider({ slides, visibleCount = 5 }: Props) {
+export function ImageSlider({ slides, visibleCount = 5, children }: Props) {
   const [startIndex, setStartIndex] = useState(0);
 
   if (slides.length === 0) {
@@ -30,18 +34,18 @@ export function ImageSlider({ slides, visibleCount = 5 }: Props) {
   const visibleImages = slides.slice(startIndex, startIndex + visibleCount);
 
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-      <button onClick={prev} disabled={startIndex === 0}>
+    <Container style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+      <Button onClick={prev} disabled={startIndex === 0}>
         ←
-      </button>
-      <div style={{ display: "flex", overflow: "hidden", gap: "24px" }}>
-        {visibleImages.map((movie, index) => (
-          <MoviePreview movie={movie} key={index}></MoviePreview>
+      </Button>
+      <Container style={{ display: "flex", overflow: "hidden", gap: "24px" }}>
+        {visibleImages.map((image, index) => (
+          {children }
         ))}
-      </div>
-      <button onClick={next} disabled={startIndex >= maxIndex}>
+      </Container>
+      <Button onClick={next} disabled={startIndex >= maxIndex}>
         →
-      </button>
-    </div>
+      </Button>
+    </Container>
   );
 }
