@@ -22,9 +22,9 @@
   border-radius: 50%;
 }
 
-.button:disabled {
+/* .button:disabled {
   opacity: 0.1;
-}
+} */
 
 .prevButton {
   transform: rotate(180deg);
