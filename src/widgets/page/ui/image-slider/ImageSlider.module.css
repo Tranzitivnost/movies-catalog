@@ -1,1 +1,31 @@
+.container {
+  transform: scale(0.8);
+}
 
+.visibleImages {
+  overflow: "hidden";
+}
+
+.button {
+  composes: background-tertiary from global;
+  background-color: rgba(122, 122, 122, 0.753);
+  background-image: url("@/shared/ui/assets/Button_Circle.png/");
+  filter: var(--image-filter);
+  width: 40px;
+  height: 40px;
+
+  opacity: 50%;
+
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.button:disabled {
+  opacity: 0.1;
+}
+
+.prevButton {
+  transform: rotate(180deg);
+}
