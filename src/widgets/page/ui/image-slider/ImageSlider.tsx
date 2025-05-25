@@ -1,36 +1,56 @@
-import type { Movie } from "@/shared/api";
 import { Container, Button } from "@/shared/ui";
 import { useState } from "react";
 import styles from "./ImageSlider.module.css";
 import clsx from "clsx";
-import { current } from "@reduxjs/toolkit";
+
 interface Props {
-  children: (slide: Movie, index: number) => React.ReactNode;
-  slides: Movie[];
+  children: JSX.Element[];
   visibleCount?: number;
   className?: string;
 }
 
-export function ImageSlider({ slides, visibleCount = 3, children }: Props) {
-  const [startIndex, setStartIndex] = useState(0);
+// 1. work with indexes of array. add somehow to the end of visible items
+// new items from beginning of source array
 
-  if (slides.length === 0) {
-    return <p>Loading...</p>;
-  }
+// edge cases:
+// 1. when we at the end or start of array we need to somehow copy the rest of array so it is cycled (startIndex)
+// 2. length of slides array and visibleCount can be different values (but should not) (visible count cannot be > slides.length)
+// 3. visibleCount <= 0
+// 4. slides.length === 0
+
+// slides, visibleCount, startIndex
+// slides - [div, span, div, ReactElement], visibleCount - number, startIndex - number
+
+// <ImageSlider visibleCount={2}>
+//    <Moive id="1"/>
+//    <Moive id="2"/>
+//    <Moive id="3"/>
+// </ImageSlider>
+
+// дублируем массив children
+// когда startIndex + visibleCount === children.length  то к массиву  добавляем  слайс,
+// где (нулевой индекс, 0 + visibleCount)
+
+//next = (setStartIndex(value + 1))
+export function ImageSlider({ visibleCount = 3, children }: Props) {
+  const [startIndex, setStartIndex] = useState(0);
+  const [slides, setSlides] = useState(children);
+
   const nextImageGenerate = () => {
-    const isLastSlide = startIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : startIndex + 1;
-    setStartIndex(newIndex);
+    if (startIndex + visibleCount === slides.length) {
+      setSlides(() => [...slides, ...slides.slice(0, visibleCount)]);
+    }
+    setStartIndex(startIndex + 1);
   };
 
   const prevImageGenerate = () => {
-    const isFirstSlide = startIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : startIndex - 1;
-
-    setStartIndex(newIndex);
+    setStartIndex(startIndex - 1);
   };
-
   const visibleImages = slides.slice(startIndex, startIndex + visibleCount);
+
+  if (children.length === 0) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <Container container alignCenter gap="12px" className={styles.container}>
@@ -39,9 +59,7 @@ export function ImageSlider({ slides, visibleCount = 3, children }: Props) {
         className={clsx([styles.button, styles.prevButton])}
       />
       <Container container gap="24px" className={styles.visibleImages}>
-        {visibleImages.map((slide, index) => {
-          return children(slide, index);
-        })}
+        {visibleImages}
       </Container>
       <Button onClick={nextImageGenerate} className={styles.button} />
     </Container>

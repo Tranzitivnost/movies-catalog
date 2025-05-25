@@ -38,8 +38,10 @@ export function FilmPage({ movies }: Props) {
         <PosterMovie movie={currentFilm} className={styles.posterContainer} />
       )}
       <Divider />
-      <ImageSlider slides={popularMovies}>
-        {(movie, index) => <MoviePreview key={index} movie={movie} />}
+      <ImageSlider>
+        {popularMovies.map((movie, index) => (
+          <MoviePreview key={index} movie={movie} />
+        ))}
       </ImageSlider>
       <Divider />
       <PageFooter />
