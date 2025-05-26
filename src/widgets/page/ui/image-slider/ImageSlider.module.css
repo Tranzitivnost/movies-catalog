@@ -1,5 +1,5 @@
 .container {
-  transform: scale(0.8);
+  padding: 50px;
 }
 
 .visibleImages {

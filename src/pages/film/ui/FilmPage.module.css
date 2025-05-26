@@ -1,7 +1,11 @@
 .container {
-  composes: main-grid from global;
+  width: 100%;
 }
 
 .posterContainer {
   composes: poster-grid from global;
+}
+
+.moviePreview {
+  width: 200px;
 }

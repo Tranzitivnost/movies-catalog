@@ -1,5 +1,5 @@
 import { Container, Button } from "@/shared/ui";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./ImageSlider.module.css";
 import clsx from "clsx";
 
@@ -29,24 +29,33 @@ interface Props {
 
 // дублируем массив children
 // когда startIndex + visibleCount === children.length  то к массиву  добавляем  слайс,
-// где (нулевой индекс, 0 + visibleCount)
+// где (нулевой индекс, 0 + visibleCount), а потом убираем
 
 //next = (setStartIndex(value + 1))
-export function ImageSlider({ visibleCount = 3, children }: Props) {
-  const [startIndex, setStartIndex] = useState(0);
+export function ImageSlider({ visibleCount = 5, children }: Props) {
   const [slides, setSlides] = useState(children);
 
+  useEffect(() => {
+    setSlides(children);
+  }, [children]);
+
   const nextImageGenerate = () => {
-    if (startIndex + visibleCount === slides.length) {
-      setSlides(() => [...slides, ...slides.slice(0, visibleCount)]);
-    }
-    setStartIndex(startIndex + 1);
+    setSlides(prevSlides => {
+      const firstElement = prevSlides[0];
+      const newSlides = [...prevSlides.slice(1), firstElement];
+      return newSlides;
+    });
   };
 
   const prevImageGenerate = () => {
-    setStartIndex(startIndex - 1);
+    setSlides(prevSlides => {
+      const lastElement = prevSlides[prevSlides.length - 1];
+      const newSlides = [lastElement, ...prevSlides.slice(0, -1)];
+      return newSlides;
+    });
   };
-  const visibleImages = slides.slice(startIndex, startIndex + visibleCount);
+
+  const visibleImages = slides.slice(0, visibleCount);
 
   if (children.length === 0) {
     return <p>Loading...</p>;

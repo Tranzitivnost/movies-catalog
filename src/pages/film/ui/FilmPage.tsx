@@ -40,7 +40,11 @@ export function FilmPage({ movies }: Props) {
       <Divider />
       <ImageSlider>
         {popularMovies.map((movie, index) => (
-          <MoviePreview key={index} movie={movie} />
+          <MoviePreview
+            key={index}
+            movie={movie}
+            className={styles.moviePreview}
+          />
         ))}
       </ImageSlider>
       <Divider />
