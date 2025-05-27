@@ -1,9 +1,14 @@
 .container {
-  padding: 50px;
+  width: 100%;
 }
 
-.visibleImages {
-  overflow: "hidden";
+.visibleItems {
+  width: 80%;
+  overflow: hidden;
+}
+
+.buttonContainer {
+  width: 10%;
 }
 
 .button {
@@ -13,18 +18,12 @@
   filter: var(--image-filter);
   width: 40px;
   height: 40px;
-
   opacity: 50%;
-
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
 }
-
-/* .button:disabled {
-  opacity: 0.1;
-} */
 
 .prevButton {
   transform: rotate(180deg);

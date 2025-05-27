@@ -1,1 +1,1 @@
-export { PageFooter, PageHeader, ImageSlider } from "./ui";
+export { PageFooter, PageHeader, Slider } from "./ui";
