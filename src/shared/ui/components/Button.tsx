@@ -6,7 +6,7 @@ interface Props
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export const Button = ({ children, className, ...rest }: Props) => {

@@ -1,4 +1,4 @@
-import { Container } from "@shared/ui";
+import { Container, Link } from "@shared/ui";
 import { PageFooter, PageHeader } from "@/widgets/page";
 import styles from "./FilmPage.module.css";
 import { usePopularMovies } from "@entities/popular-movies";
@@ -7,13 +7,9 @@ import { Divider } from "@shared/ui";
 import { useParams } from "react-router-dom";
 import { Slider } from "@/widgets/page";
 import { MoviePreview } from "@/entities/movies";
-import type { Movie } from "@/shared/api";
+import { Routes } from "@/shared/routes";
 
-type Props = {
-  movies: Movie[];
-};
-
-export function FilmPage({ movies }: Props) {
+export function FilmPage() {
   const { id } = useParams<{ id: string }>();
   const numericId = Number(id);
 
@@ -40,11 +36,14 @@ export function FilmPage({ movies }: Props) {
       <Divider />
       <Slider className={styles.slider}>
         {popularMovies.map((movie, index) => (
-          <MoviePreview
-            key={index}
-            movie={movie}
-            className={styles.moviePreview}
-          />
+          <Link to={Routes.GET_FILM_URL(movie.id)} className={styles.link}>
+            <MoviePreview
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              key={index}
+              movie={movie}
+              className={styles.moviePreview}
+            />
+          </Link>
         ))}
       </Slider>
       <Divider />

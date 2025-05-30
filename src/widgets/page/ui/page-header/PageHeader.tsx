@@ -23,7 +23,8 @@ export function PageHeader({ positionAbsolute }: Props) {
         { [styles.positionAbsolute]: positionAbsolute },
       ])}
     >
-      <Link to={Routes.HOME}><Image src={Logo} alt="logo" />
+      <Link to={Routes.HOME}>
+        <Image src={Logo} alt="logo" />
       </Link>
       <Container container justifyBetween className={styles.buttonContainer}>
         <Link to={Routes.HOME} className={styles.linkDecoration}>

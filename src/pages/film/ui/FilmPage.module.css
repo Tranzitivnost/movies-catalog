@@ -13,3 +13,10 @@
 .slider {
   padding: 40px 0;
 }
+
+.link {
+  composes: background-tertiary from global;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 16px;
+}

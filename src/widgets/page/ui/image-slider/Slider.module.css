@@ -11,18 +11,19 @@
   width: 10%;
 }
 
+.img-arrow {
+  filter: var(--image-filter);
+  width: 21px;
+  height: 21px;
+}
+
 .button {
   composes: background-tertiary from global;
   background-color: rgba(122, 122, 122, 0.753);
-  background-image: url("@/shared/ui/assets/Button_Circle.png/");
-  filter: var(--image-filter);
+  border-radius: 50%;
   width: 40px;
   height: 40px;
   opacity: 50%;
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50%;
 }
 
 .prevButton {
