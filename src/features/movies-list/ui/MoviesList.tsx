@@ -1,7 +1,8 @@
-import { Container, Header, Text } from "@shared/ui";
+import { Container, Header, Text, Link } from "@shared/ui";
 import { MoviePreview } from "@entities/movies";
 import styles from "./MoviesList.module.css";
 import type { Movie } from "@/shared/api";
+import { Routes } from "@/shared/routes";
 
 type Props = {
   movies: Movie[];
@@ -21,7 +22,15 @@ export function MoviesList({ movies, title }: Props) {
       <Header className={styles.title}>{title}</Header>
       <Container justifyBetween flexWrap gap="16px">
         {movies.length > 0 ? (
-          movies.map(movie => <MoviePreview movie={movie} key={movie.id} />)
+          movies.map(movie => (
+            <Link to={Routes.GET_FILM_URL(movie.id)} className={styles.link}>
+              <MoviePreview
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                movie={movie}
+                key={movie.id}
+              />
+            </Link>
+          ))
         ) : (
           <Text className={styles.warning}>No available films</Text>
         )}

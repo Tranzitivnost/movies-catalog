@@ -1,7 +1,7 @@
 .container {
-  composes: main-grid from global;
+  width: 100%;
 }
 
 .posterContainer {
-  height: 800px;
+  composes: poster-grid from global;
 }
