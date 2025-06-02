@@ -7,7 +7,7 @@ import {
 import { HomePage } from "@pages/home";
 import { ContactPage } from "@pages/contact";
 import { Routes } from "@shared/routes";
-import { FilmPage } from "@/pages/film/ui/FilmPage";
+import { FilmPage } from "@/pages/film";
 
 export const AppRouter = () => {
   const routers = createRoutesFromElements(

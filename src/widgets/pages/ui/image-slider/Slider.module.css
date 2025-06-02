@@ -1,0 +1,31 @@
+.container {
+  width: 100%;
+}
+
+.visibleItems {
+  width: 80%;
+  overflow: hidden;
+}
+
+.buttonContainer {
+  width: 10%;
+}
+
+.img-arrow {
+  filter: var(--image-filter);
+  width: 21px;
+  height: 21px;
+}
+
+.button {
+  composes: background-tertiary from global;
+  background-color: rgba(122, 122, 122, 0.753);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  opacity: 50%;
+}
+
+.prevButton {
+  transform: rotate(180deg);
+}

@@ -14,3 +14,10 @@
   composes: primary-font size-xxl from global;
   color: var(--text-color-primary);
 }
+
+.link {
+  composes: background-tertiary from global;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 16px;
+}

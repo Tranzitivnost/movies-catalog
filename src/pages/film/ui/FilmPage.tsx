@@ -1,10 +1,13 @@
-import { Container } from "@shared/ui";
-import { PageFooter, PageHeader } from "@/widgets/page";
+import { Container, Link } from "@shared/ui";
+import { PageFooter, PageHeader } from "@/widgets/pages";
 import styles from "./FilmPage.module.css";
 import { usePopularMovies } from "@entities/popular-movies";
-import { PosterMovie } from "@/features/poster-movie";
+import { PosterMovie } from "@/features/poster-movies";
 import { Divider } from "@shared/ui";
 import { useParams } from "react-router-dom";
+import { Slider } from "@/widgets/pages";
+import { MoviePreview } from "@/entities/movies";
+import { Routes } from "@/shared/routes";
 
 export function FilmPage() {
   const { id } = useParams<{ id: string }>();
@@ -30,6 +33,19 @@ export function FilmPage() {
       {currentFilm && (
         <PosterMovie movie={currentFilm} className={styles.posterContainer} />
       )}
+      <Divider />
+      <Slider className={styles.slider}>
+        {popularMovies.map((movie, index) => (
+          <Link to={Routes.GET_FILM_URL(movie.id)} className={styles.link}>
+            <MoviePreview
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              key={index}
+              movie={movie}
+              className={styles.moviePreview}
+            />
+          </Link>
+        ))}
+      </Slider>
       <Divider />
       <PageFooter />
     </Container>

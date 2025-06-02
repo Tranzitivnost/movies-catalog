@@ -1,1 +1,0 @@
-export { ContactInformation } from "./ui";

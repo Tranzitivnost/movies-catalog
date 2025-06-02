@@ -1,10 +1,7 @@
 import styles from "./PageHeader.module.css";
-import { Image } from "@/shared/ui";
-import Logo from "@/shared/ui/assets/Component-logo.svg";
-import { Container } from "@/shared/ui";
-import Search from "@/shared/ui/assets/Icon_Outline_search.svg";
-import { Link } from "@shared/ui/components/Link";
-import { ThemeSwitcher } from "@/shared/ui";
+import { Image, Container, Link, ThemeSwitcher } from "@/shared/ui";
+import { LogoIcon } from "@/shared/ui";
+import { SearchIcon } from "@/shared/ui";
 import { Routes } from "@shared/routes";
 import clsx from "clsx";
 interface Props
@@ -23,7 +20,9 @@ export function PageHeader({ positionAbsolute }: Props) {
         { [styles.positionAbsolute]: positionAbsolute },
       ])}
     >
-      <Image src={Logo} alt="logo" />
+      <Link to={Routes.HOME}>
+        <Image src={LogoIcon} alt="logo" />
+      </Link>
       <Container container justifyBetween className={styles.buttonContainer}>
         <Link to={Routes.HOME} className={styles.linkDecoration}>
           Home
@@ -47,7 +46,7 @@ export function PageHeader({ positionAbsolute }: Props) {
         className={styles.iconContainer}
       >
         <Link to="#" className={styles.linkDecoration}>
-          <Image src={Search} alt="button-search" />
+          <Image src={SearchIcon} alt="button-search" />
         </Link>
         <ThemeSwitcher />
       </Container>

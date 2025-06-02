@@ -1,7 +1,7 @@
 import { Container, Header } from "@shared/ui";
 import styles from "./ContactInformation.module.css";
 import clsx from "clsx";
-import { FooterBottom } from "@/entities/footer";
+import { FooterBottom } from "@/widgets/pages";
 import { TextBlock } from "@/shared/ui";
 
 interface Props
