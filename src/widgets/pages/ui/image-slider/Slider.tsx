@@ -1,8 +1,7 @@
-import { Container, Button, Image } from "@/shared/ui";
+import { Container, Button, Image, ArrowIcon } from "@/shared/ui";
 import { useState } from "react";
 import styles from "./Slider.module.css";
 import clsx from "clsx";
-import Arrow from "@/shared/ui/assets/Arrow.png";
 
 interface Props {
   children: JSX.Element[];
@@ -37,7 +36,11 @@ export function Slider({ children, className }: Props) {
           onClick={goToPrev}
           className={clsx([styles.button, styles.prevButton])}
         >
-          <Image src={Arrow} alt="arrow-left" className={styles["img-arrow"]} />
+          <Image
+            src={ArrowIcon}
+            alt="arrow-left"
+            className={styles["img-arrow"]}
+          />
         </Button>
       </Container>
       <Container container gap="24px" className={styles.visibleItems}>
@@ -46,7 +49,7 @@ export function Slider({ children, className }: Props) {
       <Container alignCenter justifyCenter className={styles.buttonContainer}>
         <Button onClick={goToNext} className={styles.button}>
           <Image
-            src={Arrow}
+            src={ArrowIcon}
             alt="arrow-right"
             className={styles["img-arrow"]}
           />

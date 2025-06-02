@@ -1,9 +1,8 @@
 import clsx from "clsx";
-import { Container, Header } from "@shared/ui";
+import { Container, Header, Image } from "@shared/ui";
 import styles from "./MoviePreview.module.css";
 import type { Movie } from "@shared/api";
-import Star from "@/shared/ui/assets/Star.svg";
-import { Image } from "@/shared/ui";
+import { StarIcon } from "@/shared/ui";
 
 type Props = {
   movie: Movie;
@@ -23,7 +22,7 @@ export function MoviePreview({ movie, className, onClick }: Props) {
       <Container flexDirectionColumn className={styles.movieContainer}>
         <Header className={styles.movieTitle}>{movie.title}</Header>
         <Container className={styles.starContainer}>
-          <Image className={styles.imgStar} src={Star} alt="star-logo" />
+          <Image className={styles.imgStar} src={StarIcon} alt="star-logo" />
           <Header className={styles.popularity}>{movie.vote_average}</Header>
         </Container>
       </Container>

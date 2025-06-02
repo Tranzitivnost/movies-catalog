@@ -18,11 +18,12 @@ export const Link = ({
   children,
   target,
   className,
+  onClick,
   ...rest
 }: Props) => {
   if (to) {
     return (
-      <RouterLink to={to} className={className}>
+      <RouterLink to={to} className={className} onClick={onClick}>
         {children}
       </RouterLink>
     );

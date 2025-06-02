@@ -1,9 +1,7 @@
-import { Container, Header } from "@shared/ui";
+import { Container, Header, Link, Text } from "@shared/ui";
 import styles from "./PageFooter.module.css";
-import { Link } from "@shared/ui/components/Link";
-import { Text } from "@shared/ui";
 import { Routes } from "@shared/routes";
-import { FooterBottom } from "@/entities/footer";
+import { FooterBottom } from "@/widgets/pages";
 
 export function PageFooter() {
   return (
@@ -21,7 +19,11 @@ export function PageFooter() {
           <p>all around the world. </p>
         </Header>
         <Container container alignEnd className={styles.linksContainer}>
-          <Link to={Routes.HOME} className={styles.linkDecoration}>
+          <Link
+            to={Routes.HOME}
+            className={styles.linkDecoration}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             Home
           </Link>
           <Text className={styles.text}>/</Text>
