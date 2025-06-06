@@ -1,0 +1,19 @@
+.container {
+  height: 48px;
+}
+
+.img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.actorName {
+  composes: secondary-font size-l from global;
+}
+
+.character {
+  composes: secondary-font size-sm from global;
+}

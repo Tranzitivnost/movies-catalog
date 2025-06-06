@@ -4,3 +4,5 @@ export type { GetPopularMoviesQueryType } from "./popular-movies/getPopularMovie
 export { IMAGE_SERVICE_BASE_URL } from "./image-service/imageServiceUrl";
 export { getImageUrl } from "./image-service/getImageUrl";
 export type { Movie } from "./movies/movie";
+export type { MovieCredits, CastMember } from "./credits/movieCredits";
+export { getMovieCredits } from "./credits/getMovieCredits";
