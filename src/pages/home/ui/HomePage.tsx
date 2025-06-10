@@ -15,8 +15,7 @@ export function HomePage() {
     primary_release_year: currentYear,
   });
   const firstMovie = popularMovies?.[0];
-  const cast = useMovieCredits(950396);
-  console.log(cast);
+
   return (
     <Container
       container
@@ -29,20 +28,7 @@ export function HomePage() {
       {firstMovie && (
         <PosterMovie movie={firstMovie} className={styles.posterContainer} />
       )}
-
       <Divider />
-      <Container container flexDirectionColumn style={{ padding: "75px" }}>
-        <Header>Top cast</Header>
-        {cast.length > 0 ? (
-          <Container gap="20px" container>
-            {cast.map(actor => (
-              <CastMemberPreview actor={actor} key={actor.id} />
-            ))}
-          </Container>
-        ) : (
-          <p>Нет данных</p>
-        )}
-      </Container>
       <MoviesList title="Popular movies for you" movies={popularMovies} />
       <Divider />
       <PageFooter />

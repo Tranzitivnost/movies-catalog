@@ -1,4 +1,4 @@
-import { Container, Link } from "@shared/ui";
+import { Container, Link, Header } from "@shared/ui";
 import { PageFooter, PageHeader } from "@/widgets/pages";
 import styles from "./FilmPage.module.css";
 import { usePopularMovies } from "@entities/popular-movies";
@@ -8,6 +8,8 @@ import { useParams } from "react-router-dom";
 import { Slider } from "@/widgets/pages";
 import { MoviePreview } from "@/entities/movies";
 import { Routes } from "@/shared/routes";
+import { CastMember } from "@/shared/api";
+import { CastMemberPreview, useMovieCredits } from "@/entities/credits";
 
 export function FilmPage() {
   const { id } = useParams<{ id: string }>();
@@ -20,7 +22,7 @@ export function FilmPage() {
     primary_release_year: currentYear,
   });
   const currentFilm = popularMovies?.find(movie => movie.id === numericId);
-
+  const cast = useMovieCredits(950396);
   return (
     <Container
       container
@@ -33,6 +35,17 @@ export function FilmPage() {
       {currentFilm && (
         <PosterMovie movie={currentFilm} className={styles.posterContainer} />
       )}
+      <Divider />
+
+      <Header>Top cast</Header>
+      <Slider className={styles.slider}>
+        {
+          cast.map(actor => (
+            <CastMemberPreview actor={actor} key={actor.id} />
+          )) as JSX.Element[]
+        }
+      </Slider>
+
       <Divider />
       <Slider className={styles.slider}>
         {popularMovies.map((movie, index) => (

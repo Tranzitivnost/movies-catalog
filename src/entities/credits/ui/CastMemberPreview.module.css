@@ -1,19 +1,36 @@
-.container {
-  height: 48px;
+.actorContainer {
+  display: flex;
+  min-width: 200px;
+  max-width: 100%;
+  flex-shrink: 0;
 }
 
 .img {
   width: 48px;
   height: 48px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
 }
 
+.headerContainer {
+  white-space: nowrap;
+}
+
 .actorName {
   composes: secondary-font size-l from global;
+  color: var(--text-color-primary);
+  text-align: left;
+  font-weight: 600;
 }
 
 .character {
   composes: secondary-font size-sm from global;
+  color: var(--text-color-secondary);
+  text-align: left;
+}
+
+.slider {
+  padding: 40px 0;
 }

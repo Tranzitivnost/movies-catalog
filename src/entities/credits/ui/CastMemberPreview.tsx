@@ -6,19 +6,22 @@ import type { CastMember } from "@shared/api";
 type Props = {
   actor: CastMember;
   className?: string;
-  onClick?: () => void;
 };
 
-export function CastMemberPreview({ actor, className, onClick }: Props) {
+export function CastMemberPreview({ actor, className }: Props) {
   return (
     <Container
-      container
-      flexDirectionColumn
-      className={clsx(styles.container, className)}
-      onClick={onClick}
+      justifyCenter
+      gap="12px"
+      className={clsx(styles.actorContainer, className)}
     >
       <Image className={styles.img} src={actor.profile_path} alt={actor.name} />
-      <Container flexDirectionColumn className={styles.headerContainer}>
+      <Container
+        justifyCenter
+        flexDirectionColumn
+        alignStart
+        className={styles.headerContainer}
+      >
         <Header className={styles.actorName}>{actor.name}</Header>
         <Header className={styles.character}>{actor.character}</Header>
       </Container>
