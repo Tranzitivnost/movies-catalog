@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 import { Slider } from "@/widgets/pages";
 import { MoviePreview } from "@/entities/movies";
 import { Routes } from "@/shared/routes";
-import { CastMember } from "@/shared/api";
+
 import { CastMemberPreview, useMovieCredits } from "@/entities/credits";
 
 export function FilmPage() {
@@ -22,13 +22,13 @@ export function FilmPage() {
     primary_release_year: currentYear,
   });
   const currentFilm = popularMovies?.find(movie => movie.id === numericId);
-  const cast = useMovieCredits(950396);
+
+  const cast = useMovieCredits(currentFilm?.id ?? 0);
   return (
     <Container
       container
       flexDirectionColumn
       justifyBetween
-      alignCenter
       className={styles.container}
     >
       <PageHeader positionAbsolute />
@@ -37,7 +37,7 @@ export function FilmPage() {
       )}
       <Divider />
 
-      <Header>Top cast</Header>
+      <Header className={styles.sliderHeader}>Top cast</Header>
       <Slider className={styles.slider}>
         {
           cast.map(actor => (
@@ -47,6 +47,7 @@ export function FilmPage() {
       </Slider>
 
       <Divider />
+      <Header className={styles.sliderHeader}>Movies</Header>
       <Slider className={styles.slider}>
         {popularMovies.map((movie, index) => (
           <Link to={Routes.GET_FILM_URL(movie.id)} className={styles.link}>
