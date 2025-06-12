@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { getMovieCredits } from "@shared/api";
 import type { ErrorType } from "@shared/error";
 import type { CastMember } from "@shared/api";
-import { mapCredits } from "./mapCredits";
+import { mapCastMembers } from "./mapCastMembers";
 
 type FetchMovieCastParams = {
   movieId: number;
@@ -25,7 +25,7 @@ export const fetchMovieCast = createAsyncThunk<
     const response = await getMovieCredits(movieId, { language });
     return {
       movieId,
-      cast: mapCredits(response),
+      cast: mapCastMembers(response),
     };
   } catch (err: unknown) {
     return thunkAPI.rejectWithValue(err as ErrorType);

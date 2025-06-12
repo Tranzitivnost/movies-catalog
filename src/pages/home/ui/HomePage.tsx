@@ -1,11 +1,10 @@
-import { Container, Header, Image } from "@shared/ui";
+import { Container } from "@shared/ui";
 import { PageFooter, PageHeader } from "@/widgets/pages";
 import styles from "./HomePage.module.css";
 import { usePopularMovies } from "@entities/popular-movies";
 import { PosterMovie } from "@/features/poster-movies";
 import { MoviesList } from "@/features/movies-lists";
 import { Divider } from "@shared/ui";
-import { useMovieCredits, CastMemberPreview } from "@entities/credits";
 
 export function HomePage() {
   const currentYear = new Date().getFullYear();

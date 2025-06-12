@@ -1,8 +1,6 @@
 .actorContainer {
-  display: flex;
   min-width: 200px;
   max-width: 100%;
-  flex-shrink: 0;
 }
 
 .img {

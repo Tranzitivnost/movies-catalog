@@ -35,10 +35,9 @@ export function FilmPage() {
       {currentFilm && (
         <PosterMovie movie={currentFilm} className={styles.posterContainer} />
       )}
-      <Divider />
 
       <Header className={styles.sliderHeader}>Top cast</Header>
-      <Slider className={styles.slider}>
+      <Slider className={styles.slider} gap="2px">
         {
           cast.map(actor => (
             <CastMemberPreview actor={actor} key={actor.id} />
@@ -46,9 +45,8 @@ export function FilmPage() {
         }
       </Slider>
 
-      <Divider />
       <Header className={styles.sliderHeader}>Movies</Header>
-      <Slider className={styles.slider}>
+      <Slider className={styles.slider} gap="32px">
         {popularMovies.map((movie, index) => (
           <Link to={Routes.GET_FILM_URL(movie.id)} className={styles.link}>
             <MoviePreview

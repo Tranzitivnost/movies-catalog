@@ -11,12 +11,15 @@ type Props = {
 export function CastMemberPreview({ actor, className }: Props) {
   return (
     <Container
+      container
       justifyCenter
       gap="12px"
+      flexShrink="0"
       className={clsx(styles.actorContainer, className)}
     >
       <Image className={styles.img} src={actor.profile_path} alt={actor.name} />
       <Container
+        container
         justifyCenter
         flexDirectionColumn
         alignStart
