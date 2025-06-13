@@ -1,4 +1,4 @@
-import { Container, Link } from "@shared/ui";
+import { Container, Link, Header } from "@shared/ui";
 import { PageFooter, PageHeader } from "@/widgets/pages";
 import styles from "./FilmPage.module.css";
 import { usePopularMovies } from "@entities/popular-movies";
@@ -8,6 +8,8 @@ import { useParams } from "react-router-dom";
 import { Slider } from "@/widgets/pages";
 import { MoviePreview } from "@/entities/movies";
 import { Routes } from "@/shared/routes";
+
+import { CastMemberPreview, useMovieCredits } from "@/entities/credits";
 
 export function FilmPage() {
   const { id } = useParams<{ id: string }>();
@@ -21,20 +23,30 @@ export function FilmPage() {
   });
   const currentFilm = popularMovies?.find(movie => movie.id === numericId);
 
+  const cast = useMovieCredits(currentFilm?.id);
   return (
     <Container
       container
       flexDirectionColumn
       justifyBetween
-      alignCenter
       className={styles.container}
     >
       <PageHeader positionAbsolute />
       {currentFilm && (
         <PosterMovie movie={currentFilm} className={styles.posterContainer} />
       )}
-      <Divider />
-      <Slider className={styles.slider}>
+
+      <Header className={styles.sliderHeader}>Top cast</Header>
+      <Slider className={styles.slider} gap="12px">
+        {
+          cast.map(actor => (
+            <CastMemberPreview actor={actor} key={actor.id} />
+          )) as JSX.Element[]
+        }
+      </Slider>
+
+      <Header className={styles.sliderHeader}>Movies</Header>
+      <Slider className={styles.slider} gap="32px">
         {popularMovies.map((movie, index) => (
           <Link to={Routes.GET_FILM_URL(movie.id)} className={styles.link}>
             <MoviePreview

@@ -10,8 +10,18 @@
   width: 200px;
 }
 
+.sliderHeader {
+  composes: primary-font size-xxl from global;
+  color: var(--text-color-primary);
+  font-weight: 700;
+  text-align: left;
+
+  box-sizing: border-box;
+  padding: 24px 242px 0px 242px;
+  width: 100%;
+}
 .slider {
-  padding: 40px 0;
+  padding: 20px 0px 40px 0px;
 }
 
 .link {
