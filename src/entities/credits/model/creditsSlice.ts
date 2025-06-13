@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchMovieCast } from "./creditsThunk";
 import type { CastMember } from "@shared/api";
+import type { ErrorType } from "@shared/error";
 
 type MovieCastState = {
   castsById: Record<number, CastMember[]>;
   loading: boolean;
-  error: string | null;
+  error: ErrorType | null;
 };
 
 const initialState: MovieCastState = {
@@ -31,6 +32,7 @@ const movieCastSlice = createSlice({
       })
       .addCase(fetchMovieCast.rejected, (state, action) => {
         state.loading = false;
+        state.error = action.payload as ErrorType;
       });
   },
 });

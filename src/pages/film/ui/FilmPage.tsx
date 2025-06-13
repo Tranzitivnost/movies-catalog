@@ -23,7 +23,7 @@ export function FilmPage() {
   });
   const currentFilm = popularMovies?.find(movie => movie.id === numericId);
 
-  const cast = useMovieCredits(currentFilm?.id ?? 0);
+  const cast = useMovieCredits(currentFilm?.id);
   return (
     <Container
       container
@@ -37,7 +37,7 @@ export function FilmPage() {
       )}
 
       <Header className={styles.sliderHeader}>Top cast</Header>
-      <Slider className={styles.slider} gap="2px">
+      <Slider className={styles.slider} gap="12px">
         {
           cast.map(actor => (
             <CastMemberPreview actor={actor} key={actor.id} />

@@ -3,7 +3,13 @@ import { useAppDispatch, useAppSelector } from "@shared/lib";
 import { fetchMovieCast } from "@entities/credits";
 import { selectCastByMovieId } from "@entities/credits";
 
-export function useMovieCredits(movieId: number, language?: string) {
+export function useMovieCredits(
+  movieId: number | undefined,
+  language?: string,
+) {
+  if (movieId === undefined) {
+    throw new Error("Movie ID is required");
+  }
   const dispatch = useAppDispatch();
 
   const castSelector = selectCastByMovieId(movieId);
