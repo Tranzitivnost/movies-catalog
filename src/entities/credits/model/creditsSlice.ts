@@ -32,7 +32,7 @@ const movieCastSlice = createSlice({
       })
       .addCase(fetchMovieCast.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.payload as ErrorType;
+        state.error = action.error as ErrorType;
       });
   },
 });
