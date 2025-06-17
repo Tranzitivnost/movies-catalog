@@ -4,7 +4,7 @@ const BASE_URL = `https://api.themoviedb.org/3`;
 
 type RequestType = "GET" | "POST" | "PUT" | "DELETE" | "PATCH" | "OPTIONS";
 
-type Response<FieldType> = {
+export type PaginationResponse<FieldType> = {
   page: number;
   results: FieldType[];
   total_pages: number;
@@ -16,7 +16,7 @@ export async function apiRequest<FieldType, BodyType = unknown>(
   method: RequestType = "GET",
   body?: BodyType,
   options?: RequestInit,
-): Promise<Response<FieldType>> {
+): Promise<FieldType> {
   if (method === "GET") {
     url = `${url}?${new URLSearchParams(body as Record<string, string>).toString()}`;
   }

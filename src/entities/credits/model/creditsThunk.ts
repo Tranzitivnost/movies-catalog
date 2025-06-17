@@ -25,7 +25,7 @@ export const fetchMovieCast = createAsyncThunk<
     const response = await getMovieCredits(movieId, { language });
     return {
       movieId,
-      cast: mapCastMembers(response),
+      cast: mapCastMembers(response.cast),
     };
   } catch (err: unknown) {
     return thunkAPI.rejectWithValue(err as ErrorType);

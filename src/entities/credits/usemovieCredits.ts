@@ -16,7 +16,7 @@ export function useMovieCredits(
     if (movieId) {
       dispatch(fetchMovieCast({ movieId, language }));
     }
-  }, [dispatch, movieId, language]);
+  }, [movieId, language]);
 
   return cast;
 }

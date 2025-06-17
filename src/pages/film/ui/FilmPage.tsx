@@ -37,7 +37,7 @@ export function FilmPage() {
       )}
 
       <Header className={styles.sliderHeader}>Top cast</Header>
-      <Slider className={styles.slider} gap="12px">
+      <Slider key={currentFilm?.id} className={styles.slider} gap="12px">
         {
           cast.map(actor => (
             <CastMemberPreview actor={actor} key={actor.id} />
