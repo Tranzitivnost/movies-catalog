@@ -48,7 +48,11 @@ export function FilmPage() {
       <Header className={styles.sliderHeader}>Movies</Header>
       <Slider className={styles.slider} gap="32px">
         {popularMovies.map((movie, index) => (
-          <Link to={Routes.GET_FILM_URL(movie.id)} className={styles.link}>
+          <Link
+            to={Routes.GET_FILM_URL(movie.id)}
+            className={styles.link}
+            key={index}
+          >
             <MoviePreview
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               key={index}

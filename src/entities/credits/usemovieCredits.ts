@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "@shared/lib";
-import { fetchMovieCast } from "@entities/credits";
+import { fetchMovieCredits } from "@entities/credits";
 import { selectCastByMovieId } from "@entities/credits";
 
 export function useMovieCredits(
@@ -14,7 +14,7 @@ export function useMovieCredits(
 
   useEffect(() => {
     if (movieId) {
-      dispatch(fetchMovieCast({ movieId, language }));
+      dispatch(fetchMovieCredits({ movieId, language }));
     }
   }, [movieId, language]);
 

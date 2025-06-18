@@ -1,31 +1,34 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { getMovieCredits } from "@shared/api";
 import type { ErrorType } from "@shared/error";
-import type { CastMember } from "@shared/api";
+import type { CastMember, CrewMember } from "@shared/api";
 import { mapCastMembers } from "./mapCastMembers";
+import { mapCrewMembers } from "./mapCrewMembers";
 
-type FetchMovieCastParams = {
+type FetchMovieCreditsParams = {
   movieId: number;
   language?: string;
 };
 
-type FetchMovieCastResult = {
+type FetchMovieCreditsResult = {
   movieId: number;
   cast: CastMember[];
+  crew: CrewMember[];
 };
 
-export const fetchMovieCast = createAsyncThunk<
-  FetchMovieCastResult,
-  FetchMovieCastParams,
+export const fetchMovieCredits = createAsyncThunk<
+  FetchMovieCreditsResult,
+  FetchMovieCreditsParams,
   {
     rejectValue: ErrorType;
   }
->("movieCast/fetchMovieCast", async ({ movieId, language }, thunkAPI) => {
+>("movieCredits/fetchMovieCredits", async ({ movieId, language }, thunkAPI) => {
   try {
     const response = await getMovieCredits(movieId, { language });
     return {
       movieId,
       cast: mapCastMembers(response.cast),
+      crew: mapCrewMembers(response.crew),
     };
   } catch (err: unknown) {
     return thunkAPI.rejectWithValue(err as ErrorType);

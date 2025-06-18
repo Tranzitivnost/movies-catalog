@@ -43,7 +43,7 @@ export const Container = ({
 }: Props) => {
   const style = {
     gap: gap ?? "0",
-    "flex-shrink": flexShrink ?? "",
+    flexShrink: flexShrink ?? "",
     ...rest.style,
   } as React.CSSProperties;
   return (

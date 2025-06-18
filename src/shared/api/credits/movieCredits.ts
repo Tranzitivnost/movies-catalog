@@ -20,7 +20,7 @@ export type CastMember = {
   order: number;
 };
 
-type CrewMember = {
+export type CrewMember = {
   adult: boolean;
   gender: GenderEnum;
   id: number;
