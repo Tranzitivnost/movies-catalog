@@ -23,7 +23,11 @@ export function MoviesList({ movies, title }: Props) {
       <Container justifyBetween flexWrap gap="16px">
         {movies.length > 0 ? (
           movies.map(movie => (
-            <Link to={Routes.GET_FILM_URL(movie.id)} className={styles.link}>
+            <Link
+              to={Routes.GET_FILM_URL(movie.id)}
+              className={styles.link}
+              key={movie.id}
+            >
               <MoviePreview
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 movie={movie}

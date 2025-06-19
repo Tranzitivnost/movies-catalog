@@ -20,6 +20,7 @@ interface Props
   justifyAround?: boolean;
   className?: string;
   gap?: string;
+  flexShrink?: string;
 }
 
 export const Container = ({
@@ -37,9 +38,14 @@ export const Container = ({
   flexWrap,
   justifyAround,
   gap,
+  flexShrink,
   ...rest
 }: Props) => {
-  const style = { gap: gap ?? "0", ...rest.style } as React.CSSProperties;
+  const style = {
+    gap: gap ?? "0",
+    flexShrink: flexShrink ?? "",
+    ...rest.style,
+  } as React.CSSProperties;
   return (
     <div
       {...rest}

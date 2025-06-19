@@ -6,9 +6,11 @@ import clsx from "clsx";
 interface Props {
   children: JSX.Element[];
   className?: string;
+  gap?: string;
 }
 
-export function Slider({ children, className }: Props) {
+export function Slider({ children, className, gap }: Props) {
+  const style = { gap: gap ?? "0" } as React.CSSProperties;
   const [startIndex, setStartIndex] = useState(0);
 
   const goToNext = () => {
@@ -28,10 +30,9 @@ export function Slider({ children, className }: Props) {
     <Container
       container
       alignCenter
-      gap="12px"
       className={clsx([styles.container, className])}
     >
-      <Container alignCenter justifyCenter className={styles.buttonContainer}>
+      <Container alignCenter justifyEnd className={styles.buttonContainer}>
         <Button
           onClick={goToPrev}
           className={clsx([styles.button, styles.prevButton])}
@@ -43,10 +44,10 @@ export function Slider({ children, className }: Props) {
           />
         </Button>
       </Container>
-      <Container container gap="24px" className={styles.visibleItems}>
+      <Container container style={style} className={styles.visibleItems}>
         {visibleItems}
       </Container>
-      <Container alignCenter justifyCenter className={styles.buttonContainer}>
+      <Container alignCenter justifyStart className={styles.buttonContainer}>
         <Button onClick={goToNext} className={styles.button}>
           <Image
             src={ArrowIcon}
