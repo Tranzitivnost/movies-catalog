@@ -27,6 +27,7 @@
 .link {
   composes: background-tertiary from global;
   text-decoration: none;
+  pointer-events: none;
   cursor: pointer;
   border-radius: 16px;
 }

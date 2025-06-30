@@ -21,7 +21,7 @@ export function MoviesList({ movies, title }: Props) {
     >
       <Header className={styles.title}>{title}</Header>
       <Container justifyBetween flexWrap gap="16px">
-        {movies.length > 0 ? (
+        {movies ? (
           movies.map(movie => (
             <Link
               to={Routes.GET_FILM_URL(movie.id)}
