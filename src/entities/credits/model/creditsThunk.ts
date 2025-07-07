@@ -25,6 +25,7 @@ export const fetchMovieCredits = createAsyncThunk<
 >("movieCredits/fetchMovieCredits", async ({ movieId, language }, thunkAPI) => {
   try {
     const response = await getMovieCredits(movieId, { language });
+
     return {
       movieId,
       cast: mapCastMembers(response.cast),
