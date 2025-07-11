@@ -24,6 +24,7 @@ export function FilmPage() {
   const currentFilm = popularMovies?.find(movie => movie.id === numericId);
 
   const cast = useMovieCredits(currentFilm?.id);
+
   return (
     <Container
       container

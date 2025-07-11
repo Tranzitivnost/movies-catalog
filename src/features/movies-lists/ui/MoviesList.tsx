@@ -20,8 +20,8 @@ export function MoviesList({ movies, title }: Props) {
       className={styles.container}
     >
       <Header className={styles.title}>{title}</Header>
-      <Container justifyBetween flexWrap gap="16px">
-        {movies ? (
+      <Container gap="10px 4%" className={styles.movieContainer}>
+        {movies.length > 0 ? (
           movies.map(movie => (
             <Link
               to={Routes.GET_FILM_URL(movie.id)}
