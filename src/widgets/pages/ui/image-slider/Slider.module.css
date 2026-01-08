@@ -5,28 +5,46 @@
 .visibleItems {
   width: 76%;
   overflow: hidden;
+  position: relative;
+}
+
+.gradient {
+  background: linear-gradient(
+    270deg,
+    rgba(13, 12, 15, 1),
+    rgba(13, 12, 15, 0) 100%,
+    rgba(13, 12, 15, 1) 100%
+  );
+  right: 0;
+  bottom: 0;
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .buttonContainer {
   width: 242px;
   padding: 0 20px;
+  z-index: 2;
 }
 
 .img-arrow {
   filter: var(--image-filter);
   aspect-ratio: 1 / 1;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
-  width: 21px;
-  height: 21px;
+  width: 15px;
+  height: 15px;
 }
 
 .button {
   composes: background-tertiary from global;
   background-color: rgba(122, 122, 122, 0.753);
   border-radius: 50%;
-  width: 25px;
-  height: 25px;
+  width: 32px;
+  height: 32px;
   opacity: 50%;
 }
 
