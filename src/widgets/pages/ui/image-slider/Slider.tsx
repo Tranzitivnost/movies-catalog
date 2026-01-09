@@ -44,9 +44,7 @@ export function Slider({ children, className, gap }: Props) {
           />
         </Button>
       </Container>
-
       <Container container style={style} className={styles.visibleItems}>
-        <Container className={styles.gradient} />
         {visibleItems}
       </Container>
       <Container alignCenter justifyStart className={styles.buttonContainer}>
