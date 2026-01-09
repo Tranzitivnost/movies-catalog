@@ -9,12 +9,7 @@
 }
 
 .gradient {
-  background: linear-gradient(
-    270deg,
-    rgba(13, 12, 15, 1),
-    rgba(13, 12, 15, 0) 100%,
-    rgba(13, 12, 15, 1) 100%
-  );
+  background: var(--bg-gradient-tertiary);
   right: 0;
   bottom: 0;
   width: 15%;

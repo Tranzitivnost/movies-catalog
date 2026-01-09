@@ -16,7 +16,7 @@ export function FooterBottom({ className }: Props) {
         <Text className={styles.firstTitle}>Privacy policy</Text>
         <Text className={styles.firstTitle}>Term of service</Text>
       </Container>
-      <Text className={styles.secondTitle}>© 2025</Text>
+      <Text className={styles.secondTitle}>© 2026</Text>
     </Container>
   );
 }

@@ -5,7 +5,9 @@ import { Image } from "@/shared/ui";
 import { Header } from "@shared/ui";
 import { LikeButton } from "@shared/ui";
 import { AddWatchListButton } from "@shared/ui";
+import { NoImagePlaceholder } from "@/shared/ui";
 import { Text } from "@shared/ui";
+
 import clsx from "clsx";
 
 interface Props
@@ -49,6 +51,11 @@ export function PosterMovie({ movie, className }: Props) {
           src={movie.backdrop_path}
           alt={movie.title}
           key={movie.id}
+          onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+            e.currentTarget.src = NoImagePlaceholder;
+            //You can check it out in the film "Tempi supplementari"
+            e.currentTarget.onerror = null;
+          }}
         />
 
         <Container
@@ -60,8 +67,8 @@ export function PosterMovie({ movie, className }: Props) {
         >
           <Header className={styles["movie-title"]}>{movie.title}</Header>
           <Header className={styles.information}>
-            original language: {movie.original_language} • {movie.release_date}{" "}
-            • viewings: {movie.popularity} • average score: {movie.vote_average}
+            Original language: {movie.original_language} • {movie.release_date}{" "}
+            • Viewings: {movie.popularity} • Average score: {movie.vote_average}
           </Header>
           <Container>
             <AddWatchListButton />
