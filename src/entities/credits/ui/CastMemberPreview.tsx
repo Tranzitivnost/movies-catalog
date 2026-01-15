@@ -21,10 +21,7 @@ export function CastMemberPreview({ actor, className }: Props) {
       <Image
         className={styles.img}
         src={actor.profile_path}
-        onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-          e.currentTarget.src = AvatarDefault;
-          e.currentTarget.onerror = null;
-        }}
+        fallback={AvatarDefault}
         alt={actor.name}
       />
       <Container

@@ -51,11 +51,7 @@ export function PosterMovie({ movie, className }: Props) {
           src={movie.backdrop_path}
           alt={movie.title}
           key={movie.id}
-          onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-            e.currentTarget.src = NoImagePlaceholder;
-            //You can check it out in the film "Tempi supplementari"
-            e.currentTarget.onerror = null;
-          }}
+          fallback={NoImagePlaceholder}
         />
 
         <Container
