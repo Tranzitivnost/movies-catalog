@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { Container, Header, Image } from "@shared/ui";
 import styles from "./CastMemberPreview.module.css";
+import { AvatarDefault } from "@/shared/ui";
 import type { CastMember } from "@shared/api";
 
 type Props = {
@@ -17,7 +18,12 @@ export function CastMemberPreview({ actor, className }: Props) {
       flexShrink="0"
       className={clsx(styles.actorContainer, className)}
     >
-      <Image className={styles.img} src={actor.profile_path} alt={actor.name} />
+      <Image
+        className={styles.img}
+        src={actor.profile_path}
+        fallback={AvatarDefault}
+        alt={actor.name}
+      />
       <Container
         container
         justifyCenter
