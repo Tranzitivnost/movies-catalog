@@ -7,7 +7,6 @@ $dark-theme-background-gradient-primary: linear-gradient(
   rgba(13, 12, 15, 0.28) 70.719%,
   rgb(13, 12, 15) 103.306%
 );
-
 $dark-theme-background-gradient-secondary: linear-gradient(
   -0.55deg,
   rgb(13, 12, 15) 0.737%,
@@ -21,8 +20,14 @@ $dark-text-color-primary: #fff;
 $dark-text-color-secondary: rgb(156, 164, 171);
 $dark-theme-border-primary: 1px solid rgba(255, 255, 255, 0.741);
 $dark-theme-background-secondary: rgba(255, 255, 255, 0.1);
-$dark-image-filter: invert(0%);
+$dark-image-filter: invert(100%);
 $dark-theme-background-tertiary: #222222cc;
+$dark-theme-background-gradient-tertiary: linear-gradient(
+  270deg,
+  rgba(13, 12, 15, 1),
+  70%,
+  rgba(13, 12, 15, 0)
+);
 
 $light-theme-background-primary: #fff;
 $light-theme-background-gradient-primary: linear-gradient(
@@ -48,5 +53,11 @@ $light-text-color-primary: rgb(13, 12, 15);
 $light-text-color-secondary: rgb(99, 101, 102);
 $light-theme-border-primary: 1px solid rgba(66, 66, 66, 0.884);
 $light-theme-background-secondary: rgba(10, 10, 10, 0.137);
-$light-image-filter: invert(100%);
+$light-image-filter: invert(0%);
 $light-theme-background-tertiary: #deddddcc;
+$light-theme-background-gradient-tertiary: linear-gradient(
+  270deg,
+  rgba(255, 255, 255, 1),
+  70%,
+  rgba(255, 255, 255, 0)
+);

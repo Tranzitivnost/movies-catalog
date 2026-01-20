@@ -1,8 +1,28 @@
-export const Image: React.FunctionComponent<
-  React.DetailedHTMLProps<
-    React.ImgHTMLAttributes<HTMLImageElement>,
-    HTMLImageElement
-  >
-> = ({ src, alt, className, ...rest }) => {
-  return <img className={className} {...rest} src={src} alt={alt} />;
+type ImageProps = React.ImgHTMLAttributes<HTMLImageElement> & {
+  fallback?: string;
+};
+
+export const Image: React.FC<ImageProps> = ({
+  src,
+  fallback,
+  alt,
+  className,
+  ...rest
+}) => {
+  const handleError: React.ReactEventHandler<HTMLImageElement> = e => {
+    if (fallback) {
+      e.currentTarget.src = fallback;
+      e.currentTarget.onerror = null;
+    }
+  };
+
+  return (
+    <img
+      className={className}
+      src={src}
+      alt={alt}
+      onError={handleError}
+      {...rest}
+    />
+  );
 };

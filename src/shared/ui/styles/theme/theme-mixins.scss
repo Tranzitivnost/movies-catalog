@@ -7,7 +7,8 @@
   $image-filter,
   $bg-secondary,
   $bg-gradient-secondary,
-  $bg-tertiary
+  $bg-tertiary,
+  $bg-gradient-tertiary
 ) {
   --bg-primary: #{$bg-primary};
   --bg-gradient-primary: #{$bg-gradient-primary};
@@ -17,6 +18,7 @@
   --image-filter: #{$image-filter};
   --bg-secondary: #{$bg-secondary};
   --bg-gradient-secondary: #{$bg-gradient-secondary};
+  --bg-gradient-tertiary: #{$bg-gradient-tertiary};
 
   .scheme-primary {
     background-color: $bg-primary;
