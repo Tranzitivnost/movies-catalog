@@ -5,12 +5,30 @@
   padding: 70px 242px 40px 242px;
 }
 
+@media (max-width: 770px) {
+  .container {
+    padding: 64px 64px 64px 64px;
+  }
+}
+
+@media (max-width: 430px) {
+  .container {
+    padding: 32px 32px 32px 32px;
+  }
+}
+
 .title {
   composes: primary-font size-4xl from global;
   color: var(--text-color-primary);
   font-weight: 500;
   line-height: 48px;
   text-align: left;
+}
+
+@media (max-width: 430px) {
+  .title {
+    font-size: 12px;
+  }
 }
 
 .linkDecoration {
