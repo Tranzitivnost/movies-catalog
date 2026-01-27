@@ -66,9 +66,9 @@ export function PosterMovie({ movie, className }: Props) {
             Original language: {movie.original_language} • {movie.release_date}{" "}
             • Viewings: {movie.popularity} • Average score: {movie.vote_average}
           </Header>
-          <Container>
-            <AddWatchListButton />
-            <LikeButton />
+          <Container container justifyBetween alignStart>
+            <AddWatchListButton className={styles.addWatchListButton} />
+            <LikeButton className={styles.buttonLike} />
           </Container>
         </Container>
       </Container>

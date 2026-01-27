@@ -2,6 +2,12 @@
   min-width: 200px;
 }
 
+@media (max-width: 430px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
 .movieContainer {
   padding: 10px 15px;
 }

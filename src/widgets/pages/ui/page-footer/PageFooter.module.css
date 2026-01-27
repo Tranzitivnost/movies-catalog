@@ -1,19 +1,40 @@
 .container {
-  height: 397px;
   width: 100%;
-  box-sizing: border-box;
   padding: 70px 242px 40px 242px;
+  display: block;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 836px) {
   .container {
     padding: 64px 64px 64px 64px;
   }
 }
 
+@media (max-width: 770px) {
+  .container {
+    padding: 32px 64px 0px 64px;
+  }
+}
+
 @media (max-width: 430px) {
   .container {
-    padding: 32px 32px 32px 32px;
+    padding: 32px 32px 0px 32px;
+  }
+}
+
+.titleContainer {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1260px) {
+  .titleContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .titleContainer {
+    margin-bottom: 0px;
   }
 }
 
@@ -25,9 +46,36 @@
   text-align: left;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 1260px) {
   .title {
-    font-size: 12px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 928px) {
+  .title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: 730px) {
+  .title {
+    font-size: 24px;
+    margin-bottom: 40px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 520px) {
+  br {
+    display: none;
+  }
+}
+
+@media (max-width: 470px) {
+  .linksContainer {
+    justify-content: center;
   }
 }
 
@@ -39,6 +87,12 @@
   text-decoration: none;
 }
 
+@media (max-width: 470px) {
+  .linkDecoration {
+    font-size: 16px;
+  }
+}
+
 .text {
   composes: primary-font size-xl from global;
   color: var(--text-color-primary);
@@ -48,7 +102,8 @@
   margin: 0px 20px;
 }
 
-.linksContainer {
-  height: 100%;
-  margin-bottom: 40px;
+@media (max-width: 470px) {
+  .text {
+    font-size: 16px;
+  }
 }

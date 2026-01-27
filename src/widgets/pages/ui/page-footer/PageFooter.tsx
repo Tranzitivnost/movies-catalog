@@ -13,10 +13,12 @@ export function PageFooter() {
     >
       <Container container justifyBetween className={styles.titleContainer}>
         <Header className={styles.title}>
-          <p>Our platform is trusted </p>
-          <p> by millions & features </p>
-          <p> best updated movies </p>
-          <p>all around the world. </p>
+          <p>
+            Our platform is trusted <br />
+            by millions & features <br />
+            best updated movies <br />
+            all around the world.
+          </p>
         </Header>
         <Container container alignEnd className={styles.linksContainer}>
           <Link
