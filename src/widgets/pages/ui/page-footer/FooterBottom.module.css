@@ -1,9 +1,26 @@
 .secondContainer {
   width: 100%;
+  margin-bottom: 34px;
 }
+
+@media (max-width: 768px) {
+  .secondContainer {
+    flex-direction: column;
+
+    align-items: center;
+  }
+}
+
 .footer {
   width: 240px;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 32px 0px;
+  }
+}
+
 .firstTitle {
   composes: primary-font size-m from global;
   color: var(--text-color-primary);
@@ -16,4 +33,10 @@
   color: var(--text-color-primary);
   opacity: 0.7;
   display: flex;
+}
+
+@media (max-width: 768px) {
+  .secondTitle {
+    font-size: 18px;
+  }
 }

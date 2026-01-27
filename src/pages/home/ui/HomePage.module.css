@@ -5,3 +5,9 @@
 .posterContainer {
   composes: poster-grid from global;
 }
+
+@media (max-width: 768px) {
+  .posterContainer {
+    height: 500px;
+  }
+}

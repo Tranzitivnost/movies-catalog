@@ -1,6 +1,7 @@
 .posterContainer {
   width: 100%;
 }
+
 .generalContainer {
   position: relative;
   width: 100%;
@@ -17,7 +18,7 @@
 
 .movie-img {
   width: 100%;
-  height: 800px;
+  height: 100%;
   object-position: top;
   object-fit: cover;
 
@@ -34,11 +35,23 @@
   padding: 64px 242px 64px 242px;
 }
 
+@media (max-width: 770px) {
+  .titleContainer {
+    padding: 64px 64px 64px 64px;
+  }
+}
+
+@media (max-width: 430px) {
+  .titleContainer {
+    padding: 32px 32px 32px 32px;
+  }
+}
+
 .movie-title {
   composes: primary-font size-xxxl from global;
   color: var(--text-color-primary);
   font-weight: 700;
-  text-align: left;
+  text-align: lef16t;
   margin-bottom: 20px;
 }
 
@@ -57,6 +70,18 @@
   width: 100%;
 }
 
+@media (max-width: 770px) {
+  .summary {
+    padding: 64px 64px 64px 64px;
+  }
+}
+
+@media (max-width: 430px) {
+  .summary {
+    padding: 32px 32px 32px 32px;
+  }
+}
+
 .storyTitle {
   composes: primary-font size-xxl from global;
   color: var(--text-color-primary);
@@ -71,4 +96,10 @@
   font-weight: 600;
 
   text-align: left;
+}
+
+@media (max-width: 768px) {
+  .buttonLike {
+    width: 50%;
+  }
 }
