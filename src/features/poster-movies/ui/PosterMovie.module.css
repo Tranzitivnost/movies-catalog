@@ -35,7 +35,7 @@
   padding: 64px 242px 64px 242px;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 820px) {
   .titleContainer {
     padding: 64px 64px 64px 64px;
   }
@@ -70,7 +70,7 @@
   width: 100%;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 820px) {
   .summary {
     padding: 64px 64px 64px 64px;
   }
@@ -101,5 +101,11 @@
 @media (max-width: 768px) {
   .buttonLike {
     width: 50%;
+  }
+}
+
+@media (max-width: 375px) {
+  .addWatchListButton {
+    width: 75%;
   }
 }
