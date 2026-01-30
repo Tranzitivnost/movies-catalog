@@ -1,5 +1,18 @@
 .container {
-  min-width: 200px;
+  width: 200px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 150px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    flex-direction: row;
+  }
 }
 
 .movieContainer {
@@ -9,9 +22,21 @@
 .img {
   object-fit: cover;
   object-position: top;
-  min-height: 300px;
+  height: 300px;
 
   border-radius: 16px;
+}
+
+@media (max-width: 600px) {
+  .img {
+    height: 225px;
+  }
+}
+
+@media (max-width: 500px) {
+  .img {
+    height: 150px;
+  }
 }
 
 .movieTitle {

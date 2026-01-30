@@ -16,16 +16,40 @@
   z-index: 4;
 }
 
+.logoLink {
+  padding-left: 32px;
+}
+
 .buttonContainer {
   width: 445px;
+}
+
+@media (max-width: 620px) {
+  .buttonContainer {
+    display: none;
+  }
 }
 
 .linkDecoration {
   composes: secondary-font size-l from global;
   text-decoration: none;
   color: #ffffff;
+  margin: 20px 20px;
 
   font-weight: 400;
+  text-align: center;
 
   cursor: pointer;
+}
+
+@media (max-width: 620px) {
+  .linkDecoration {
+    display: none;
+  }
+}
+
+@media (max-width: 770px) {
+  .searchDecoration {
+    display: none;
+  }
 }
