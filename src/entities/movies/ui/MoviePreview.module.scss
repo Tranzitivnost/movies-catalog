@@ -1,18 +1,7 @@
+@import '@/shared/ui/styles/breakpoints/breakpoints-mixins.scss';
+
 .container {
   width: 200px;
-}
-
-@media (max-width: 600px) {
-  .container {
-    width: 150px;
-  }
-}
-
-@media (max-width: 500px) {
-  .container {
-    width: 100%;
-    flex-direction: row;
-  }
 }
 
 .movieContainer {
@@ -25,18 +14,6 @@
   height: 300px;
 
   border-radius: 16px;
-}
-
-@media (max-width: 600px) {
-  .img {
-    height: 225px;
-  }
-}
-
-@media (max-width: 500px) {
-  .img {
-    height: 150px;
-  }
 }
 
 .movieTitle {
@@ -62,4 +39,25 @@
 
 .starContainer {
   margin-top: 8px;
+}
+
+@include tablet {
+  .img {
+    height: 225px;
+  }
+
+  .container {
+    width: 150px;
+  }
+}
+
+@include mobile {
+  .img {
+    height: 150px;
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: row;
+  }
 }

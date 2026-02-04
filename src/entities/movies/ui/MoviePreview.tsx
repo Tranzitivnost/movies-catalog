@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { Container, Header, Image } from "@shared/ui";
-import styles from "./MoviePreview.module.css";
+import styles from "./MoviePreview.module.scss";
 import type { Movie } from "@shared/api";
 import { StarIcon } from "@/shared/ui";
 
