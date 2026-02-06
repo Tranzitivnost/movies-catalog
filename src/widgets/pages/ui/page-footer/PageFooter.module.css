@@ -68,7 +68,7 @@
 }
 
 @media (max-width: 520px) {
-  br {
+  .br {
     display: none;
   }
 }

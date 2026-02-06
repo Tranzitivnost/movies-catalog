@@ -51,7 +51,6 @@
   composes: primary-font size-xxxl from global;
   color: var(--text-color-primary);
   font-weight: 700;
-  text-align: lef16t;
   margin-bottom: 20px;
 }
 
