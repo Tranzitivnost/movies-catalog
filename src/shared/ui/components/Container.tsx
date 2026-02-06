@@ -1,4 +1,4 @@
-import styles from "./Container.module.css";
+import styles from "./Container.module.scss";
 import clsx from "clsx";
 
 interface Props
@@ -45,7 +45,7 @@ export const Container = ({
     gap: gap ?? "0",
     flexShrink: flexShrink ?? "",
     ...rest.style,
-  } as React.CSSProperties;
+  } as React.scssProperties;
   return (
     <div
       {...rest}

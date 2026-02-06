@@ -1,6 +1,6 @@
 import { Button } from "@shared/ui";
 import { Image } from "@shared/ui";
-import styles from "./LikeButton.module.css";
+import styles from "./LikeButton.module.scss";
 import { LikeIcon } from "@/shared/ui";
 import clsx from "clsx";
 

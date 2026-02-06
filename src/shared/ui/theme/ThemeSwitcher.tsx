@@ -1,4 +1,4 @@
-import styles from "./ThemeSwitcher.module.css";
+import styles from "./ThemeSwitcher.module.scss";
 import { useTheme, Theme } from "@/shared/ui";
 import { Switcher } from "@/shared/ui";
 

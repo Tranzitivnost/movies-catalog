@@ -1,6 +1,6 @@
 import { Container, Header, Text, Link } from "@shared/ui";
 import { MoviePreview } from "@entities/movies";
-import styles from "./MoviesList.module.css";
+import styles from "./MoviesList.module.scss";
 import type { Movie } from "@/shared/api";
 import { Routes } from "@/shared/routes";
 

@@ -1,4 +1,4 @@
-import styles from "./TextBlock.module.css";
+import styles from "./TextBlock.module.scss";
 import { Container, Text } from "@shared/ui";
 
 interface Props

@@ -1,24 +1,12 @@
+@import "@/shared/ui/styles/breakpoints/breakpoints-mixins.scss";
+
 .secondContainer {
   width: 100%;
   margin-bottom: 34px;
 }
 
-@media (max-width: 768px) {
-  .secondContainer {
-    flex-direction: column;
-
-    align-items: center;
-  }
-}
-
 .footer {
   width: 240px;
-}
-
-@media (max-width: 768px) {
-  .footer {
-    padding: 32px 0px;
-  }
 }
 
 .firstTitle {
@@ -35,8 +23,20 @@
   display: flex;
 }
 
-@media (max-width: 768px) {
+@include tablet {
+  .secondContainer {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
   .secondTitle {
     font-size: 18px;
+  }
+}
+
+@include laptop {
+  .footer {
+    padding: 32px 0px;
   }
 }

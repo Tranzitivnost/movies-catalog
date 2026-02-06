@@ -1,4 +1,4 @@
-import styles from "./PageHeader.module.css";
+import styles from "./PageHeader.module.scss";
 import { Image, Container, Link, ThemeSwitcher } from "@/shared/ui";
 import { LogoIcon } from "@/shared/ui";
 import { SearchIcon } from "@/shared/ui";

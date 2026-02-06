@@ -1,5 +1,5 @@
 import { Container, Header } from "@shared/ui";
-import styles from "./ContactInformation.module.css";
+import styles from "./ContactInformation.module.scss";
 import clsx from "clsx";
 import { FooterBottom } from "@/widgets/pages";
 import { TextBlock } from "@/shared/ui";

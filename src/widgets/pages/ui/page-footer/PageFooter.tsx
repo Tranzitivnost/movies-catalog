@@ -1,5 +1,5 @@
 import { Container, Header, Link, Text } from "@shared/ui";
-import styles from "./PageFooter.module.css";
+import styles from "./PageFooter.module.scss";
 import { Routes } from "@shared/routes";
 import { FooterBottom } from "@/widgets/pages";
 

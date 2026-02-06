@@ -1,6 +1,6 @@
 import { Container } from "@shared/ui";
 import { PageFooter, PageHeader } from "@/widgets/pages";
-import styles from "./HomePage.module.css";
+import styles from "./HomePage.module.scss";
 import { usePopularMovies } from "@entities/popular-movies";
 import { PosterMovie } from "@/features/poster-movies";
 import { MoviesList } from "@/features/movies-lists";

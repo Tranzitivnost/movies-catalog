@@ -1,6 +1,6 @@
 import { Container, Button, Image, ArrowIcon } from "@/shared/ui";
 import { useState } from "react";
-import styles from "./Slider.module.css";
+import styles from "./Slider.module.scss";
 import clsx from "clsx";
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 }
 
 export function Slider({ children, className, gap }: Props) {
-  const style = { gap: gap ?? "0" } as React.CSSProperties;
+  const style = { gap: gap ?? "0" } as React.scssProperties;
   const [startIndex, setStartIndex] = useState(0);
 
   const goToNext = () => {

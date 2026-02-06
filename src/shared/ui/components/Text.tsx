@@ -1,4 +1,4 @@
-import styles from "./Text.module.css";
+import styles from "./Text.module.scss";
 import clsx from "clsx";
 
 interface Props

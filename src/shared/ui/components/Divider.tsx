@@ -1,4 +1,4 @@
-import styles from "./Divider.module.css";
+import styles from "./Divider.module.scss";
 import clsx from "clsx";
 
 interface Props

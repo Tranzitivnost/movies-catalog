@@ -1,6 +1,6 @@
 import { Container } from "@shared/ui";
 import { PageHeader } from "@/widgets/pages";
-import styles from "./ContactPage.module.css";
+import styles from "./ContactPage.module.scss";
 
 import { ContactInformation } from "@/widgets/pages";
 

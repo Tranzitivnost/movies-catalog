@@ -1,5 +1,5 @@
 import { Button } from "@shared/ui";
-import styles from "./AddWatchListButton.module.css";
+import styles from "./AddWatchListButton.module.scss";
 import clsx from "clsx";
 
 interface Props

@@ -1,4 +1,4 @@
-import styles from "./PosterMovie.module.css";
+import styles from "./PosterMovie.module.scss";
 import type { Movie } from "@/shared/api";
 import { Container } from "@shared/ui";
 import { Image } from "@/shared/ui";
