@@ -1,0 +1,15 @@
+@import "@/shared/ui/styles/breakpoints/breakpoints-mixins.scss";
+
+.container {
+  width: 100%;
+}
+
+.posterContainer {
+  composes: poster-grid from global;
+}
+
+@include tablet {
+  .posterContainer {
+    height: 500px;
+  }
+}

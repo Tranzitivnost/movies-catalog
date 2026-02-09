@@ -1,0 +1,84 @@
+@import "@/shared/ui/styles/breakpoints/breakpoints-mixins.scss";
+
+.container {
+  width: 100%;
+  padding: 70px 242px 40px 242px;
+  display: block;
+}
+
+.titleContainer {
+  margin-bottom: 40px;
+}
+
+.title {
+  composes: primary-font size-4xl from global;
+  color: var(--text-color-primary);
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+}
+
+.linkDecoration {
+  composes: primary-font size-xl from global;
+  color: var(--text-color-primary);
+  font-weight: 400;
+  text-align: right;
+  text-decoration: none;
+}
+
+.text {
+  composes: primary-font size-xl from global;
+  color: var(--text-color-primary);
+  font-weight: 400;
+  text-align: right;
+  text-decoration: none;
+  margin: 0px 20px;
+}
+
+@include laptop {
+  .container {
+    padding: 70px 242px 0px 242px;
+  }
+  .titleContainer {
+    flex-direction: column;
+  }
+  .title {
+    margin-bottom: 40px;
+  }
+}
+
+@include tablet {
+  .container {
+    padding: 64px 64px 0px 64px;
+  }
+  .title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .titleContainer {
+    margin-bottom: 0px;
+  }
+}
+
+@include mobile {
+  .container {
+    padding: 32px 32px 0px 32px;
+  }
+  .title {
+    font-size: 26px;
+    margin-bottom: 40px;
+    line-height: 30px;
+  }
+  .br {
+    display: none;
+  }
+  .linksContainer {
+    justify-content: center;
+  }
+  .text {
+    font-size: 16px;
+  }
+  .linkDecoration {
+    font-size: 16px;
+  }
+}

@@ -1,3 +1,5 @@
+@import "@/shared/ui/styles/breakpoints/breakpoints-mixins.scss";
+
 .container {
   padding: 40px 242px 60px 242px;
   width: 100%;
@@ -26,6 +28,7 @@
 
 .link {
   composes: background-tertiary from global;
+  display: block;
   text-decoration: none;
   cursor: pointer;
   border-radius: 16px;
@@ -33,20 +36,37 @@
   height: 100%;
 }
 
-@media (max-width: 1600px) {
+@include monitor {
+  .movieContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@include laptop {
   .movieContainer {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 1320px) {
+@include tablet {
+  .container {
+    padding: 64px 64px 64px 64px;
+  }
   .movieContainer {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 900px) {
+@include mobile {
+  .container {
+    padding: 32px 32px 32px 32px;
+  }
+
   .movieContainer {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .link {
+    width: 100%;
   }
 }

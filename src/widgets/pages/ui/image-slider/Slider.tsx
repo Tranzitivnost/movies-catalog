@@ -1,6 +1,6 @@
 import { Container, Button, Image, ArrowIcon } from "@/shared/ui";
 import { useState } from "react";
-import styles from "./Slider.module.css";
+import styles from "./Slider.module.scss";
 import clsx from "clsx";
 
 interface Props {

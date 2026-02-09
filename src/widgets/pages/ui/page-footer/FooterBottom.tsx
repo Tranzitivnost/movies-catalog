@@ -1,4 +1,4 @@
-import styles from "./FooterBottom.module.css";
+import styles from "./FooterBottom.module.scss";
 import { Container, Text } from "@shared/ui";
 
 interface Props
@@ -11,7 +11,12 @@ interface Props
 
 export function FooterBottom({ className }: Props) {
   return (
-    <Container container justifyBetween className={styles.secondContainer}>
+    <Container
+      container
+      justifyBetween
+      alignCenter
+      className={styles.secondContainer}
+    >
       <Container container justifyBetween className={styles.footer}>
         <Text className={styles.firstTitle}>Privacy policy</Text>
         <Text className={styles.firstTitle}>Term of service</Text>

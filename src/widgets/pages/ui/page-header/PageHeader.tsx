@@ -1,4 +1,4 @@
-import styles from "./PageHeader.module.css";
+import styles from "./PageHeader.module.scss";
 import { Image, Container, Link, ThemeSwitcher } from "@/shared/ui";
 import { LogoIcon } from "@/shared/ui";
 import { SearchIcon } from "@/shared/ui";
@@ -20,10 +20,15 @@ export function PageHeader({ positionAbsolute }: Props) {
         { [styles.positionAbsolute]: positionAbsolute },
       ])}
     >
-      <Link to={Routes.HOME}>
+      <Link to={Routes.HOME} className={styles.logoLink}>
         <Image src={LogoIcon} alt="logo" />
       </Link>
-      <Container container justifyBetween className={styles.buttonContainer}>
+      <Container
+        container
+        justifyBetween
+        alignCenter
+        className={styles.buttonContainer}
+      >
         <Link to={Routes.HOME} className={styles.linkDecoration}>
           Home
         </Link>
@@ -45,7 +50,10 @@ export function PageHeader({ positionAbsolute }: Props) {
         alignCenter
         className={styles.iconContainer}
       >
-        <Link to="#" className={styles.linkDecoration}>
+        <Link
+          to="#"
+          className={clsx(styles.linkDecoration, styles.searchDecoration)}
+        >
           <Image src={SearchIcon} alt="button-search" />
         </Link>
         <ThemeSwitcher />

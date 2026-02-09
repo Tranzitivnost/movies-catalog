@@ -6,7 +6,7 @@
     "*.d.ts": "${capture}.d.ts.map",
     "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts, ${capture}.d.ts.map",
     "*.jsx": "${capture}.js, ${capture}.jsx.map",
-    "*.tsx": "${capture}Loader.ts, ${capture}.ts, ${capture}.test.tsx, ${capture}.module.css",
+    "*.tsx": "${capture}Loader.ts, ${capture}.ts, ${capture}.test.tsx, ${capture}.module.css, ${capture}.module.scss, ${capture}.scss",
     ".eslintrc.*": ".eslintrc.*, .eslintignore",
     "tsconfig.json": "tsconfig.*.json, *.tsbuildinfo",
     "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml"

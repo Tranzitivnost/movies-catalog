@@ -1,4 +1,4 @@
-import styles from "./Avatar.module.css";
+import styles from "./Avatar.module.scss";
 import clsx from "clsx";
 
 type TSize = "s" | "m" | "l" | "xl";

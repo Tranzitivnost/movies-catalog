@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { Container, Header, Image } from "@shared/ui";
-import styles from "./CastMemberPreview.module.css";
+import styles from "./CastMemberPreview.module.scss";
 import { AvatarDefault } from "@/shared/ui";
 import type { CastMember } from "@shared/api";
 

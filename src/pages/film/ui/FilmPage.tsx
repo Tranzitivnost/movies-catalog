@@ -1,6 +1,6 @@
 import { Container, Link, Header } from "@shared/ui";
 import { PageFooter, PageHeader } from "@/widgets/pages";
-import styles from "./FilmPage.module.css";
+import styles from "./FilmPage.module.scss";
 import { usePopularMovies } from "@entities/popular-movies";
 import { PosterMovie } from "@/features/poster-movies";
 import { Divider } from "@shared/ui";

@@ -1,4 +1,4 @@
-import styles from "./Switcher.module.css";
+import styles from "./Switcher.module.scss";
 import { useState } from "react";
 
 interface Props {

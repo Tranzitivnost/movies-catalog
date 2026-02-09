@@ -1,3 +1,5 @@
+@import "@/shared/ui/styles/breakpoints/breakpoints-mixins.scss";
+
 .positionAbsolute {
   position: absolute;
 }
@@ -16,6 +18,10 @@
   z-index: 4;
 }
 
+.logoLink {
+  padding-left: 32px;
+}
+
 .buttonContainer {
   width: 445px;
 }
@@ -24,8 +30,25 @@
   composes: secondary-font size-l from global;
   text-decoration: none;
   color: #ffffff;
+  margin: 20px 20px;
 
   font-weight: 400;
+  text-align: center;
 
   cursor: pointer;
+}
+
+@include tablet {
+  .searchDecoration {
+    display: none;
+  }
+}
+
+@include mobile {
+  .linkDecoration {
+    display: none;
+  }
+  .buttonContainer {
+    display: none;
+  }
 }

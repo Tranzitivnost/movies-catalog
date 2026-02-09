@@ -1,5 +1,6 @@
 import { Button } from "@shared/ui";
-import styles from "./AddWatchListButton.module.css";
+import styles from "./AddWatchListButton.module.scss";
+import clsx from "clsx";
 
 interface Props
   extends React.DetailedHTMLProps<
@@ -9,6 +10,10 @@ interface Props
   children?: React.ReactNode;
 }
 
-export function AddWatchListButton({ children }: Props) {
-  return <Button className={styles.addButton}>Add Watchlist</Button>;
+export function AddWatchListButton({ children, className, ...rest }: Props) {
+  return (
+    <Button {...rest} className={clsx([className, styles.addButton])}>
+      Add Watchlist
+    </Button>
+  );
 }

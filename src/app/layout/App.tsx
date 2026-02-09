@@ -12,7 +12,7 @@ import { Providers } from "../providers";
 import { AppRouter } from "../routes";
 import { Container, useTheme } from "@/shared/ui";
 import { useEffect } from "react";
-import styles from "./App.module.css";
+import styles from "./App.module.scss";
 
 export const App = () => {
   const { restoreTheme } = useTheme();

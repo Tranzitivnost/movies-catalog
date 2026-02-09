@@ -1,4 +1,4 @@
-import styles from "./PosterMovie.module.css";
+import styles from "./PosterMovie.module.scss";
 import type { Movie } from "@/shared/api";
 import { Container } from "@shared/ui";
 import { Image } from "@/shared/ui";
@@ -66,9 +66,9 @@ export function PosterMovie({ movie, className }: Props) {
             Original language: {movie.original_language} • {movie.release_date}{" "}
             • Viewings: {movie.popularity} • Average score: {movie.vote_average}
           </Header>
-          <Container>
-            <AddWatchListButton />
-            <LikeButton />
+          <Container container justifyBetween alignStart>
+            <AddWatchListButton className={styles.addWatchListButton} />
+            <LikeButton className={styles.buttonLike} />
           </Container>
         </Container>
       </Container>

@@ -1,0 +1,32 @@
+@import './breakpoints-variables.scss';
+
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile-max) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $breakpoint-tablet-max) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: $breakpoint-laptop-max) {
+    @content;
+  }
+}
+
+@mixin monitor {
+  @media (max-width: $breakpoint-monitor-max) {
+    @content;
+  }
+}
+
+@mixin tv {
+  @media (max-width: $breakpoint-tv-max) {
+    @content;
+  }
+}
+
