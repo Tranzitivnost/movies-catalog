@@ -10,7 +10,7 @@ interface Props {
 }
 
 export function Slider({ children, className, gap }: Props) {
-  const style = { gap: gap ?? "0" } as React.scssProperties;
+  const style = { gap: gap ?? "0" } as React.CSSProperties;
   const [startIndex, setStartIndex] = useState(0);
 
   const goToNext = () => {

@@ -45,7 +45,7 @@ export const Container = ({
     gap: gap ?? "0",
     flexShrink: flexShrink ?? "",
     ...rest.style,
-  } as React.scssProperties;
+  } as React.CSSProperties;
   return (
     <div
       {...rest}

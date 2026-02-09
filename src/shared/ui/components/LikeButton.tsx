@@ -10,7 +10,6 @@ interface Props
     HTMLButtonElement
   > {
   children?: React.ReactNode;
-  className?: string;
 }
 
 export function LikeButton({ children, className, ...rest }: Props) {

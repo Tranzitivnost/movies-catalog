@@ -8,7 +8,6 @@ interface Props
     HTMLButtonElement
   > {
   children?: React.ReactNode;
-  className?: string;
 }
 
 export function AddWatchListButton({ children, className, ...rest }: Props) {
