@@ -1,6 +1,6 @@
 import styles from "./PageHeader.module.scss";
 import { Image, Container, Link, ThemeSwitcher } from "@/shared/ui";
-import { LogoIcon } from "@/shared/ui";
+import { LogoIcon, BurgerMenuIcon } from "@/shared/ui";
 import { SearchIcon } from "@/shared/ui";
 import { Routes } from "@shared/routes";
 import clsx from "clsx";
@@ -29,25 +29,37 @@ export function PageHeader({ positionAbsolute }: Props) {
         alignCenter
         className={styles.buttonContainer}
       >
-        <Link to={Routes.HOME} className={styles.linkDecoration}>
+        <Link
+          to={Routes.HOME}
+          className={clsx(styles.linkDecoration, styles.home)}
+        >
           Home
         </Link>
         {/* TODO replace it to the movie release when we have this page */}
-        <Link to={Routes.MOVIE_RELEASE} className={styles.linkDecoration}>
+        <Link
+          to={Routes.MOVIE_RELEASE}
+          className={clsx(styles.linkDecoration, styles.movieRelease)}
+        >
           Movie Release
         </Link>
         {/* TODO replace it to the about when we have this page */}
-        <Link to={Routes.ABOUT} className={styles.linkDecoration}>
+        <Link
+          to={Routes.ABOUT}
+          className={clsx(styles.linkDecoration, styles.about)}
+        >
           About
         </Link>
-        <Link to={Routes.CONTACT} className={styles.linkDecoration}>
+        <Link
+          to={Routes.CONTACT}
+          className={clsx(styles.linkDecoration, styles.contact)}
+        >
           Contact
         </Link>
       </Container>
       <Container
         container
-        justifyBetween
         alignCenter
+        justifyAround
         className={styles.iconContainer}
       >
         <Link
@@ -56,7 +68,13 @@ export function PageHeader({ positionAbsolute }: Props) {
         >
           <Image src={SearchIcon} alt="button-search" />
         </Link>
-        <ThemeSwitcher />
+        <Link
+          to="#"
+          className={clsx(styles.linkDecoration, styles.burgerMenuDecoration)}
+        >
+          <Image src={BurgerMenuIcon} alt="burger-menu" />
+        </Link>
+        <ThemeSwitcher className={styles.themeSwitcher} />
       </Container>
     </header>
   );

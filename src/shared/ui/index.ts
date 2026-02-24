@@ -25,3 +25,4 @@ export { default as SearchIcon } from "./assets/Icon_Outline_search.svg";
 export { default as LikeIcon } from "./assets/Icon_Like.svg";
 export { default as AvatarDefault } from "./assets/Avatar-default.svg";
 export { default as NoImagePlaceholder } from "./assets/No-Image-Placeholder.png";
+export { default as BurgerMenuIcon } from "./assets/Burger-menu.svg";
