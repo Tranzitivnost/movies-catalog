@@ -1,6 +1,7 @@
 import styles from "./ThemeSwitcher.module.scss";
 import { useTheme, Theme } from "@/shared/ui";
 import { Switcher } from "@/shared/ui";
+import clsx from "clsx";
 
 interface Props {
   className?: string;
@@ -17,7 +18,7 @@ export const ThemeSwitcher = ({ className }: Props) => {
 
   return (
     <Switcher
-      className={styles.customSwitch}
+      className={clsx(styles.customSwitch, className)}
       onChange={handleCheckboxChange}
       defaultValue={isCurrentThemeLight}
     />
