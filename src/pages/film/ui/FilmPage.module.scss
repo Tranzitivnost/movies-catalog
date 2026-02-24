@@ -1,3 +1,5 @@
+@import "@/shared/ui/styles/breakpoints/breakpoints-mixins.scss";
+
 .container {
   width: 100%;
 }
@@ -15,7 +17,9 @@
   color: var(--text-color-primary);
   font-weight: 700;
   text-align: left;
-
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
   box-sizing: border-box;
   padding: 24px 242px 0px 242px;
   width: 100%;
@@ -29,4 +33,22 @@
   text-decoration: none;
   cursor: pointer;
   border-radius: 16px;
+}
+
+@include tablet {
+  .posterContainer {
+    height: 500px;
+  }
+  .sliderHeader {
+    padding: 64px 64px 64px 64px;
+  }
+  .slider {
+    gap: 5px;
+  }
+}
+
+@include mobile {
+  .sliderHeader {
+    padding: 32px 32px 32px 32px;
+  }
 }

@@ -1,16 +1,3 @@
-/**
- * Breakpoints Variables
- * Bootstrap-style responsive breakpoints for standardized media queries
- *
- * Device categories:
- * - Mobile:  0-575px     (phones)
- * - Tablet:  576-991px   (tablets, large phones in landscape)
- * - Laptop:  992-1199px  (laptops, small desktops)
- * - Monitor: 1200-1919px (standard monitors, desktops)
- * - TV:      1920px+     (large monitors, TVs, 4K displays)
- */
-
-// Maximum widths (for max-width media queries)
 $breakpoint-mobile-max: 575px;
 $breakpoint-tablet-max: 991px;
 $breakpoint-laptop-max: 1210px;

@@ -30,6 +30,7 @@ export function FilmPage() {
       container
       flexDirectionColumn
       justifyBetween
+      alignCenter
       className={styles.container}
     >
       <PageHeader positionAbsolute />
