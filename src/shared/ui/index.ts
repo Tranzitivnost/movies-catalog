@@ -18,6 +18,7 @@ export { ThemeSwitcher } from "./theme/ThemeSwitcher";
 export { Divider } from "./components/Divider";
 export { Switcher } from "./components/Switcher";
 export { TextBlock } from "./components/TextBlock";
+export { Layout } from "./components/Layout";
 export { default as ArrowIcon } from "./assets/Arrow.png";
 export { default as LogoIcon } from "./assets/Component-logo.svg";
 export { default as StarIcon } from "./assets/Star.svg";
