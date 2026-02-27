@@ -1,0 +1,27 @@
+.container {
+  height: 100vh;
+  background-image: var(--bg-gradient-secondary),
+    url("@/shared/ui/assets/No-Image-Placeholder.png");
+  width: 100%;
+
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.messageContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  composes: primary-font size-4xl from global;
+  color: var(--text-color-primary);
+  display: flex;
+}
+
+.message {
+  composes: primary-font size-l from global;
+  color: var(--text-color-primary);
+  display: flex;
+}

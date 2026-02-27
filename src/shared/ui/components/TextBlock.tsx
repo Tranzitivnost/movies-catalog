@@ -13,7 +13,13 @@ interface Props
 
 export function TextBlock({ className, header, description }: Props) {
   return (
-    <Container container flexDirectionColumn justifyBetween alignStart>
+    <Container
+      container
+      flexDirectionColumn
+      justifyBetween
+      alignStart
+      className={className}
+    >
       <Text className={styles.contactTitle}>{header}</Text>
       <Text className={styles.contactInfo}>{description}</Text>
     </Container>
