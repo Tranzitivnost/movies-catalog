@@ -3,7 +3,7 @@
 }
 
 .posterContainer {
-  composes: poster-grid from global;
+  height: 800px;
 }
 
 .moviePreview {

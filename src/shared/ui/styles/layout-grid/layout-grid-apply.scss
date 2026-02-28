@@ -1,13 +1,36 @@
 @import "./layout-grid-variables.scss";
+@import "../breakpoints/breakpoints-mixins.scss";
 
 .main-grid {
-  min-width: $main-grid-width;
+  max-width: $main-grid-width;
+  margin: 0 auto;
+  padding-left: 242px;
+  padding-right: 242px;
+
+  @include tablet {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  @include mobile {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 .inner-grid {
   max-width: $inner-grid-width;
-}
+  margin: 0 auto;
+  padding-left: 242px;
+  padding-right: 242px;
 
-.poster-grid {
-  height: $main-grid-height;
+  @include tablet {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  @include mobile {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }

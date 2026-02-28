@@ -1,0 +1,15 @@
+@import '@/shared/ui/styles/breakpoints/breakpoints-mixins.scss';
+@import '@/shared/ui/styles/layout-grid/layout-grid-variables.scss';
+
+.layout {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main {
+  composes: main-grid from global;
+}
+
+.inner {
+  composes: inner-grid from global;
+}

@@ -8,6 +8,7 @@ export {
 export { Button } from "./components/Button";
 export { Avatar } from "./components/Avatar";
 export { Container } from "./components/Container";
+export { Layout } from "./components/Layout";
 export { Header } from "./components/Header";
 export { Link } from "./components/Link";
 export { Text } from "./components/Text";

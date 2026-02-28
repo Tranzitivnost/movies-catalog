@@ -1,7 +1,7 @@
 import styles from "./Container.module.scss";
 import clsx from "clsx";
 
-interface Props
+export interface ContainerProps
   extends React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
@@ -40,7 +40,7 @@ export const Container = ({
   gap,
   flexShrink,
   ...rest
-}: Props) => {
+}: ContainerProps) => {
   const style = {
     gap: gap ?? "0",
     flexShrink: flexShrink ?? "",
