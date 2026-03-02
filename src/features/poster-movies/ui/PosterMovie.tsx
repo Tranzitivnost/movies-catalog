@@ -6,7 +6,7 @@ import { Header } from "@shared/ui";
 import { LikeButton } from "@shared/ui";
 import { AddWatchListButton } from "@shared/ui";
 import { NoImagePlaceholder } from "@/shared/ui";
-import { Text } from "@shared/ui";
+import { Text, Layout } from "@shared/ui";
 
 import clsx from "clsx";
 
@@ -54,7 +54,7 @@ export function PosterMovie({ movie, className }: Props) {
           fallback={NoImagePlaceholder}
         />
 
-        <Container
+        <Layout
           container
           flexDirectionColumn
           justifyEnd
@@ -70,9 +70,9 @@ export function PosterMovie({ movie, className }: Props) {
             <AddWatchListButton className={styles.addWatchListButton} />
             <LikeButton className={styles.buttonLike} />
           </Container>
-        </Container>
+        </Layout>
       </Container>
-      <Container
+      <Layout
         container
         flexDirectionColumn
         justifyAround
@@ -81,7 +81,7 @@ export function PosterMovie({ movie, className }: Props) {
         <Header className={styles.storyTitle}>Story Line</Header>
 
         <Text className={styles.storyText}>{sentences}</Text>
-      </Container>
+      </Layout>
     </Container>
   );
 }

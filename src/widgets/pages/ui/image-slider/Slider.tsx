@@ -1,4 +1,4 @@
-import { Container, Button, Image, ArrowIcon } from "@/shared/ui";
+import { Container, Button, Image, ArrowIcon, Layout } from "@/shared/ui";
 import { useState } from "react";
 import styles from "./Slider.module.scss";
 import clsx from "clsx";
@@ -27,7 +27,7 @@ export function Slider({ children, className, gap }: Props) {
   });
 
   return (
-    <Container
+    <Layout
       container
       alignCenter
       className={clsx([styles.container, className])}
@@ -58,6 +58,6 @@ export function Slider({ children, className, gap }: Props) {
           />
         </Button>
       </Container>
-    </Container>
+    </Layout>
   );
 }

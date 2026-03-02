@@ -34,7 +34,8 @@
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  padding: 64px 242px 64px 242px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
 .movie-title {
@@ -55,7 +56,7 @@
 
 .summary {
   box-sizing: border-box;
-  padding: 0px 242px 40px 242px;
+  padding-bottom: 40px;
   width: 100%;
 }
 
@@ -76,24 +77,12 @@
 }
 
 @include tablet {
-  .titleContainer {
-    padding: 64px 64px 64px 64px;
-  }
-  .summary {
-    padding: 64px 64px 64px 64px;
-  }
   .buttonLike {
     width: 50%;
   }
 }
 
 @include mobile {
-  .titleContainer {
-    padding: 32px 32px 32px 32px;
-  }
-  .summary {
-    padding: 32px 32px 32px 32px;
-  }
   .addWatchListButton {
     width: 75%;
   }

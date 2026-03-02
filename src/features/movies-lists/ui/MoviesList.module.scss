@@ -1,7 +1,10 @@
 @import "@/shared/ui/styles/breakpoints/breakpoints-mixins.scss";
 
 .container {
-  padding: 40px 242px 60px 242px;
+  padding-top: 40px;
+
+  padding-bottom: 60px;
+
   width: 100%;
   height: 100%;
 }
@@ -49,18 +52,18 @@
 }
 
 @include tablet {
-  .container {
-    padding: 64px 64px 64px 64px;
-  }
+  // .container {
+  //   padding: 64px 64px 64px 64px;
+  // }
   .movieContainer {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @include mobile {
-  .container {
-    padding: 32px 32px 32px 32px;
-  }
+  // .container {
+  //   padding: 32px 32px 32px 32px;
+  // }
 
   .movieContainer {
     grid-template-columns: repeat(1, 1fr);

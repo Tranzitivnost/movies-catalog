@@ -1,4 +1,4 @@
-import { Container, Link, Header } from "@shared/ui";
+import { Container, Link, Header, Layout } from "@shared/ui";
 import { PageFooter, PageHeader } from "@/widgets/pages";
 import styles from "./FilmPage.module.scss";
 import { usePopularMovies } from "@entities/popular-movies";
@@ -36,8 +36,9 @@ export function FilmPage() {
       {currentFilm && (
         <PosterMovie movie={currentFilm} className={styles.posterContainer} />
       )}
-
-      <Header className={styles.sliderHeader}>Top cast</Header>
+      <Layout>
+        <Header className={styles.sliderHeader}>Top cast</Header>
+      </Layout>
       <Slider key={currentFilm?.id} className={styles.slider} gap="12px">
         {
           cast.map(actor => (
@@ -45,8 +46,9 @@ export function FilmPage() {
           )) as JSX.Element[]
         }
       </Slider>
-
-      <Header className={styles.sliderHeader}>Movies</Header>
+      <Layout>
+        <Header className={styles.sliderHeader}>Movies</Header>
+      </Layout>
       <Slider className={styles.slider} gap="32px">
         {popularMovies.map((movie, index) => (
           <Link
@@ -64,7 +66,9 @@ export function FilmPage() {
         ))}
       </Slider>
       <Divider />
-      <PageFooter />
+      <Layout>
+        <PageFooter />
+      </Layout>
     </Container>
   );
 }

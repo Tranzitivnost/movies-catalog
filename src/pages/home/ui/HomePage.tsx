@@ -1,4 +1,4 @@
-import { Container } from "@shared/ui";
+import { Container, Layout } from "@shared/ui";
 import { PageFooter, PageHeader } from "@/widgets/pages";
 import styles from "./HomePage.module.scss";
 import { usePopularMovies } from "@entities/popular-movies";
@@ -30,7 +30,9 @@ export function HomePage() {
       <Divider />
       <MoviesList title="Popular movies for you" movies={popularMovies} />
       <Divider />
-      <PageFooter />
+      <Layout variant="main">
+        <PageFooter />
+      </Layout>
     </Container>
   );
 }
