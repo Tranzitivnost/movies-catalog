@@ -1,6 +1,6 @@
 $dark-theme-background-primary: rgb(13, 12, 15);
 $dark-theme-background-gradient-primary: linear-gradient(
-  -0.55deg,
+  0deg,
   rgb(13, 12, 15) 0.737%,
   rgba(13, 12, 15, 0.85) 28.516%,
   rgba(13, 12, 15, 0) 48.816%,
@@ -8,7 +8,7 @@ $dark-theme-background-gradient-primary: linear-gradient(
   rgb(13, 12, 15) 103.306%
 );
 $dark-theme-background-gradient-secondary: linear-gradient(
-  -0.55deg,
+  0deg,
   rgb(13, 12, 15) 0.737%,
   rgba(13, 12, 15, 0.961) 35.563%,
   rgba(13, 12, 15, 0.753) 67.607%,
@@ -31,7 +31,7 @@ $dark-theme-background-gradient-tertiary: linear-gradient(
 
 $light-theme-background-primary: #fff;
 $light-theme-background-gradient-primary: linear-gradient(
-  -0.55deg,
+  0deg,
   rgb(255, 255, 255) 3%,
   rgba(255, 255, 255, 0.85) 15%,
   rgba(17, 16, 16, 0) 50%,
@@ -40,7 +40,7 @@ $light-theme-background-gradient-primary: linear-gradient(
 );
 
 $light-theme-background-gradient-secondary: linear-gradient(
-  -0.55deg,
+  0deg,
   rgb(255, 255, 255) 0.737%,
   rgba(255, 255, 255, 0.961) 35.563%,
   rgba(255, 255, 255, 0.753) 67.607%,
