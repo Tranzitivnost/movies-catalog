@@ -39,3 +39,9 @@
     height: 500px;
   }
 }
+
+@include mobile {
+  .link {
+    height: 150px;
+  }
+}
