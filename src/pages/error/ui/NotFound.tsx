@@ -23,7 +23,7 @@ export function NotFound({ className }: Props) {
       className={styles.container}
     >
       <PageHeader positionAbsolute />
-      <Container
+      <Layout
         alignCenter
         container
         justifyCenter
@@ -35,7 +35,7 @@ export function NotFound({ className }: Props) {
         <Text className={styles.message}>
           THIS PAGE IS UNDER CONSTRUCTION 🚧
         </Text>
-      </Container>
+      </Layout>
       <Layout>
         <FooterBottom />
       </Layout>

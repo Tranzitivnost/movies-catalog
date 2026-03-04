@@ -14,9 +14,9 @@ export function PageFooter() {
       <Container container justifyBetween className={styles.titleContainer}>
         <Header className={styles.title}>
           <p>
-            Our platform is trusted <br className={styles.br} />
-            by millions & features <br className={styles.br} />
-            best updated movies <br className={styles.br} />
+            Our platform is trusted <br className={styles.desktopOnly} />
+            by millions & features <br className={styles.desktopOnly} />
+            best updated movies <br className={styles.desktopOnly} />
             all around the world.
           </p>
         </Header>

@@ -1,7 +1,7 @@
-import { Container, Header } from "@shared/ui";
+import { Container, Header, Layout } from "@shared/ui";
 import styles from "./ContactInformation.module.scss";
 import clsx from "clsx";
-import { FooterBottom } from "@/widgets/pages";
+
 import { TextBlock } from "@/shared/ui";
 
 interface Props
@@ -14,10 +14,10 @@ interface Props
 
 export function ContactInformation({ className }: Props) {
   return (
-    <Container
-      alignStart
+    <Layout
       container
-      justifyBetween
+      alignCenter
+      justifyCenter
       flexDirectionColumn
       gap="16px"
       className={clsx([styles.container, className])}
@@ -27,9 +27,9 @@ export function ContactInformation({ className }: Props) {
       </Header>
       <Container
         container
+        alignStart
         flexDirectionColumn
         justifyBetween
-        alignStart
         className={styles.information}
       >
         <TextBlock header="CONTACT US" description="+381 98 765 4321" />
@@ -42,7 +42,6 @@ export function ContactInformation({ className }: Props) {
           description="saintstream_support@gmail.com"
         />
       </Container>
-      <FooterBottom />
-    </Container>
+    </Layout>
   );
 }

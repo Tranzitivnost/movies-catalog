@@ -1,10 +1,20 @@
-.contactInfo {
-  composes: primary-font size-xxl from global;
-  color: var(--text-color-primary);
-}
+@import "@/shared/ui/styles/breakpoints/breakpoints-mixins.scss";
 
 .contactTitle {
   composes: primary-font size-m from global;
+
   color: var(--text-color-primary);
   font-weight: 200;
+}
+
+.contactInfo {
+  composes: primary-font size-xxl from global;
+
+  color: var(--text-color-primary);
+}
+
+@include tablet {
+  .contactInfo {
+    font-size: 20px;
+  }
 }

@@ -41,16 +41,6 @@
   margin-top: 8px;
 }
 
-@include tablet {
-  .img {
-    height: 225px;
-  }
-
-  .container {
-    width: 150px;
-  }
-}
-
 @include mobile {
   .img {
     height: 150px;

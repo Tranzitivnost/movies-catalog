@@ -1,16 +1,23 @@
-.container {
-  min-height: 100vh;
-  width: 670px;
+@import "@/shared/ui/styles/breakpoints/breakpoints-mixins.scss";
 
-  padding: 210px 0px 100px 0px;
+.container {
+  width: 100%;
+  height: 100%;
 }
 
 .title {
   composes: primary-font size-xxxl from global;
   color: var(--text-color-primary);
   display: flex;
+  margin-top: 20px;
 }
 
 .information {
   height: 270px;
+}
+
+@include mobile {
+  .title {
+    line-height: 35px;
+  }
 }
