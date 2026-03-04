@@ -1,3 +1,5 @@
+@import "@/shared/ui/styles/breakpoints/breakpoints-mixins.scss";
+
 .container {
   width: 100%;
 }
@@ -17,11 +19,12 @@
   text-align: left;
 
   box-sizing: border-box;
-  padding: 24px 242px 0px 242px;
+  padding-top: 24px;
   width: 100%;
 }
 .slider {
-  padding: 20px 0px 40px 0px;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .link {
@@ -29,4 +32,10 @@
   text-decoration: none;
   cursor: pointer;
   border-radius: 16px;
+}
+
+@include tablet {
+  .posterContainer {
+    height: 500px;
+  }
 }

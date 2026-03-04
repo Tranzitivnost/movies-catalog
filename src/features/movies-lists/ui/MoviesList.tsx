@@ -1,4 +1,4 @@
-import { Container, Header, Text, Link } from "@shared/ui";
+import { Container, Header, Text, Link, Layout } from "@shared/ui";
 import { MoviePreview } from "@entities/movies";
 import styles from "./MoviesList.module.scss";
 import type { Movie } from "@/shared/api";
@@ -11,7 +11,7 @@ type Props = {
 
 export function MoviesList({ movies, title }: Props) {
   return (
-    <Container
+    <Layout
       container
       flexDirectionColumn
       alignStart
@@ -39,6 +39,6 @@ export function MoviesList({ movies, title }: Props) {
           <Text className={styles.warning}>No available films</Text>
         )}
       </Container>
-    </Container>
+    </Layout>
   );
 }

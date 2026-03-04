@@ -2,7 +2,7 @@
 
 .container {
   width: 100%;
-  padding: 70px 242px 40px 242px;
+  padding-top: 70px;
   display: block;
 }
 
@@ -36,9 +36,6 @@
 }
 
 @include laptop {
-  .container {
-    padding: 70px 242px 0px 242px;
-  }
   .titleContainer {
     flex-direction: column;
   }
@@ -49,7 +46,7 @@
 
 @include tablet {
   .container {
-    padding: 64px 64px 0px 64px;
+    padding-top: 64px;
   }
   .title {
     font-size: 32px;
@@ -62,7 +59,7 @@
 
 @include mobile {
   .container {
-    padding: 32px 32px 0px 32px;
+    padding-top: 32px;
   }
   .title {
     font-size: 26px;
