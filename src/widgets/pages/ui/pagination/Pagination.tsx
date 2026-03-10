@@ -1,6 +1,8 @@
 import { useAppDispatch, useAppSelector } from "@shared/lib";
 import { setPage } from "@entities/popular-movies";
-import { Button, Container } from "@shared/ui";
+import { Button, Container, Image, ArrowIcon } from "@shared/ui";
+import styles from "./Pagination.module.scss";
+import clsx from "clsx";
 
 export function Pagination({ className }: { className?: string }) {
   const dispatch = useAppDispatch();
@@ -14,19 +16,21 @@ export function Pagination({ className }: { className?: string }) {
       <Button
         disabled={currentPage === 1}
         onClick={() => dispatch(setPage(currentPage - 1))}
+        className={styles.button}
       >
-        Prev
+        <Image src={ArrowIcon} alt="arrow-left" />
       </Button>
 
       <span>
-        Page {currentPage} / {totalPages}
+        Page {currentPage} ... {totalPages}
       </span>
 
       <Button
         disabled={currentPage === totalPages}
         onClick={() => dispatch(setPage(currentPage + 1))}
+        className={clsx([styles.button, styles.nextButton])}
       >
-        Next
+        <Image src={ArrowIcon} alt="arrow-left" />
       </Button>
     </Container>
   );

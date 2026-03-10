@@ -1,0 +1,12 @@
+.button {
+  composes: background-tertiary from global;
+  background-color: rgba(122, 122, 122, 0.753);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  opacity: 50%;
+}
+
+.nextButton {
+  transform: rotate(180deg);
+}
