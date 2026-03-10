@@ -1,21 +1,33 @@
-import { Container, Button } from "@/shared/ui";
-import { useState } from "react";
-import { usePopularMovies } from "@entities/popular-movies";
+import { useAppDispatch, useAppSelector } from "@shared/lib";
+import { setPage } from "@entities/popular-movies";
+import { Button, Container } from "@shared/ui";
 
-interface Props {
-  children: JSX.Element;
-  className?: string;
-}
+export function Pagination({ className }: { className?: string }) {
+  const dispatch = useAppDispatch();
 
-export function Pagination({ children, className }: Props) {
-  const [page, setPage] = useState(1);
+  const { currentPage, totalPages } = useAppSelector(
+    state => state.popularMovies,
+  );
 
-  //   const { movies, loading } = usePopularMovies(page);
   return (
     <Container className={className}>
-      {children}
-      <Button onClick={() => setPage(page - 1)}>Prev</Button>
-      <Button onClick={() => setPage(page + 1)}>Next</Button>
+      <Button
+        disabled={currentPage === 1}
+        onClick={() => dispatch(setPage(currentPage - 1))}
+      >
+        Prev
+      </Button>
+
+      <span>
+        Page {currentPage} / {totalPages}
+      </span>
+
+      <Button
+        disabled={currentPage === totalPages}
+        onClick={() => dispatch(setPage(currentPage + 1))}
+      >
+        Next
+      </Button>
     </Container>
   );
 }
