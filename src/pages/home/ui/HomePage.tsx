@@ -5,15 +5,17 @@ import { usePopularMovies } from "@entities/popular-movies";
 import { PosterMovie } from "@/features/poster-movies";
 import { MoviesList } from "@/features/movies-lists";
 import { Divider } from "@shared/ui";
+import { Pagination } from "@/widgets/pages/ui/pagination";
 
 export function HomePage() {
   const currentYear = new Date().getFullYear();
-  const { popularMovies } = usePopularMovies({
+  const { movies } = usePopularMovies({
     page: 1,
     sort_by: "vote_count.desc",
     primary_release_year: currentYear,
   });
-  const firstMovie = popularMovies?.[0];
+
+  const firstMovie = movies?.[0];
 
   return (
     <Container
@@ -28,7 +30,9 @@ export function HomePage() {
         <PosterMovie movie={firstMovie} className={styles.posterContainer} />
       )}
       <Divider />
-      <MoviesList title="Popular movies for you" movies={popularMovies} />
+      <Pagination className={styles.pagination} />
+      <MoviesList title="Popular movies for you" movies={movies} />
+
       <Divider />
       <Layout variant="main">
         <PageFooter />
