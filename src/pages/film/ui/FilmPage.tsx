@@ -8,7 +8,6 @@ import { useParams } from "react-router-dom";
 import { Slider } from "@/widgets/pages";
 import { MoviePreview } from "@/entities/movies";
 import { Routes } from "@/shared/routes";
-
 import { CastMemberPreview, useMovieCredits } from "@/entities/credits";
 
 export function FilmPage() {
@@ -16,12 +15,14 @@ export function FilmPage() {
   const numericId = Number(id);
 
   const currentYear = new Date().getFullYear();
-  const { popularMovies } = usePopularMovies({
+
+  const { movies } = usePopularMovies({
     page: 1,
     sort_by: "vote_count.desc",
     primary_release_year: currentYear,
   });
-  const currentFilm = popularMovies?.find(movie => movie.id === numericId);
+
+  const currentFilm = movies.find(movie => movie.id === numericId);
 
   const cast = useMovieCredits(currentFilm?.id);
 
@@ -33,39 +34,43 @@ export function FilmPage() {
       className={styles.container}
     >
       <PageHeader positionAbsolute />
+
       {currentFilm && (
         <PosterMovie movie={currentFilm} className={styles.posterContainer} />
       )}
+
       <Layout>
         <Header className={styles.sliderHeader}>Top cast</Header>
       </Layout>
+
       <Slider key={currentFilm?.id} className={styles.slider} gap="12px">
-        {
-          cast.map(actor => (
-            <CastMemberPreview actor={actor} key={actor.id} />
-          )) as JSX.Element[]
-        }
+        {cast.map(actor => (
+          <CastMemberPreview actor={actor} key={actor.id} />
+        ))}
       </Slider>
+
       <Layout>
         <Header className={styles.sliderHeader}>Movies</Header>
       </Layout>
+
       <Slider className={styles.slider} gap="32px">
-        {popularMovies.map((movie, index) => (
+        {movies.map(movie => (
           <Link
             to={Routes.GET_FILM_URL(movie.id)}
             className={styles.link}
-            key={index}
+            key={movie.id}
           >
             <MoviePreview
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              key={index}
               movie={movie}
               className={styles.moviePreview}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             />
           </Link>
         ))}
       </Slider>
+
       <Divider />
+
       <Layout>
         <PageFooter />
       </Layout>
