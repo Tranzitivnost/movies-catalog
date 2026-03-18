@@ -1,10 +1,15 @@
 import { useAppDispatch, useAppSelector } from "@shared/lib";
 import { setPage } from "@entities/popular-movies";
-import { Button, Container, Image, ArrowIcon } from "@shared/ui";
+import { Button, Container, Image, ArrowIcon, Layout, Text } from "@shared/ui";
 import styles from "./Pagination.module.scss";
 import clsx from "clsx";
 
-export function Pagination({ className }: { className?: string }) {
+interface Props {
+  children: JSX.Element;
+  className?: string;
+}
+
+export function Pagination({ children }: Props) {
   const dispatch = useAppDispatch();
 
   const { currentPage, totalPages } = useAppSelector(
@@ -12,26 +17,48 @@ export function Pagination({ className }: { className?: string }) {
   );
 
   return (
-    <Container className={className}>
-      <Button
-        disabled={currentPage === 1}
-        onClick={() => dispatch(setPage(currentPage - 1))}
-        className={styles.button}
+    <Container
+      container
+      alignCenter
+      flexDirectionColumn
+      className={styles.paginationContainer}
+    >
+      <Layout
+        container
+        alignCenter
+        justifyCenter
+        gap="16px"
+        className={styles.buttonsContainer}
       >
-        <Image src={ArrowIcon} alt="arrow-left" />
-      </Button>
+        <Button
+          disabled={currentPage === 1}
+          onClick={() => dispatch(setPage(currentPage - 1))}
+          className={clsx([styles.button, styles.prevButton])}
+        >
+          <Image
+            src={ArrowIcon}
+            alt="arrow-left"
+            className={styles["img-arrow"]}
+          />
+        </Button>
 
-      <span>
-        Page {currentPage} ... {totalPages}
-      </span>
+        <Text className={styles.pageInfo}>
+          Page {currentPage} ... {totalPages}
+        </Text>
 
-      <Button
-        disabled={currentPage === totalPages}
-        onClick={() => dispatch(setPage(currentPage + 1))}
-        className={clsx([styles.button, styles.nextButton])}
-      >
-        <Image src={ArrowIcon} alt="arrow-left" />
-      </Button>
+        <Button
+          disabled={currentPage === totalPages}
+          onClick={() => dispatch(setPage(currentPage + 1))}
+          className={styles.button}
+        >
+          <Image
+            src={ArrowIcon}
+            alt="arrow-right"
+            className={styles["img-arrow"]}
+          />
+        </Button>
+      </Layout>
+      {children}
     </Container>
   );
 }

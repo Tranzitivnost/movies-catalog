@@ -6,6 +6,7 @@ import { PosterMovie } from "@/features/poster-movies";
 import { MoviesList } from "@/features/movies-lists";
 import { Divider } from "@shared/ui";
 import { Pagination } from "@/widgets/pages/ui/pagination";
+import { useAppSelector } from "@/shared/lib";
 
 export function HomePage() {
   const currentYear = new Date().getFullYear();
@@ -15,7 +16,9 @@ export function HomePage() {
     primary_release_year: currentYear,
   });
 
-  const firstMovie = movies?.[0];
+  const firstMovie = useAppSelector(
+    state => state.popularMovies.moviesByPage[1]?.[0],
+  );
 
   return (
     <Container
@@ -30,8 +33,9 @@ export function HomePage() {
         <PosterMovie movie={firstMovie} className={styles.posterContainer} />
       )}
       <Divider />
-      <Pagination className={styles.pagination} />
-      <MoviesList title="Popular movies for you" movies={movies} />
+      <Pagination>
+        <MoviesList title="Popular movies for you" movies={movies} />
+      </Pagination>
 
       <Divider />
       <Layout variant="main">
