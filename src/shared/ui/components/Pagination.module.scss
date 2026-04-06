@@ -15,8 +15,10 @@
 }
 
 .pageButtonActive {
-  background-color: rgba(13, 77, 34, 0.9);
+  color: var(--text-color-tertiary);
   font-weight: bold;
+  width: 30px;
+  height: 30px;
 }
 
 .prevButton {
