@@ -1,0 +1,38 @@
+.buttonContainer {
+  padding-top: 40px;
+}
+
+.button {
+  composes: background-tertiary from global;
+  background-color: rgba(122, 122, 122, 0.753);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  opacity: 50%;
+
+  composes: primary-font size-m from global;
+  color: var(--text-color-primary);
+}
+
+.pageButtonActive {
+  background-color: rgba(13, 77, 34, 0.9);
+  font-weight: bold;
+}
+
+.prevButton {
+  transform: rotate(180deg);
+  margin-right: 10px;
+}
+
+.nextButton {
+  margin-left: 10px;
+}
+
+.img-arrow {
+  filter: var(--image-filter);
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  object-position: center;
+  width: 15px;
+  height: 15px;
+}

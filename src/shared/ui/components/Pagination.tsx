@@ -1,4 +1,10 @@
 import { useState } from "react";
+import { Container } from "@shared/ui/components/Container";
+import { Button } from "./Button";
+import { Image } from "./Image";
+import clsx from "clsx";
+import styles from "./Pagination.module.scss";
+import { ArrowIcon } from "..";
 
 type Props = {
   currentPage: number;
@@ -37,27 +43,51 @@ export const Pagination = ({
   };
 
   return (
-    <div className={className} style={{ display: "flex", gap: 8 }}>
-      <button onClick={handlePrev} disabled={startPage === 1}>
-        {"<"}
-      </button>
+    <Container
+      container
+      justifyBetween
+      alignCenter
+      gap="8px"
+      className={clsx([className, styles.buttonContainer])}
+    >
+      <Button
+        className={clsx([styles.button, styles.prevButton])}
+        onClick={handlePrev}
+        disabled={startPage === 1}
+      >
+        <Image
+          src={ArrowIcon}
+          alt="arrow-left"
+          className={styles["img-arrow"]}
+        />
+      </Button>
 
       {pages.map(page => (
-        <button
+        <Button
           key={page}
+          className={clsx([
+            styles.button,
+            {
+              [styles.pageButtonActive]: page === currentPage,
+            },
+          ])}
           onClick={() => onPageChange(page)}
-          style={{
-            fontWeight: page === currentPage ? "bold" : "normal",
-            padding: "4px 8px",
-          }}
         >
           {page}
-        </button>
+        </Button>
       ))}
 
-      <button onClick={handleNext} disabled={endPage === totalPages}>
-        {">"}
-      </button>
-    </div>
+      <Button
+        className={clsx([styles.button, styles.nextButton])}
+        onClick={handleNext}
+        disabled={endPage === totalPages}
+      >
+        <Image
+          src={ArrowIcon}
+          alt="arrow-right"
+          className={styles["img-arrow"]}
+        />
+      </Button>
+    </Container>
   );
 };

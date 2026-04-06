@@ -6,7 +6,6 @@ import { PosterMovie } from "@/features/poster-movies";
 import { MoviesList } from "@/features/movies-lists";
 import { Divider } from "@shared/ui";
 import { Pagination } from "@shared/ui/components/Pagination";
-import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "@shared/lib";
 import { setPage } from "@entities/popular-movies";
 
