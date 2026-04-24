@@ -16,12 +16,12 @@ export function FilmPage() {
   const numericId = Number(id);
 
   const currentYear = new Date().getFullYear();
-  const { popularMovies } = usePopularMovies({
+  const { movies } = usePopularMovies({
     page: 1,
     sort_by: "vote_count.desc",
     primary_release_year: currentYear,
   });
-  const currentFilm = popularMovies?.find(movie => movie.id === numericId);
+  const currentFilm = movies?.find(movie => movie.id === numericId);
 
   const cast = useMovieCredits(currentFilm?.id);
 
@@ -50,7 +50,7 @@ export function FilmPage() {
         <Header className={styles.sliderHeader}>Movies</Header>
       </Layout>
       <Slider className={styles.slider} gap="32px">
-        {popularMovies.map((movie, index) => (
+        {movies.map((movie, index) => (
           <Link
             to={Routes.GET_FILM_URL(movie.id)}
             className={styles.link}

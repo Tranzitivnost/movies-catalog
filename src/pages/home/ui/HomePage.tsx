@@ -5,15 +5,24 @@ import { usePopularMovies } from "@entities/popular-movies";
 import { PosterMovie } from "@/features/poster-movies";
 import { MoviesList } from "@/features/movies-lists";
 import { Divider } from "@shared/ui";
+import { Pagination } from "@shared/ui/components/Pagination";
+import { useAppDispatch, useAppSelector } from "@shared/lib";
+import { setPage } from "@entities/popular-movies";
 
 export function HomePage() {
+  const dispatch = useAppDispatch();
   const currentYear = new Date().getFullYear();
-  const { popularMovies } = usePopularMovies({
+  const { movies } = usePopularMovies({
     page: 1,
     sort_by: "vote_count.desc",
     primary_release_year: currentYear,
   });
-  const firstMovie = popularMovies?.[0];
+  const firstMovie = useAppSelector(
+    state => state.popularMovies.moviesByPage[1]?.[0],
+  );
+  const { currentPage, totalPages } = useAppSelector(
+    state => state.popularMovies,
+  );
 
   return (
     <Container
@@ -28,7 +37,13 @@ export function HomePage() {
         <PosterMovie movie={firstMovie} className={styles.posterContainer} />
       )}
       <Divider />
-      <MoviesList title="Popular movies for you" movies={popularMovies} />
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={page => dispatch(setPage(page))}
+      />
+      <MoviesList title="Popular movies for you" movies={movies} />
+
       <Divider />
       <Layout variant="main">
         <PageFooter />
