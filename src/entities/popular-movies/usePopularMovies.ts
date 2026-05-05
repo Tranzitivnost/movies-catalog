@@ -1,17 +1,29 @@
-import { selectPopularMovies } from ".";
+import { useEffect } from "react";
 
 import { useAppSelector, useAppDispatch } from "@shared/lib";
 
 import { fetchPopularMovies } from ".";
-import { useEffect } from "react";
+
 import type { GetPopularMoviesQueryType } from "@shared/api";
 
 export function usePopularMovies(options?: GetPopularMoviesQueryType) {
   const dispatch = useAppDispatch();
+  const { moviesByPage, currentPage, loading, totalPages } = useAppSelector(
+    state => state.popularMovies,
+  );
+
+  const movies = moviesByPage[currentPage] ?? [];
 
   useEffect(() => {
-    dispatch(fetchPopularMovies(options));
-  }, []);
+    if (!movies.length) {
+      dispatch(fetchPopularMovies({ ...options, page: currentPage }));
+    }
+  }, [currentPage]);
 
-  return useAppSelector(selectPopularMovies);
+  return {
+    movies,
+    currentPage,
+    totalPages,
+    loading,
+  };
 }
