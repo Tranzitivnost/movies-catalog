@@ -8,5 +8,5 @@ Catalog uses TMDB API for fetching movies data so you need to get API key [here]
 
 1. Install all dependencies executing in the shell `npm install`
 2. Set up the environment variables
-   1. Execute in the shell `cp config.example.ts config.ts`
-   2. Define all of required variables in the freshly created `config.ts` file
+   1. Execute in the shell `cp .env.example .env`
+   2. Define all of required variables in the freshly created `.env` file
