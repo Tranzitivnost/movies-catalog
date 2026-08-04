@@ -7,9 +7,10 @@ import { Routes } from "@/shared/routes";
 type Props = {
   movies: Movie[];
   title: string;
+  ref?: React.Ref<HTMLDivElement>;
 };
 
-export function MoviesList({ movies, title }: Props) {
+export function MoviesList({ movies, title, ref }: Props) {
   return (
     <Layout
       container
@@ -18,6 +19,7 @@ export function MoviesList({ movies, title }: Props) {
       justifyAround
       gap="24px"
       className={styles.container}
+      ref={ref}
     >
       <Header className={styles.title}>{title}</Header>
       <Container gap="10px 4%" className={styles.movieContainer}>

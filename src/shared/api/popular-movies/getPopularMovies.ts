@@ -4,10 +4,10 @@ import type { Movie } from "../movies/movie";
 
 export const getPopularMovies = async (
   query?: GetPopularMoviesQueryType,
-): Promise<Movie[]> => {
-  const response = await apiRequest<
-    PaginationResponse<Movie>,
-    GetPopularMoviesQueryType
-  >("/discover/movie", "GET", query);
-  return response.results;
+): Promise<PaginationResponse<Movie>> => {
+  return await apiRequest<PaginationResponse<Movie>, GetPopularMoviesQueryType>(
+    "/discover/movie",
+    "GET",
+    query,
+  );
 };

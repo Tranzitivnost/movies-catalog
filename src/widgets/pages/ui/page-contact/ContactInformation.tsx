@@ -32,14 +32,11 @@ export function ContactInformation({ className }: Props) {
         justifyBetween
         className={styles.information}
       >
-        <TextBlock header="CONTACT US" description="+381 98 765 4321" />
-        <TextBlock
-          header="ADDRESS"
-          description="1071 Fifth Avenue at 89th Street Manhattan, New York City"
-        />
+        <TextBlock header="CONTACT US" description="+381 62 82 31 230" />
+        <TextBlock header="ADDRESS" description="11000 Belgrade, Serbia" />
         <TextBlock
           header="YOUR QUESTIONS AND SPECIAL REQUESTS ARE ALWAYS WELCOME! 🚀🎉"
-          description="saintstream_support@gmail.com"
+          description="savitskaia.tina@gmail.com"
         />
       </Container>
     </Layout>
