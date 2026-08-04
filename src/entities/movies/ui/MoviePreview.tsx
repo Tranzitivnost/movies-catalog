@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Container, Header, Image } from "@shared/ui";
+import { Container, Header, Image, NoImagePlaceholder } from "@shared/ui";
 import styles from "./MoviePreview.module.scss";
 import type { Movie } from "@shared/api";
 import { StarIcon } from "@/shared/ui";
@@ -18,7 +18,12 @@ export function MoviePreview({ movie, className, onClick }: Props) {
       className={clsx(styles.container, className)}
       onClick={onClick}
     >
-      <Image className={styles.img} src={movie.poster_path} alt={movie.title} />
+      <Image
+        className={styles.img}
+        src={movie.poster_path}
+        alt={movie.title}
+        fallback={NoImagePlaceholder}
+      />
       <Container flexDirectionColumn className={styles.movieContainer}>
         <Header className={styles.movieTitle}>{movie.title}</Header>
         <Container className={styles.starContainer}>

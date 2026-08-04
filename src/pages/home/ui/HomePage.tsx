@@ -8,8 +8,10 @@ import { Divider } from "@shared/ui";
 import { Pagination } from "@shared/ui/components/Pagination";
 import { useAppDispatch, useAppSelector } from "@shared/lib";
 import { setPage } from "@entities/popular-movies";
+import { useRef } from "react";
 
 export function HomePage() {
+  const moviesRef = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
   const currentYear = new Date().getFullYear();
   const { movies } = usePopularMovies({
@@ -23,7 +25,14 @@ export function HomePage() {
   const { currentPage, totalPages } = useAppSelector(
     state => state.popularMovies,
   );
+  const handlePageChange = (page: number) => {
+    dispatch(setPage(page));
 
+    moviesRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
   return (
     <Container
       container
@@ -37,13 +46,16 @@ export function HomePage() {
         <PosterMovie movie={firstMovie} className={styles.posterContainer} />
       )}
       <Divider />
+      <MoviesList
+        title="Popular movies for you"
+        movies={movies}
+        ref={moviesRef}
+      />
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}
-        onPageChange={page => dispatch(setPage(page))}
+        onPageChange={handlePageChange}
       />
-      <MoviesList title="Popular movies for you" movies={movies} />
-
       <Divider />
       <Layout variant="main">
         <PageFooter />

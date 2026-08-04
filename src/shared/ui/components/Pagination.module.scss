@@ -1,24 +1,32 @@
 .buttonContainer {
-  padding-top: 40px;
+  padding-bottom: 80px;
 }
 
 .button {
   composes: background-tertiary from global;
-  background-color: rgba(122, 122, 122, 0.753);
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  opacity: 50%;
+  background: transparent;
+
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 16px;
 
   composes: primary-font size-m from global;
   color: var(--text-color-primary);
 }
 
 .pageButtonActive {
-  color: var(--text-color-tertiary);
+  composes: primary-font size-m from global;
+  background-color: var(--bg-secondary);
   font-weight: bold;
-  width: 30px;
-  height: 30px;
+  width: 56px;
+  height: 56px;
 }
 
 .prevButton {
@@ -28,6 +36,13 @@
 
 .nextButton {
   margin-left: 10px;
+}
+
+.dots {
+  composes: primary-font size-m from global;
+  color: var(--text-color-primary);
+  min-width: 32px;
+  text-align: center;
 }
 
 .img-arrow {

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Container } from "@shared/ui/components/Container";
 import { Button } from "./Button";
 import { Image } from "./Image";
@@ -13,32 +12,65 @@ type Props = {
   className?: string;
 };
 
+const DOTS = ". . .";
+
+type PaginationRangeItem = number | typeof DOTS;
+
+const getPaginationRange = (
+  currentPage: number,
+  totalPages: number,
+): PaginationRangeItem[] => {
+  if (totalPages <= 6) {
+    return Array.from({ length: totalPages }, (_, index) => index + 1);
+  }
+
+  if (currentPage <= 3) {
+    return [1, 2, 3, 4, DOTS, totalPages];
+  }
+
+  if (currentPage >= totalPages - 2) {
+    return [
+      1,
+      DOTS,
+      totalPages - 3,
+      totalPages - 2,
+      totalPages - 1,
+      totalPages,
+    ];
+  }
+
+  return [
+    1,
+    DOTS,
+    currentPage - 2,
+    currentPage - 1,
+    currentPage,
+    currentPage + 1,
+    currentPage + 2,
+    DOTS,
+    totalPages,
+  ];
+};
+
 export const Pagination = ({
   currentPage,
   totalPages,
   onPageChange,
   className,
 }: Props) => {
-  const PAGE_WINDOW = 5;
+  const safeTotalPages = Math.min(totalPages, 500);
 
-  const [startPage, setStartPage] = useState(1);
-
-  const endPage = Math.min(startPage + PAGE_WINDOW - 1, totalPages);
-
-  const pages = Array.from(
-    { length: endPage - startPage + 1 },
-    (_, i) => startPage + i,
-  );
+  const paginationRange = getPaginationRange(currentPage, safeTotalPages);
 
   const handlePrev = () => {
-    if (startPage > 1) {
-      setStartPage(prev => prev - 1);
+    if (currentPage > 1) {
+      onPageChange(currentPage - 1);
     }
   };
 
   const handleNext = () => {
-    if (endPage < totalPages) {
-      setStartPage(prev => prev + 1);
+    if (currentPage < safeTotalPages) {
+      onPageChange(currentPage + 1);
     }
   };
 
@@ -53,7 +85,7 @@ export const Pagination = ({
       <Button
         className={clsx([styles.button, styles.prevButton])}
         onClick={handlePrev}
-        disabled={startPage === 1}
+        disabled={currentPage === 1}
       >
         <Image
           src={ArrowIcon}
@@ -62,25 +94,33 @@ export const Pagination = ({
         />
       </Button>
 
-      {pages.map(page => (
-        <Button
-          key={page}
-          className={clsx([
-            styles.button,
-            {
-              [styles.pageButtonActive]: page === currentPage,
-            },
-          ])}
-          onClick={() => onPageChange(page)}
-        >
-          {page}
-        </Button>
-      ))}
+      {paginationRange.map((page, index) =>
+        page === DOTS ? (
+          <span key={`dots-${index}`} className={styles.dots}>
+            {DOTS}
+          </span>
+        ) : (
+          <Button
+            key={page}
+            className={clsx([
+              styles.button,
+              {
+                [styles.pageButtonActive]: page === currentPage,
+              },
+            ])}
+            onClick={() => {
+              onPageChange(page);
+            }}
+          >
+            {page}
+          </Button>
+        ),
+      )}
 
       <Button
         className={clsx([styles.button, styles.nextButton])}
         onClick={handleNext}
-        disabled={endPage === totalPages}
+        disabled={currentPage === safeTotalPages}
       >
         <Image
           src={ArrowIcon}
